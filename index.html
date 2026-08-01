@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- HARMONY EQUILIBRIUM SELF-CONTAINED WEB LAUNCH FILE V2 -->
 <html lang="en-AU">
 <head>
   <meta charset="utf-8">
@@ -6,10 +7,820 @@
   <meta name="description" content="Harmony Equilibrium connects artificial intelligence with human intelligence through interaction. Explore software, Forge tools, games, audio, research and creative services.">
   <meta name="theme-color" content="#080b10">
   <title>Harmony Equilibrium</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script defer src="assets/app.js"></script>
+  <style>
+
+:root {
+  --bg: #080b10;
+  --bg-soft: #10151d;
+  --panel: #141b25;
+  --panel-2: #1a2230;
+  --text: #f4f5f7;
+  --muted: #a8b0bd;
+  --gold: #e8b65c;
+  --gold-2: #f5d28e;
+  --blue: #53a3ff;
+  --green: #5bd59a;
+  --red: #ff7474;
+  --line: rgba(232, 182, 92, .26);
+  --shadow: 0 26px 70px rgba(0, 0, 0, .42);
+  --radius: 20px;
+  --max: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 8%, rgba(83, 163, 255, .12), transparent 32rem),
+    radial-gradient(circle at 82% 18%, rgba(232, 182, 92, .11), transparent 28rem),
+    var(--bg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .24;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 84%);
+}
+
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; }
+img, svg { max-width: 100%; }
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 1000;
+  padding: .8rem 1rem;
+  background: var(--gold);
+  color: #101010;
+  border-radius: 10px;
+}
+.skip-link:focus { top: 1rem; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 78px;
+  padding: .8rem max(1.2rem, calc((100vw - var(--max)) / 2));
+  border-bottom: 1px solid rgba(232, 182, 92, .15);
+  background: rgba(8, 11, 16, .86);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  letter-spacing: .05em;
+}
+.brand strong {
+  display: block;
+  font-size: .96rem;
+}
+.brand small {
+  display: block;
+  margin-top: .1rem;
+  color: var(--gold);
+  font-size: .67rem;
+  letter-spacing: .03em;
+}
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  min-width: 64px;
+  height: 44px;
+  padding: .45rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(232,182,92,.16), rgba(83,163,255,.09));
+  box-shadow: inset 0 0 24px rgba(232,182,92,.07);
+}
+.brand-mark span {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  color: var(--gold-2);
+  font-weight: 800;
+}
+.brand-mark i {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--blue), var(--gold));
+}
+.brand-mark i::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  right: 30%;
+  top: -2px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 12px var(--gold);
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.primary-nav a {
+  color: var(--muted);
+  font-size: .9rem;
+  transition: color .2s ease;
+}
+.primary-nav a:hover,
+.primary-nav a:focus-visible { color: var(--gold-2); }
+
+.menu-button {
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 10px;
+  padding: .65rem .9rem;
+}
+
+.section {
+  width: min(var(--max), calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+.hero {
+  min-height: calc(100vh - 78px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+  align-items: center;
+  gap: 5rem;
+}
+.eyebrow {
+  margin: 0 0 .8rem;
+  color: var(--gold);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.hero h1,
+.section-heading h2 {
+  margin: 0;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+.hero h1 { font-size: clamp(3rem, 7.5vw, 6.7rem); }
+.hero h1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold);
+  text-shadow: 0 0 42px rgba(232,182,92,.12);
+}
+.hero-definition {
+  max-width: 780px;
+  margin: 1.6rem 0 .8rem;
+  color: var(--gold-2);
+  font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+  font-weight: 650;
+}
+.hero-support {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: .8rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(20,27,37,.9);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+.button.primary {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--gold), #c88d30);
+  color: #111;
+  font-weight: 800;
+}
+
+.connection-visual {
+  position: relative;
+  display: grid;
+  gap: 1.3rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(20,27,37,.96), rgba(9,13,19,.94));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.connection-visual::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  bottom: -110px;
+  border-radius: 50%;
+  background: rgba(83,163,255,.14);
+  filter: blur(30px);
+}
+.connection-visual article {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  background: rgba(255,255,255,.035);
+}
+.connection-visual article > span {
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  color: #101010;
+  background: var(--gold);
+  font-weight: 900;
+}
+.connection-visual article:last-child > span {
+  background: var(--blue);
+}
+.connection-visual strong { font-size: 1.08rem; }
+.connection-visual small { color: var(--muted); }
+
+.energy-line {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  width: 72%;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, var(--gold), var(--blue));
+  box-shadow: 0 0 18px rgba(232,182,92,.45);
+}
+.energy-line i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 14px var(--gold);
+  animation: pulse 1.8s ease-in-out infinite alternate;
+}
+.energy-line i:nth-child(2) { margin-left: auto; animation-delay: .3s; }
+.energy-line i:nth-child(3) { animation-delay: .7s; }
+
+@keyframes pulse {
+  from { opacity: .35; transform: scale(.8); }
+  to { opacity: 1; transform: scale(1.25); }
+}
+
+.section-heading {
+  max-width: 820px;
+  margin-bottom: 2rem;
+}
+.section-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 4.25rem);
+}
+.section-heading p:not(.eyebrow) {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.split-heading {
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+}
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.principle-grid.two { grid-template-columns: repeat(2, 1fr); }
+.panel,
+.status-card {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(20,27,37,.92), rgba(12,17,24,.92));
+  box-shadow: 0 18px 52px rgba(0,0,0,.22);
+}
+.panel.emphasis { border-color: var(--line); }
+.panel h3,
+.status-card h3 { margin: .4rem 0 .7rem; font-size: 1.35rem; }
+.panel p,
+.status-card p { color: var(--muted); }
+.panel-number {
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.store-controls {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.search-field {
+  display: grid;
+  gap: .45rem;
+  color: var(--muted);
+  font-size: .82rem;
+}
+.search-field input {
+  width: 100%;
+  min-height: 52px;
+  padding: .9rem 1rem;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px;
+  outline: none;
+  background: var(--panel);
+}
+.search-field input:focus { border-color: var(--gold); }
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+.filter {
+  min-height: 40px;
+  padding: .55rem .85rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--panel);
+  cursor: pointer;
+}
+.filter.active {
+  color: #111;
+  border-color: var(--gold);
+  background: var(--gold);
+  font-weight: 800;
+}
+
+.interest-button span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  margin-left: .5rem;
+  border-radius: 999px;
+  color: #111;
+  background: var(--gold);
+  font-size: .78rem;
+  font-weight: 900;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: 1.35rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(20,27,37,.96), rgba(10,14,20,.96));
+  box-shadow: 0 18px 50px rgba(0,0,0,.18);
+}
+.product-card:hover { border-color: rgba(232,182,92,.45); }
+.product-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+.product-mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  color: var(--gold-2);
+  background: linear-gradient(145deg, rgba(232,182,92,.14), rgba(83,163,255,.08));
+  font-weight: 900;
+}
+.product-status {
+  color: var(--gold);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.product-card h3 { margin: 1.2rem 0 .4rem; font-size: 1.35rem; }
+.product-platform { color: var(--blue); font-size: .82rem; }
+.product-card > p { color: var(--muted); }
+.product-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .6rem;
+  margin-top: auto;
+}
+.product-actions .button { min-height: 44px; padding: .65rem .8rem; }
+.interest-toggle.active {
+  border-color: var(--gold);
+  color: var(--gold-2);
+}
+
+.forge-section {
+  width: 100%;
+  max-width: none;
+  padding-left: max(1.2rem, calc((100vw - var(--max)) / 2));
+  padding-right: max(1.2rem, calc((100vw - var(--max)) / 2));
+  background: linear-gradient(180deg, transparent, rgba(83,163,255,.055), transparent);
+}
+.forge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.forge-card {
+  min-height: 240px;
+  padding: 1.35rem;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: var(--radius);
+  text-align: left;
+  color: var(--text);
+  background: linear-gradient(150deg, rgba(20,27,37,.97), rgba(8,12,18,.95));
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.forge-card:hover,
+.forge-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+.forge-card > span {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 3.5rem;
+  border-radius: 17px;
+  background: var(--gold);
+  color: #111;
+  font-weight: 900;
+}
+.forge-card:nth-child(even) > span { background: var(--blue); }
+.forge-card strong,
+.forge-card small { display: block; }
+.forge-card strong { font-size: 1.25rem; }
+.forge-card small { margin-top: .4rem; color: var(--muted); }
+
+.dark-section {
+  width: 100%;
+  max-width: none;
+  padding-left: max(1.2rem, calc((100vw - var(--max)) / 2));
+  padding-right: max(1.2rem, calc((100vw - var(--max)) / 2));
+  border-block: 1px solid rgba(232,182,92,.12);
+  background: rgba(4,7,11,.72);
+}
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.status-card > p:first-child {
+  color: var(--gold);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+.status-card small { color: var(--muted); }
+
+.research-flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin: 2rem 0;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(232,182,92,.055);
+}
+.research-flow span {
+  padding: .5rem .75rem;
+  border-radius: 10px;
+  background: var(--panel);
+  font-weight: 700;
+}
+.research-flow b { color: var(--gold); }
+
+.status {
+  display: inline-block;
+  margin-top: .8rem;
+  color: var(--gold);
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+.status.positive { color: var(--green); }
+blockquote {
+  margin: 2rem 0 0;
+  padding: 1.3rem 1.5rem;
+  border-left: 3px solid var(--gold);
+  color: var(--gold-2);
+  background: rgba(232,182,92,.055);
+  font-size: 1.25rem;
+}
+
+.compact-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: linear-gradient(135deg, rgba(232,182,92,.09), rgba(83,163,255,.05));
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+}
+.service-list span {
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 13px;
+  background: var(--panel);
+}
+.notice {
+  margin-top: 1.5rem;
+  color: var(--muted);
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.quote-grid blockquote { margin: 0; }
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  width: min(var(--max), calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+.site-footer p { margin: .35rem 0; color: var(--gold); }
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: start;
+  color: var(--muted);
+}
+.site-footer small {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+.modal {
+  width: min(720px, calc(100% - 2rem));
+  max-height: 88vh;
+  padding: 0;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--bg-soft);
+  box-shadow: var(--shadow);
+}
+.modal::backdrop {
+  background: rgba(0,0,0,.78);
+  backdrop-filter: blur(6px);
+}
+.modal > div {
+  padding: 2rem;
+  overflow: auto;
+}
+.modal-close {
+  position: sticky;
+  top: .8rem;
+  float: right;
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  margin: .8rem .8rem 0 0;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+}
+.modal-product-mark {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  color: #111;
+  background: var(--gold);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.feature-list { padding-left: 1.2rem; color: var(--muted); }
+.feature-list li { margin: .35rem 0; }
+.interest-list {
+  display: grid;
+  gap: .7rem;
+  margin: 1.2rem 0;
+}
+.interest-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .8rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.interest-row button {
+  border: 0;
+  color: var(--red);
+  background: transparent;
+  cursor: pointer;
+}
+.empty-state {
+  padding: 2rem;
+  color: var(--muted);
+  text-align: center;
+  border: 1px dashed rgba(255,255,255,.12);
+  border-radius: 16px;
+}
+
+.legal-page {
+  min-height: 100vh;
+}
+.legal-header {
+  width: min(860px, calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 2rem 0 0;
+}
+.legal-content {
+  width: min(860px, calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 4rem 0 7rem;
+}
+.legal-content h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 1;
+}
+.legal-content h2 {
+  margin: 2.5rem 0 .7rem;
+  color: var(--gold-2);
+}
+.legal-content p,
+.legal-content li { color: var(--muted); }
+.legal-content .legal-status {
+  margin: 1rem 0 2rem;
+  color: var(--gold);
+  font-weight: 800;
+}
+.legal-back { margin-top: 2rem; }
+
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 1fr; padding-top: 5rem; }
+  .connection-visual { max-width: 680px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .forge-grid { grid-template-columns: repeat(2, 1fr); }
+  .principle-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .site-header { align-items: flex-start; }
+  .brand small { display: none; }
+  .menu-button { display: block; }
+  .primary-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 1rem;
+    right: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(12,17,24,.98);
+    box-shadow: var(--shadow);
+  }
+  .primary-nav.open { display: flex; }
+  .section { width: min(100% - 1.5rem, var(--max)); padding: 5rem 0; }
+  .hero { min-height: auto; gap: 2.5rem; }
+  .hero h1 { font-size: clamp(2.65rem, 14vw, 4.5rem); }
+  .connection-visual { padding: 1rem; }
+  .split-heading { display: block; }
+  .interest-button { margin-top: 1rem; }
+  .product-grid,
+  .status-grid,
+  .principle-grid.two,
+  .quote-grid,
+  .service-list { grid-template-columns: 1fr; }
+  .product-card { min-height: 330px; }
+  .forge-grid { grid-template-columns: 1fr; }
+  .forge-card { min-height: 190px; }
+  .forge-card > span { margin-bottom: 2rem; }
+  .site-footer { grid-template-columns: 1fr; }
+  .site-footer small { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+.footer-link {
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--gold-2);
+}
+.legal-modal h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+  line-height: 1;
+}
+.legal-modal h2 {
+  margin: 2rem 0 .6rem;
+  color: var(--gold-2);
+}
+.legal-modal p,
+.legal-modal li {
+  color: var(--muted);
+}
+.legal-modal .legal-status {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -227,8 +1038,8 @@
       <p>Artificial Intelligence Connected With Human Intelligence.</p>
     </div>
     <nav aria-label="Legal and information">
-      <a href="privacy.html">Privacy Notice</a>
-      <a href="terms.html">Website Terms</a>
+      <button class="footer-link" type="button" data-open-legal="privacy-dialog">Privacy Notice</button>
+      <button class="footer-link" type="button" data-open-legal="terms-dialog">Website Terms</button>
       <a href="#top">Back to top</a>
     </nav>
     <small>© 2026 Jamon Allan Hartzer · Western Australia</small>
@@ -250,6 +1061,285 @@
     </div>
   </dialog>
 
+
+  <dialog id="privacy-dialog" class="modal legal-modal">
+    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
+    <div><p class="eyebrow">PUBLIC PREVIEW</p>
+<h1>Privacy Notice</h1>
+<p class="legal-status">Effective for the Harmony Equilibrium public-preview website.</p>
+
+<h2>What this website stores</h2>
+<p>The optional Store interest list is stored only in the visitor’s browser using local storage. It is not sent to Harmony Equilibrium and does not create a hosted account.</p>
+
+<h2>No public account</h2>
+<p>This preview does not provide a cloud profile, public sign-in service or hosted Harmony Equilibrium account.</p>
+
+<h2>No payment processing</h2>
+<p>The website does not take payments, create orders, reserve products or provide commercial digital delivery.</p>
+
+<h2>No hosted enquiry submission</h2>
+<p>No inactive local form is presented as though it sends a message or project request. A verified public contact channel will be added before enquiries open.</p>
+
+<h2>External destinations</h2>
+<p>Future media, social and contact destinations will use verified public links. Visitors will choose whether to follow those links.</p>
+
+<h2>Local data control</h2>
+<p>The local interest list remains in the browser until it is cleared through the website, removed through browser settings or erased when site data is cleared.</p>
+
+<h2>Future hosted services</h2>
+<p>A final hosted privacy policy will be published before accounts, analytics, enquiries, payments or direct digital delivery are activated.</p></div>
+  </dialog>
+
+  <dialog id="terms-dialog" class="modal legal-modal">
+    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
+    <div><p class="eyebrow">PUBLIC PREVIEW</p>
+<h1>Website Terms</h1>
+<p class="legal-status">Plain-language conditions for the current public preview.</p>
+
+<h2>Preview information</h2>
+<p>Product descriptions and availability statements explain current public intentions and may be updated as development continues.</p>
+
+<h2>No purchase contract</h2>
+<p>Viewing a product or saving it to the local interest list does not create an order, reservation, subscription or purchase agreement.</p>
+
+<h2>Intellectual property</h2>
+<p>This preview does not transfer ownership of Harmony Equilibrium names, software, source code, designs, media or other creative work.</p>
+
+<h2>Private research</h2>
+<p>Public summaries do not grant access to private research, internal architecture, training methods or proprietary development processes.</p>
+
+<h2>Future services</h2>
+<p>Client accounts, hosted enquiries, payments, downloads and collaboration services will receive their own final conditions before activation.</p>
+
+<h2>Final hosted terms</h2>
+<p>Commercial terms will be reviewed and published before direct transactions or account services open.</p></div>
+  </dialog>
+
   <script id="product-data" type="application/json">[{&quot;id&quot;: &quot;codeforge&quot;, &quot;name&quot;: &quot;CodeForge Creativity 223&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Release preparation&quot;, &quot;platform&quot;: &quot;Android development platform&quot;, &quot;mark&quot;: &quot;CF&quot;, &quot;description&quot;: &quot;A mobile creative development station for writing, testing, organising and preparing Python and Kivy projects.&quot;, &quot;features&quot;: [&quot;Mobile development workspace&quot;, &quot;Project editing and runtime testing&quot;, &quot;Android project preparation&quot;, &quot;Integrated Forge tools&quot;, &quot;Guided tutorial suite&quot;]}, {&quot;id&quot;: &quot;harmony-stabilizer&quot;, &quot;name&quot;: &quot;Harmony Stabilizer Collection&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;HS&quot;, &quot;description&quot;: &quot;A collection of original Harmony Equilibrium sound and focus experiences with direct user control.&quot;, &quot;features&quot;: [&quot;Calm experience&quot;, &quot;Focus experience&quot;, &quot;Deep experience&quot;, &quot;Sleep experience&quot;]}, {&quot;id&quot;: &quot;musicforge&quot;, &quot;name&quot;: &quot;MusicForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Music and sound creation&quot;, &quot;mark&quot;: &quot;MF&quot;, &quot;description&quot;: &quot;An original mobile creative tool for developing rhythm, music, sound ideas and adaptive audio experiences.&quot;, &quot;features&quot;: [&quot;Mobile music and rhythm creation&quot;, &quot;Adaptive percussion development&quot;, &quot;Original sound experimentation&quot;, &quot;Creative audio workflow&quot;]}, {&quot;id&quot;: &quot;iconforge&quot;, &quot;name&quot;: &quot;IconForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Icon and visual asset creation&quot;, &quot;mark&quot;: &quot;IF&quot;, &quot;description&quot;: &quot;A focused creative utility for preparing application icons and project visual identity assets.&quot;, &quot;features&quot;: [&quot;Application icon preparation&quot;, &quot;Project visual identity workflow&quot;, &quot;Mobile-first creative interface&quot;, &quot;Export-ready asset organisation&quot;]}, {&quot;id&quot;: &quot;introforge&quot;, &quot;name&quot;: &quot;IntroForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Intro and presentation creation&quot;, &quot;mark&quot;: &quot;IN&quot;, &quot;description&quot;: &quot;A dedicated creative tool for preparing, organising and managing application and game introductions separately from the main runtime.&quot;, &quot;features&quot;: [&quot;Application and game intro preparation&quot;, &quot;Separate introduction workflow&quot;, &quot;Project-friendly asset organisation&quot;, &quot;Mobile development focus&quot;]}, {&quot;id&quot;: &quot;auto-snap-forge&quot;, &quot;name&quot;: &quot;Auto Snap Forge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Document and screen-capture utility&quot;, &quot;mark&quot;: &quot;AS&quot;, &quot;description&quot;: &quot;A mobile utility designed to automate long-document scrolling and sequential screen-capture workflows.&quot;, &quot;features&quot;: [&quot;Automated long-document scrolling&quot;, &quot;Sequential screen capture&quot;, &quot;Full-document workflow assistance&quot;, &quot;Mobile-first operation&quot;]}, {&quot;id&quot;: &quot;ambience-of-war&quot;, &quot;name&quot;: &quot;Ambience of War&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;AW&quot;, &quot;description&quot;: &quot;An original atmospheric audio experience created for historical and dramatic listening.&quot;, &quot;features&quot;: [&quot;Original sound design&quot;, &quot;Immersive listening&quot;, &quot;Mobile playback&quot;]}, {&quot;id&quot;: &quot;pythagoras-oracle&quot;, &quot;name&quot;: &quot;Pythagoras Oracle&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;PO&quot;, &quot;description&quot;: &quot;An interactive numerical exploration application developed by Harmony Equilibrium.&quot;, &quot;features&quot;: [&quot;Interactive numerical exploration&quot;, &quot;Mobile interface&quot;, &quot;Research-inspired presentation&quot;]}, {&quot;id&quot;: &quot;juice-box-wars&quot;, &quot;name&quot;: &quot;Juice Box Wars&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android game&quot;, &quot;mark&quot;: &quot;JB&quot;, &quot;description&quot;: &quot;A serious tactical action game built around an absurd juice-carton battlefield.&quot;, &quot;features&quot;: [&quot;Tactical defence gameplay&quot;, &quot;Multiple support weapons&quot;, &quot;Comic battlefield identity&quot;, &quot;Original audio and visual design&quot;]}, {&quot;id&quot;: &quot;snafu&quot;, &quot;name&quot;: &quot;SNAFU Historical Games&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android historical games&quot;, &quot;mark&quot;: &quot;SN&quot;, &quot;description&quot;: &quot;A developing series of historically inspired tactical games focused on battlefield decisions and human stories.&quot;, &quot;features&quot;: [&quot;Historical scenarios&quot;, &quot;Tactical command&quot;, &quot;Original battlefield systems&quot;, &quot;Multiple planned theatres&quot;]}, {&quot;id&quot;: &quot;audiobooks&quot;, &quot;name&quot;: &quot;Harmony Equilibrium Audiobooks&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Under production&quot;, &quot;platform&quot;: &quot;Audiobooks&quot;, &quot;mark&quot;: &quot;AB&quot;, &quot;description&quot;: &quot;Original audiobooks are being written, recorded and produced. Titles and release information will be announced when ready.&quot;, &quot;features&quot;: [&quot;Original stories and publications&quot;, &quot;Produced audio editions&quot;, &quot;Release details coming later&quot;]}, {&quot;id&quot;: &quot;custom-software&quot;, &quot;name&quot;: &quot;Custom Software&quot;, &quot;category&quot;: &quot;Services&quot;, &quot;status&quot;: &quot;Enquiries opening soon&quot;, &quot;platform&quot;: &quot;Custom development&quot;, &quot;mark&quot;: &quot;CS&quot;, &quot;description&quot;: &quot;Original apps, games, business tools, educational projects and project-improvement work.&quot;, &quot;features&quot;: [&quot;Android applications&quot;, &quot;Games and creative tools&quot;, &quot;Business and educational software&quot;, &quot;Project improvement&quot;]}]</script>
+  <script>
+
+(() => {
+  "use strict";
+
+  const dataNode = document.getElementById("product-data");
+  const products = dataNode ? JSON.parse(dataNode.textContent) : [];
+  const productMap = new Map(products.map((product) => [product.id, product]));
+  const storageKey = "harmony-equilibrium-interest-list-v1";
+
+  const grid = document.getElementById("product-grid");
+  const empty = document.getElementById("store-empty");
+  const search = document.getElementById("store-search");
+  const filters = [...document.querySelectorAll("[data-filter]")];
+  const productDialog = document.getElementById("product-dialog");
+  const productDialogContent = document.getElementById("product-dialog-content");
+  const interestDialog = document.getElementById("interest-dialog");
+  const interestList = document.getElementById("interest-list");
+  const interestCounts = [...document.querySelectorAll("[data-interest-count]")];
+
+  let activeFilter = "All";
+
+  const readInterest = () => {
+    try {
+      const value = JSON.parse(localStorage.getItem(storageKey) || "[]");
+      return Array.isArray(value) ? value.filter((id) => productMap.has(id)) : [];
+    } catch {
+      return [];
+    }
+  };
+
+  const writeInterest = (ids) => {
+    localStorage.setItem(storageKey, JSON.stringify([...new Set(ids)]));
+    updateInterestUI();
+  };
+
+  const escapeHTML = (value) => String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+
+  const productCard = (product, interested) => `
+    <article class="product-card" data-card="${escapeHTML(product.id)}">
+      <div class="product-topline">
+        <span class="product-mark">${escapeHTML(product.mark)}</span>
+        <span class="product-status">${escapeHTML(product.status)}</span>
+      </div>
+      <h3>${escapeHTML(product.name)}</h3>
+      <span class="product-platform">${escapeHTML(product.platform)}</span>
+      <p>${escapeHTML(product.description)}</p>
+      <div class="product-actions">
+        <button class="button" type="button" data-product="${escapeHTML(product.id)}">View product</button>
+        <button class="button interest-toggle ${interested ? "active" : ""}" type="button"
+          data-interest="${escapeHTML(product.id)}" aria-pressed="${interested}">
+          ${interested ? "Saved" : "Save"}
+        </button>
+      </div>
+    </article>
+  `;
+
+  const filteredProducts = () => {
+    const query = (search?.value || "").trim().toLowerCase();
+    return products.filter((product) => {
+      const categoryMatch = activeFilter === "All" || product.category === activeFilter;
+      const text = [
+        product.name,
+        product.category,
+        product.status,
+        product.platform,
+        product.description,
+        ...product.features,
+      ].join(" ").toLowerCase();
+      const queryMatch = !query || query.split(/\s+/).every((term) => text.includes(term));
+      return categoryMatch && queryMatch;
+    });
+  };
+
+  const renderProducts = () => {
+    if (!grid) return;
+    const interested = new Set(readInterest());
+    const matches = filteredProducts();
+    grid.innerHTML = matches.map((product) => productCard(product, interested.has(product.id))).join("");
+    empty.hidden = matches.length !== 0;
+  };
+
+  const showProduct = (id) => {
+    const product = productMap.get(id);
+    if (!product || !productDialog || !productDialogContent) return;
+    const interested = readInterest().includes(id);
+    productDialogContent.innerHTML = `
+      <span class="modal-product-mark">${escapeHTML(product.mark)}</span>
+      <p class="eyebrow">${escapeHTML(product.category)}</p>
+      <h2>${escapeHTML(product.name)}</h2>
+      <p class="product-platform">${escapeHTML(product.platform)} · ${escapeHTML(product.status)}</p>
+      <p>${escapeHTML(product.description)}</p>
+      <h3>Public product overview</h3>
+      <ul class="feature-list">${product.features.map((feature) => `<li>${escapeHTML(feature)}</li>`).join("")}</ul>
+      <p class="notice">No payment, order or download is being offered through this public preview.</p>
+      <button class="button primary" type="button" data-interest="${escapeHTML(id)}">
+        ${interested ? "Remove from interest list" : "Add to interest list"}
+      </button>
+    `;
+    productDialog.showModal();
+  };
+
+  const toggleInterest = (id) => {
+    const current = readInterest();
+    const next = current.includes(id)
+      ? current.filter((item) => item !== id)
+      : [...current, id];
+    writeInterest(next);
+    renderProducts();
+    if (productDialog?.open) showProduct(id);
+  };
+
+  const renderInterestList = () => {
+    if (!interestList) return;
+    const ids = readInterest();
+    if (!ids.length) {
+      interestList.innerHTML = `<p class="empty-state">Your interest list is empty.</p>`;
+      return;
+    }
+    interestList.innerHTML = ids.map((id) => {
+      const product = productMap.get(id);
+      return `
+        <div class="interest-row">
+          <button type="button" data-product="${escapeHTML(id)}">${escapeHTML(product.name)}</button>
+          <button type="button" data-remove-interest="${escapeHTML(id)}">Remove</button>
+        </div>
+      `;
+    }).join("");
+  };
+
+  const updateInterestUI = () => {
+    const count = readInterest().length;
+    interestCounts.forEach((node) => { node.textContent = String(count); });
+    renderInterestList();
+  };
+
+  document.addEventListener("click", (event) => {
+    const productTrigger = event.target.closest("[data-product]");
+    if (productTrigger) {
+      showProduct(productTrigger.dataset.product);
+      return;
+    }
+
+    const interestTrigger = event.target.closest("[data-interest]");
+    if (interestTrigger) {
+      toggleInterest(interestTrigger.dataset.interest);
+      return;
+    }
+
+    const removeTrigger = event.target.closest("[data-remove-interest]");
+    if (removeTrigger) {
+      const next = readInterest().filter((id) => id !== removeTrigger.dataset.removeInterest);
+      writeInterest(next);
+      renderProducts();
+      return;
+    }
+
+    if (event.target.closest("[data-open-interest]")) {
+      renderInterestList();
+      interestDialog?.showModal();
+      return;
+    }
+
+    if (event.target.closest("[data-clear-interest]")) {
+      writeInterest([]);
+      renderProducts();
+      return;
+    }
+
+    const close = event.target.closest("[data-close-dialog]");
+    if (close) close.closest("dialog")?.close();
+  });
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.filter;
+      filters.forEach((item) => item.classList.toggle("active", item === button));
+      renderProducts();
+    });
+  });
+
+  search?.addEventListener("input", renderProducts);
+
+  document.querySelectorAll("dialog").forEach((dialog) => {
+    dialog.addEventListener("click", (event) => {
+      const rect = dialog.getBoundingClientRect();
+      const inside = (
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom
+      );
+      if (!inside) dialog.close();
+    });
+  });
+
+  const menuButton = document.querySelector(".menu-button");
+  const nav = document.getElementById("primary-nav");
+  menuButton?.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
+  nav?.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  });
+
+  renderProducts();
+  updateInterestUI();
+
+  document.addEventListener("click", (event) => {
+    const legalTrigger = event.target.closest("[data-open-legal]");
+    if (legalTrigger) {
+      document.getElementById(legalTrigger.dataset.openLegal)?.showModal();
+    }
+  });
+
+})();
+
+  </script>
 </body>
 </html>
