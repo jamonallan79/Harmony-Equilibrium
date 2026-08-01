@@ -1,10 +1,10 @@
 <!doctype html>
-<!-- HARMONY EQUILIBRIUM SELF-CONTAINED WEB LAUNCH FILE V2 -->
+<!-- HARMONY EQUILIBRIUM SELF-CONTAINED WEB LAUNCH FILE V3 — CREATOR PATH + CODEFORGE TUTORIAL -->
 <html lang="en-AU">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Harmony Equilibrium connects artificial intelligence with human intelligence through interaction. Explore software, Forge tools, games, audio, research and creative services.">
+  <meta name="description" content="Harmony Equilibrium connects artificial intelligence with human intelligence through interaction. Discover CodeForge, Forge tools, direct Android publishing, software, games, audio and original research.">
   <meta name="theme-color" content="#080b10">
   <title>Harmony Equilibrium</title>
   <style>
@@ -820,6 +820,206 @@ blockquote {
   font-weight: 800;
 }
 
+
+/* Creator path and CodeForge tutorial — V3 */
+.creator-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(83, 163, 255, .10), transparent 46%),
+    linear-gradient(315deg, rgba(232, 182, 92, .11), transparent 42%),
+    var(--bg-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.creator-bridge {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.bridge-card {
+  min-height: 220px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(8, 11, 16, .78);
+  box-shadow: var(--shadow);
+}
+.bridge-card .bridge-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 3.35rem;
+  height: 3.35rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(232, 182, 92, .58);
+  border-radius: 1rem;
+  color: var(--gold-2);
+  font-weight: 900;
+  letter-spacing: .08em;
+  background: linear-gradient(145deg, rgba(232, 182, 92, .16), rgba(83, 163, 255, .09));
+}
+.bridge-card h3 { margin: 0 0 .55rem; font-size: 1.4rem; }
+.bridge-card p { margin: 0; color: var(--muted); }
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.path-card {
+  position: relative;
+  min-height: 190px;
+  padding: 1.35rem;
+  border: 1px solid rgba(83, 163, 255, .24);
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(26, 34, 48, .95), rgba(13, 18, 26, .97));
+}
+.path-card .step-no {
+  display: block;
+  margin-bottom: .65rem;
+  color: var(--gold);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+.path-card h3 { margin: 0 0 .45rem; font-size: 1.12rem; }
+.path-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.creator-callout {
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.35rem;
+  padding: clamp(1.35rem, 3vw, 2.2rem);
+  border: 1px solid rgba(232, 182, 92, .48);
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, rgba(232, 182, 92, .14), rgba(83, 163, 255, .08));
+}
+.creator-callout strong {
+  display: block;
+  color: var(--gold-2);
+  font-size: clamp(1.7rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+}
+.creator-callout p { margin: .6rem 0 0; color: var(--muted); }
+.phase-badge {
+  justify-self: end;
+  max-width: 250px;
+  padding: .8rem 1rem;
+  border: 1px solid rgba(91, 213, 154, .38);
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(91, 213, 154, .08);
+  font-size: .82rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.tutorial-section { background: var(--bg); }
+.tutorial-summary {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 1rem;
+  margin: 2rem 0 1.25rem;
+}
+.tutorial-summary article {
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+.tutorial-summary h3 { margin: 0 0 .55rem; }
+.tutorial-summary p { margin: 0; color: var(--muted); }
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.tutorial-step {
+  display: grid;
+  grid-template-columns: 3.1rem 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.3rem;
+  border: 1px solid rgba(232, 182, 92, .23);
+  border-radius: 18px;
+  background: linear-gradient(150deg, rgba(20, 27, 37, .96), rgba(10, 14, 20, .98));
+}
+.tutorial-step .tutorial-number {
+  display: grid;
+  place-items: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  border: 1px solid rgba(83, 163, 255, .44);
+  border-radius: 1rem;
+  color: var(--blue);
+  background: rgba(83, 163, 255, .09);
+  font-weight: 900;
+}
+.tutorial-step h3 { margin: 0 0 .35rem; font-size: 1.08rem; }
+.tutorial-step p { margin: 0; color: var(--muted); font-size: .94rem; }
+.tutorial-step code {
+  color: var(--gold-2);
+  background: rgba(232, 182, 92, .08);
+  border: 1px solid rgba(232, 182, 92, .16);
+  border-radius: .35rem;
+  padding: .05rem .3rem;
+}
+.tutorial-note {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.4rem;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 16px 16px 0;
+  background: rgba(232, 182, 92, .08);
+}
+.tutorial-note strong { color: var(--gold-2); }
+.tutorial-note p { margin: .35rem 0 0; color: var(--muted); }
+
+.release-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1.25rem 0 2rem;
+}
+.release-card {
+  min-height: 150px;
+  padding: 1rem;
+  border: 1px solid rgba(168, 176, 189, .18);
+  border-radius: 16px;
+  background: rgba(20, 27, 37, .82);
+}
+.release-card strong { display: block; margin-bottom: .45rem; }
+.release-card small { display: block; color: var(--muted); line-height: 1.45; }
+.release-card .release-state {
+  display: inline-block;
+  margin-top: .8rem;
+  color: var(--gold-2);
+  font-size: .72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.release-card.live .release-state { color: var(--green); }
+.release-card.hold .release-state { color: var(--blue); }
+
+@media (max-width: 980px) {
+  .path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .release-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .creator-bridge,
+  .creator-callout,
+  .tutorial-summary,
+  .tutorial-grid { grid-template-columns: 1fr; }
+  .path-grid { grid-template-columns: 1fr; }
+  .phase-badge { justify-self: start; }
+  .release-board { grid-template-columns: 1fr; }
+}
+
   </style>
 </head>
 <body>
@@ -838,6 +1038,8 @@ blockquote {
     <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
       <a href="#connection">The Connection</a>
       <a href="#store">Store</a>
+      <a href="#creator-path">Creator Path</a>
+      <a href="#codeforge-tutorial">CodeForge Tutorial</a>
       <a href="#forge-tools">Forge Tools</a>
       <a href="#research">Research</a>
       <a href="#about">About</a>
@@ -902,7 +1104,7 @@ blockquote {
         <div>
           <p class="eyebrow">HARMONY STORE</p>
           <h2>Products, projects and creative services.</h2>
-          <p>Current public status is shown honestly. Direct payments and digital delivery are not open yet.</p>
+          <p>Ready-to-package Android titles are moving toward direct APK release. Direct payments, creator uploads and digital delivery are not open yet.</p>
         </div>
         <button class="button interest-button" type="button" data-open-interest>
           Interest list <span data-interest-count>0</span>
@@ -926,6 +1128,95 @@ blockquote {
 
       <div id="product-grid" class="product-grid" aria-live="polite"></div>
       <p id="store-empty" class="empty-state" hidden>No Harmony Store entries match that search.</p>
+    </section>
+
+
+    <section class="section creator-section" id="creator-path">
+      <div class="section-heading">
+        <p class="eyebrow">FROM IDEA TO RELEASE</p>
+        <h2>Create it in CodeForge. Release it through Harmony Equilibrium.</h2>
+        <p>CodeForge is the mobile creation and packaging environment. Harmony Equilibrium is the public ecosystem for presenting, publishing and selling finished work. Together they form one continuous path from the first line of code to a customer-ready Android application.</p>
+      </div>
+
+      <div class="creator-bridge">
+        <article class="bridge-card">
+          <span class="bridge-mark">CF</span>
+          <h3>CodeForge Creativity 223</h3>
+          <p>Create the project, organise files, write and refine code, test the real application, prepare identity and package a standalone Android release.</p>
+        </article>
+        <article class="bridge-card">
+          <span class="bridge-mark">HE</span>
+          <h3>Harmony Equilibrium</h3>
+          <p>Present the finished work, create the product listing, set the release status and—when the publishing system opens—offer the signed APK directly through Harmony Store.</p>
+        </article>
+      </div>
+
+      <div class="path-grid" aria-label="Harmony creator release path">
+        <article class="path-card"><span class="step-no">STEP 01</span><h3>Create</h3><p>Begin a new project or continue an existing project inside CodeForge.</p></article>
+        <article class="path-card"><span class="step-no">STEP 02</span><h3>Build</h3><p>Develop the interface, behaviour, media and project identity using the mobile workspace and Forge tools.</p></article>
+        <article class="path-card"><span class="step-no">STEP 03</span><h3>Run</h3><p>Launch the genuine project through the CodeForge runtime and correct anything that does not behave as intended.</p></article>
+        <article class="path-card"><span class="step-no">STEP 04</span><h3>Package</h3><p>Prepare a signed standalone APK with the code, runtime and required assets bundled for installation.</p></article>
+        <article class="path-card"><span class="step-no">STEP 05</span><h3>List</h3><p>Add the title, description, screenshots, version, price and installation information to Harmony Store.</p></article>
+        <article class="path-card"><span class="step-no">STEP 06</span><h3>Release</h3><p>Publish directly without a traditional app-store review queue. Customers receive the finished APK.</p></article>
+      </div>
+
+      <div class="creator-callout">
+        <div>
+          <strong>Create today.<br>Publish today.<br>Sell today.</strong>
+          <p>The goal is a same-day independent creator pathway with no compulsory tester recruitment or weeks-long release waiting period.</p>
+        </div>
+        <span class="phase-badge">Future Harmony Store publishing experience</span>
+      </div>
+    </section>
+
+    <section class="section tutorial-section" id="codeforge-tutorial">
+      <div class="section-heading">
+        <p class="eyebrow">CODEFORGE PUBLIC TUTORIAL</p>
+        <h2>From a project idea to a release-ready Android package.</h2>
+        <p>This public overview introduces the CodeForge workflow without exposing private AI architecture or internal development systems. Exact controls may continue to be refined before commercial release.</p>
+      </div>
+
+      <div class="tutorial-summary">
+        <article>
+          <h3>What CodeForge is</h3>
+          <p>A mobile development station designed to let creators write, organise, run and prepare real Python and Kivy projects without moving the creative workflow to a conventional desktop environment.</p>
+        </article>
+        <article>
+          <h3>The tutorial standard</h3>
+          <p>The Tutorial Edition must perform the same genuine project operation as the commercial product. A demonstration is not accepted as proof unless the real workflow succeeds.</p>
+        </article>
+      </div>
+
+      <div class="tutorial-grid">
+        <article class="tutorial-step"><span class="tutorial-number">1</span><div><h3>Open HOME</h3><p>Start the guided project, open a saved project or enter the workspace. The Tutorial Edition will use a bundled demonstration project and a controlled learning path.</p></div></article>
+        <article class="tutorial-step"><span class="tutorial-number">2</span><div><h3>Organise FILES</h3><p>Keep the core project files together. Android projects use <code>main.py</code>, the existing <code>buildozer.spec</code> and the required image, sound and data assets.</p></div></article>
+        <article class="tutorial-step"><span class="tutorial-number">3</span><div><h3>Work in EDITOR</h3><p>Write or refine the application code while preserving the proven project structure. CodeForge is designed for incremental improvement rather than destructive rebuilding.</p></div></article>
+        <article class="tutorial-step"><span class="tutorial-number">4</span><div><h3>Test in RUNTIME</h3><p>Run the genuine application, use its controls, inspect layout and behaviour, and return to the editor when a repair or refinement is required.</p></div></article>
+        <article class="tutorial-step"><span class="tutorial-number">5</span><div><h3>Use the Forge tools</h3><p>Prepare icons with IconForge, introductions with IntroForge, sound ideas with MusicForge and long-document promotional captures with Auto Snap Forge.</p></div></article>
+        <article class="tutorial-step"><span class="tutorial-number">6</span><div><h3>Prepare APK LAB</h3><p>Set the permanent package domain, unique package name, application version and release identity. Future updates retain the same package and signing identity.</p></div></article>
+        <article class="tutorial-step"><span class="tutorial-number">7</span><div><h3>Export and build</h3><p>Export the selected project for the Android build process. The release result is a signed APK for direct customers; an AAB can also be prepared for Google Play.</p></div></article>
+        <article class="tutorial-step"><span class="tutorial-number">8</span><div><h3>Publish through Harmony</h3><p>Create the public listing, state the real release status and—when creator publishing opens—make the verified APK available through Harmony Store.</p></div></article>
+      </div>
+
+      <div class="tutorial-note">
+        <strong>Release rule:</strong>
+        <p>APK is the direct customer download. AAB is the publishing package used for Google Play. Harmony Store is being designed around the signed standalone APK so creators can move from completion to release without a traditional review queue.</p>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="release-board">
+      <div class="section-heading">
+        <p class="eyebrow">CURRENT RELEASE BOARD</p>
+        <h2>Honest status. No invented launch claims.</h2>
+        <p>The public website is live. Finished Android projects are being prepared as release packages, while unfinished projects remain clearly marked as development work.</p>
+      </div>
+      <div class="release-board">
+        <article class="release-card live"><strong>Harmony Equilibrium</strong><small>Official public website and ecosystem foundation.</small><span class="release-state">Website live</span></article>
+        <article class="release-card"><strong>Juice Box Wars</strong><small>Android game moving into release packaging.</small><span class="release-state">Ready to package</span></article>
+        <article class="release-card"><strong>Pythagoras Oracle</strong><small>Interactive numerical exploration application.</small><span class="release-state">Ready to package</span></article>
+        <article class="release-card"><strong>Ambience of War</strong><small>Original atmospheric mobile audio experience.</small><span class="release-state">Ready to package</span></article>
+        <article class="release-card hold"><strong>SNAFU Historical Games</strong><small>Development continues. Release screenshots are intentionally being held back.</small><span class="release-state">In development</span></article>
+      </div>
     </section>
 
     <section class="section forge-section" id="forge-tools">
@@ -1035,7 +1326,7 @@ blockquote {
   <footer class="site-footer">
     <div>
       <strong>HARMONY EQUILIBRIUM</strong>
-      <p>Artificial Intelligence Connected With Human Intelligence.</p>
+      <p>Artificial Intelligence Connected With Human Intelligence.</p><p>Create. Build. Publish. Sell.</p>
     </div>
     <nav aria-label="Legal and information">
       <button class="footer-link" type="button" data-open-legal="privacy-dialog">Privacy Notice</button>
@@ -1115,7 +1406,7 @@ blockquote {
 <p>Commercial terms will be reviewed and published before direct transactions or account services open.</p></div>
   </dialog>
 
-  <script id="product-data" type="application/json">[{&quot;id&quot;: &quot;codeforge&quot;, &quot;name&quot;: &quot;CodeForge Creativity 223&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Release preparation&quot;, &quot;platform&quot;: &quot;Android development platform&quot;, &quot;mark&quot;: &quot;CF&quot;, &quot;description&quot;: &quot;A mobile creative development station for writing, testing, organising and preparing Python and Kivy projects.&quot;, &quot;features&quot;: [&quot;Mobile development workspace&quot;, &quot;Project editing and runtime testing&quot;, &quot;Android project preparation&quot;, &quot;Integrated Forge tools&quot;, &quot;Guided tutorial suite&quot;]}, {&quot;id&quot;: &quot;harmony-stabilizer&quot;, &quot;name&quot;: &quot;Harmony Stabilizer Collection&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;HS&quot;, &quot;description&quot;: &quot;A collection of original Harmony Equilibrium sound and focus experiences with direct user control.&quot;, &quot;features&quot;: [&quot;Calm experience&quot;, &quot;Focus experience&quot;, &quot;Deep experience&quot;, &quot;Sleep experience&quot;]}, {&quot;id&quot;: &quot;musicforge&quot;, &quot;name&quot;: &quot;MusicForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Music and sound creation&quot;, &quot;mark&quot;: &quot;MF&quot;, &quot;description&quot;: &quot;An original mobile creative tool for developing rhythm, music, sound ideas and adaptive audio experiences.&quot;, &quot;features&quot;: [&quot;Mobile music and rhythm creation&quot;, &quot;Adaptive percussion development&quot;, &quot;Original sound experimentation&quot;, &quot;Creative audio workflow&quot;]}, {&quot;id&quot;: &quot;iconforge&quot;, &quot;name&quot;: &quot;IconForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Icon and visual asset creation&quot;, &quot;mark&quot;: &quot;IF&quot;, &quot;description&quot;: &quot;A focused creative utility for preparing application icons and project visual identity assets.&quot;, &quot;features&quot;: [&quot;Application icon preparation&quot;, &quot;Project visual identity workflow&quot;, &quot;Mobile-first creative interface&quot;, &quot;Export-ready asset organisation&quot;]}, {&quot;id&quot;: &quot;introforge&quot;, &quot;name&quot;: &quot;IntroForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Intro and presentation creation&quot;, &quot;mark&quot;: &quot;IN&quot;, &quot;description&quot;: &quot;A dedicated creative tool for preparing, organising and managing application and game introductions separately from the main runtime.&quot;, &quot;features&quot;: [&quot;Application and game intro preparation&quot;, &quot;Separate introduction workflow&quot;, &quot;Project-friendly asset organisation&quot;, &quot;Mobile development focus&quot;]}, {&quot;id&quot;: &quot;auto-snap-forge&quot;, &quot;name&quot;: &quot;Auto Snap Forge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Document and screen-capture utility&quot;, &quot;mark&quot;: &quot;AS&quot;, &quot;description&quot;: &quot;A mobile utility designed to automate long-document scrolling and sequential screen-capture workflows.&quot;, &quot;features&quot;: [&quot;Automated long-document scrolling&quot;, &quot;Sequential screen capture&quot;, &quot;Full-document workflow assistance&quot;, &quot;Mobile-first operation&quot;]}, {&quot;id&quot;: &quot;ambience-of-war&quot;, &quot;name&quot;: &quot;Ambience of War&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;AW&quot;, &quot;description&quot;: &quot;An original atmospheric audio experience created for historical and dramatic listening.&quot;, &quot;features&quot;: [&quot;Original sound design&quot;, &quot;Immersive listening&quot;, &quot;Mobile playback&quot;]}, {&quot;id&quot;: &quot;pythagoras-oracle&quot;, &quot;name&quot;: &quot;Pythagoras Oracle&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;PO&quot;, &quot;description&quot;: &quot;An interactive numerical exploration application developed by Harmony Equilibrium.&quot;, &quot;features&quot;: [&quot;Interactive numerical exploration&quot;, &quot;Mobile interface&quot;, &quot;Research-inspired presentation&quot;]}, {&quot;id&quot;: &quot;juice-box-wars&quot;, &quot;name&quot;: &quot;Juice Box Wars&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android game&quot;, &quot;mark&quot;: &quot;JB&quot;, &quot;description&quot;: &quot;A serious tactical action game built around an absurd juice-carton battlefield.&quot;, &quot;features&quot;: [&quot;Tactical defence gameplay&quot;, &quot;Multiple support weapons&quot;, &quot;Comic battlefield identity&quot;, &quot;Original audio and visual design&quot;]}, {&quot;id&quot;: &quot;snafu&quot;, &quot;name&quot;: &quot;SNAFU Historical Games&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android historical games&quot;, &quot;mark&quot;: &quot;SN&quot;, &quot;description&quot;: &quot;A developing series of historically inspired tactical games focused on battlefield decisions and human stories.&quot;, &quot;features&quot;: [&quot;Historical scenarios&quot;, &quot;Tactical command&quot;, &quot;Original battlefield systems&quot;, &quot;Multiple planned theatres&quot;]}, {&quot;id&quot;: &quot;audiobooks&quot;, &quot;name&quot;: &quot;Harmony Equilibrium Audiobooks&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Under production&quot;, &quot;platform&quot;: &quot;Audiobooks&quot;, &quot;mark&quot;: &quot;AB&quot;, &quot;description&quot;: &quot;Original audiobooks are being written, recorded and produced. Titles and release information will be announced when ready.&quot;, &quot;features&quot;: [&quot;Original stories and publications&quot;, &quot;Produced audio editions&quot;, &quot;Release details coming later&quot;]}, {&quot;id&quot;: &quot;custom-software&quot;, &quot;name&quot;: &quot;Custom Software&quot;, &quot;category&quot;: &quot;Services&quot;, &quot;status&quot;: &quot;Enquiries opening soon&quot;, &quot;platform&quot;: &quot;Custom development&quot;, &quot;mark&quot;: &quot;CS&quot;, &quot;description&quot;: &quot;Original apps, games, business tools, educational projects and project-improvement work.&quot;, &quot;features&quot;: [&quot;Android applications&quot;, &quot;Games and creative tools&quot;, &quot;Business and educational software&quot;, &quot;Project improvement&quot;]}]</script>
+  <script id="product-data" type="application/json">[{&quot;id&quot;: &quot;codeforge&quot;, &quot;name&quot;: &quot;CodeForge Creativity 223&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Release preparation&quot;, &quot;platform&quot;: &quot;Android development platform&quot;, &quot;mark&quot;: &quot;CF&quot;, &quot;description&quot;: &quot;A mobile creative development station for writing, testing, organising and preparing Python and Kivy projects.&quot;, &quot;features&quot;: [&quot;Mobile development workspace&quot;, &quot;Project editing and runtime testing&quot;, &quot;Android project preparation&quot;, &quot;Integrated Forge tools&quot;, &quot;Guided tutorial suite&quot;]}, {&quot;id&quot;: &quot;harmony-stabilizer&quot;, &quot;name&quot;: &quot;Harmony Stabilizer Collection&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;HS&quot;, &quot;description&quot;: &quot;A collection of original Harmony Equilibrium sound and focus experiences with direct user control.&quot;, &quot;features&quot;: [&quot;Calm experience&quot;, &quot;Focus experience&quot;, &quot;Deep experience&quot;, &quot;Sleep experience&quot;]}, {&quot;id&quot;: &quot;musicforge&quot;, &quot;name&quot;: &quot;MusicForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Music and sound creation&quot;, &quot;mark&quot;: &quot;MF&quot;, &quot;description&quot;: &quot;An original mobile creative tool for developing rhythm, music, sound ideas and adaptive audio experiences.&quot;, &quot;features&quot;: [&quot;Mobile music and rhythm creation&quot;, &quot;Adaptive percussion development&quot;, &quot;Original sound experimentation&quot;, &quot;Creative audio workflow&quot;]}, {&quot;id&quot;: &quot;iconforge&quot;, &quot;name&quot;: &quot;IconForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Icon and visual asset creation&quot;, &quot;mark&quot;: &quot;IF&quot;, &quot;description&quot;: &quot;A focused creative utility for preparing application icons and project visual identity assets.&quot;, &quot;features&quot;: [&quot;Application icon preparation&quot;, &quot;Project visual identity workflow&quot;, &quot;Mobile-first creative interface&quot;, &quot;Export-ready asset organisation&quot;]}, {&quot;id&quot;: &quot;introforge&quot;, &quot;name&quot;: &quot;IntroForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Intro and presentation creation&quot;, &quot;mark&quot;: &quot;IN&quot;, &quot;description&quot;: &quot;A dedicated creative tool for preparing, organising and managing application and game introductions separately from the main runtime.&quot;, &quot;features&quot;: [&quot;Application and game intro preparation&quot;, &quot;Separate introduction workflow&quot;, &quot;Project-friendly asset organisation&quot;, &quot;Mobile development focus&quot;]}, {&quot;id&quot;: &quot;auto-snap-forge&quot;, &quot;name&quot;: &quot;Auto Snap Forge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Document and screen-capture utility&quot;, &quot;mark&quot;: &quot;AS&quot;, &quot;description&quot;: &quot;A mobile utility designed to automate long-document scrolling and sequential screen-capture workflows.&quot;, &quot;features&quot;: [&quot;Automated long-document scrolling&quot;, &quot;Sequential screen capture&quot;, &quot;Full-document workflow assistance&quot;, &quot;Mobile-first operation&quot;]}, {&quot;id&quot;: &quot;ambience-of-war&quot;, &quot;name&quot;: &quot;Ambience of War&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;AW&quot;, &quot;description&quot;: &quot;An original atmospheric audio experience created for historical and dramatic listening.&quot;, &quot;features&quot;: [&quot;Original sound design&quot;, &quot;Immersive listening&quot;, &quot;Mobile playback&quot;]}, {&quot;id&quot;: &quot;pythagoras-oracle&quot;, &quot;name&quot;: &quot;Pythagoras Oracle&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;PO&quot;, &quot;description&quot;: &quot;An interactive numerical exploration application developed by Harmony Equilibrium.&quot;, &quot;features&quot;: [&quot;Interactive numerical exploration&quot;, &quot;Mobile interface&quot;, &quot;Research-inspired presentation&quot;]}, {&quot;id&quot;: &quot;juice-box-wars&quot;, &quot;name&quot;: &quot;Juice Box Wars&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android game&quot;, &quot;mark&quot;: &quot;JB&quot;, &quot;description&quot;: &quot;A serious tactical action game built around an absurd juice-carton battlefield.&quot;, &quot;features&quot;: [&quot;Tactical defence gameplay&quot;, &quot;Multiple support weapons&quot;, &quot;Comic battlefield identity&quot;, &quot;Original audio and visual design&quot;]}, {&quot;id&quot;: &quot;snafu&quot;, &quot;name&quot;: &quot;SNAFU Historical Games&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android historical games&quot;, &quot;mark&quot;: &quot;SN&quot;, &quot;description&quot;: &quot;A developing series of historically inspired tactical games focused on battlefield decisions and human stories.&quot;, &quot;features&quot;: [&quot;Historical scenarios&quot;, &quot;Tactical command&quot;, &quot;Original battlefield systems&quot;, &quot;Multiple planned theatres&quot;]}, {&quot;id&quot;: &quot;audiobooks&quot;, &quot;name&quot;: &quot;Harmony Equilibrium Audiobooks&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Under production&quot;, &quot;platform&quot;: &quot;Audiobooks&quot;, &quot;mark&quot;: &quot;AB&quot;, &quot;description&quot;: &quot;Original audiobooks are being written, recorded and produced. Titles and release information will be announced when ready.&quot;, &quot;features&quot;: [&quot;Original stories and publications&quot;, &quot;Produced audio editions&quot;, &quot;Release details coming later&quot;]}, {&quot;id&quot;: &quot;custom-software&quot;, &quot;name&quot;: &quot;Custom Software&quot;, &quot;category&quot;: &quot;Services&quot;, &quot;status&quot;: &quot;Enquiries opening soon&quot;, &quot;platform&quot;: &quot;Custom development&quot;, &quot;mark&quot;: &quot;CS&quot;, &quot;description&quot;: &quot;Original apps, games, business tools, educational projects and project-improvement work.&quot;, &quot;features&quot;: [&quot;Android applications&quot;, &quot;Games and creative tools&quot;, &quot;Business and educational software&quot;, &quot;Project improvement&quot;]}]</script>
   <script>
 
 (() => {
