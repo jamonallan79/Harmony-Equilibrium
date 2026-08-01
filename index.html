@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Harmony Equilibrium connects artificial intelligence with human intelligence through interaction. Explore software, Forge tools, games, audio, research and creative services.">
+  <meta name="theme-color" content="#080b10">
+  <title>Harmony Equilibrium</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Harmony Equilibrium home">
+      <span class="brand-mark" aria-hidden="true"><span>H</span><i></i><span>E</span></span>
+      <span>
+        <strong>HARMONY EQUILIBRIUM</strong>
+        <small>Artificial Intelligence Connected With Human Intelligence</small>
+      </span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+      <a href="#connection">The Connection</a>
+      <a href="#store">Store</a>
+      <a href="#forge-tools">Forge Tools</a>
+      <a href="#research">Research</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">THE HARMONY SITUATION ROOM</p>
+        <h1>Artificial Intelligence<br><span>Connected With</span><br>Human Intelligence.</h1>
+        <p class="hero-definition">Harmony Equilibrium connects artificial intelligence with human intelligence through interaction.</p>
+        <p class="hero-support">Software, Forge tools, games, private AI research, audio production and original ideas—created through a powerful human–AI connection.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#store">Explore Harmony</a>
+          <a class="button" href="#connection">Discover the Connection</a>
+        </div>
+      </div>
+
+      <div class="connection-visual" aria-label="Two powerful sources connected through interaction">
+        <article>
+          <span>AI</span>
+          <strong>Artificial Intelligence</strong>
+          <small>Speed · Memory · Analysis · Capability</small>
+        </article>
+        <div class="energy-line" aria-hidden="true"><i></i><i></i><i></i></div>
+        <article>
+          <span>HI</span>
+          <strong>Human Intelligence</strong>
+          <small>Purpose · Judgement · Creativity · Control</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section connection-section" id="connection">
+      <div class="section-heading">
+        <p class="eyebrow">THE CONNECTION</p>
+        <h2>Two powerful sources of intelligence—connected.</h2>
+        <p>Neither intelligence is dissolved into the other. Harmony Equilibrium creates a working connection in which each contributes its own strengths.</p>
+      </div>
+      <div class="principle-grid">
+        <article class="panel">
+          <span class="panel-number">01</span>
+          <h3>Artificial Intelligence</h3>
+          <p>Contributes speed, memory, analysis, pattern recognition and specialised capability.</p>
+        </article>
+        <article class="panel">
+          <span class="panel-number">02</span>
+          <h3>Human Intelligence</h3>
+          <p>Provides purpose, judgement, creativity, values, lived experience and final control.</p>
+        </article>
+        <article class="panel emphasis">
+          <span class="panel-number">03</span>
+          <h3>Interaction</h3>
+          <p>The connection becomes productive through guided conversation, testing, correction, approval and shared creation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="store">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">HARMONY STORE</p>
+          <h2>Products, projects and creative services.</h2>
+          <p>Current public status is shown honestly. Direct payments and digital delivery are not open yet.</p>
+        </div>
+        <button class="button interest-button" type="button" data-open-interest>
+          Interest list <span data-interest-count>0</span>
+        </button>
+      </div>
+
+      <div class="store-controls">
+        <label class="search-field">
+          <span>Search</span>
+          <input id="store-search" type="search" placeholder="Search Harmony Store" autocomplete="off">
+        </label>
+        <div class="filter-row" role="group" aria-label="Store filters">
+          <button type="button" class="filter active" data-filter="All">All</button>
+          <button type="button" class="filter" data-filter="Software">Software</button>
+          <button type="button" class="filter" data-filter="Forge Tools">Forge Tools</button>
+          <button type="button" class="filter" data-filter="Games">Games</button>
+          <button type="button" class="filter" data-filter="Audio and Media">Audio &amp; Media</button>
+          <button type="button" class="filter" data-filter="Services">Services</button>
+        </div>
+      </div>
+
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      <p id="store-empty" class="empty-state" hidden>No Harmony Store entries match that search.</p>
+    </section>
+
+    <section class="section forge-section" id="forge-tools">
+      <div class="section-heading">
+        <p class="eyebrow">HARMONY FORGE TOOLS</p>
+        <h2>Creative tools that help create other things.</h2>
+        <p>Four focused mobile tools separate specialised creative tasks into clear working environments.</p>
+      </div>
+      <div class="forge-grid">
+        <button class="forge-card" type="button" data-product="musicforge">
+          <span>MF</span><strong>MusicForge</strong><small>Music, rhythm and sound creation</small>
+        </button>
+        <button class="forge-card" type="button" data-product="iconforge">
+          <span>IF</span><strong>IconForge</strong><small>Icons and visual identity assets</small>
+        </button>
+        <button class="forge-card" type="button" data-product="introforge">
+          <span>IN</span><strong>IntroForge</strong><small>Application and game introductions</small>
+        </button>
+        <button class="forge-card" type="button" data-product="auto-snap-forge">
+          <span>AS</span><strong>Auto Snap Forge</strong><small>Long-document capture workflows</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="ai">
+      <div class="section-heading">
+        <p class="eyebrow">ARTIFICIAL INTELLIGENCE</p>
+        <h2>Human-guided. Private where it needs to be.</h2>
+        <p>Harmony Equilibrium develops original artificial-intelligence research while protecting internal architecture, training methods and proprietary development records.</p>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <p>SUPER INTELLIGENCE</p>
+          <h3>Private research and development</h3>
+          <p>A long-term Harmony Equilibrium programme exploring future human-guided intelligence systems.</p>
+          <small>Internal methods, capabilities, tests and milestones are intentionally confidential.</small>
+        </article>
+        <article class="status-card">
+          <p>DANGER CLOSE AI</p>
+          <h3>Human responsibility remains central</h3>
+          <p>Critical work requires evidence, clear limits, human review and accountable decisions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-heading">
+        <p class="eyebrow">RESEARCH CENTRE</p>
+        <h2>Public principles without private development records.</h2>
+      </div>
+      <div class="research-flow" aria-label="Public research standard">
+        <span>Idea</span><b>&gt;</b><span>Prototype</span><b>&gt;</b><span>Practical Test</span><b>&gt;</b><span>Refinement</span><b>&gt;</b><span>Public Release</span>
+      </div>
+      <div class="principle-grid two">
+        <article class="panel">
+          <h3>Commercial Tutorial Fidelity</h3>
+          <p>A tutorial is trusted only when it performs the same genuine operation as the commercial product.</p>
+          <strong class="status positive">Verified on device</strong>
+        </article>
+        <article class="panel">
+          <h3>Creative Research</h3>
+          <p>Ideas are documented, prototyped, tested and refined before they are presented as public products.</p>
+          <strong class="status">Ongoing</strong>
+        </article>
+      </div>
+      <blockquote>Public claims must match demonstrated capabilities.</blockquote>
+    </section>
+
+    <section class="section compact-section" id="audiobooks">
+      <div class="section-heading">
+        <p class="eyebrow">HARMONY EQUILIBRIUM AUDIOBOOKS</p>
+        <h2>Under production. Coming soon.</h2>
+        <p>Original audiobooks are being written, recorded and produced. Titles, previews and listening links will be announced when ready.</p>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">CUSTOM SOFTWARE</p>
+        <h2>Bring the idea. Build it together.</h2>
+        <p>Original Android apps, games, business tools, educational software and project-improvement work.</p>
+      </div>
+      <div class="service-list">
+        <span>Android Apps</span>
+        <span>Artificial Intelligence</span>
+        <span>Games</span>
+        <span>Business Software</span>
+        <span>Educational Software</span>
+        <span>Pimp My Project!</span>
+      </div>
+      <p class="notice">The verified public enquiry channel is being prepared. No inactive form is presented as though it sends a message.</p>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">ABOUT HARMONY EQUILIBRIUM</p>
+        <h2>Software, AI, research, publishing, music and digital innovation.</h2>
+        <p>Harmony Equilibrium is the creative company and ecosystem established by Jamon Allan Hartzer in Western Australia.</p>
+      </div>
+      <div class="quote-grid">
+        <blockquote>“We create things that create things.”</blockquote>
+        <blockquote>“Being Australian is not about the place you are from; it’s who you are in that place.”</blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>HARMONY EQUILIBRIUM</strong>
+      <p>Artificial Intelligence Connected With Human Intelligence.</p>
+    </div>
+    <nav aria-label="Legal and information">
+      <a href="privacy.html">Privacy Notice</a>
+      <a href="terms.html">Website Terms</a>
+      <a href="#top">Back to top</a>
+    </nav>
+    <small>© 2026 Jamon Allan Hartzer · Western Australia</small>
+  </footer>
+
+  <dialog id="product-dialog" class="modal">
+    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
+    <div id="product-dialog-content"></div>
+  </dialog>
+
+  <dialog id="interest-dialog" class="modal">
+    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
+    <div>
+      <p class="eyebrow">MY INTEREST LIST</p>
+      <h2>Saved on this device.</h2>
+      <p>This list does not create an account, order, payment, reservation or subscription.</p>
+      <div id="interest-list" class="interest-list"></div>
+      <button class="button" type="button" data-clear-interest>Clear interest list</button>
+    </div>
+  </dialog>
+
+  <script id="product-data" type="application/json">[{&quot;id&quot;: &quot;codeforge&quot;, &quot;name&quot;: &quot;CodeForge Creativity 223&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Release preparation&quot;, &quot;platform&quot;: &quot;Android development platform&quot;, &quot;mark&quot;: &quot;CF&quot;, &quot;description&quot;: &quot;A mobile creative development station for writing, testing, organising and preparing Python and Kivy projects.&quot;, &quot;features&quot;: [&quot;Mobile development workspace&quot;, &quot;Project editing and runtime testing&quot;, &quot;Android project preparation&quot;, &quot;Integrated Forge tools&quot;, &quot;Guided tutorial suite&quot;]}, {&quot;id&quot;: &quot;harmony-stabilizer&quot;, &quot;name&quot;: &quot;Harmony Stabilizer Collection&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;HS&quot;, &quot;description&quot;: &quot;A collection of original Harmony Equilibrium sound and focus experiences with direct user control.&quot;, &quot;features&quot;: [&quot;Calm experience&quot;, &quot;Focus experience&quot;, &quot;Deep experience&quot;, &quot;Sleep experience&quot;]}, {&quot;id&quot;: &quot;musicforge&quot;, &quot;name&quot;: &quot;MusicForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Music and sound creation&quot;, &quot;mark&quot;: &quot;MF&quot;, &quot;description&quot;: &quot;An original mobile creative tool for developing rhythm, music, sound ideas and adaptive audio experiences.&quot;, &quot;features&quot;: [&quot;Mobile music and rhythm creation&quot;, &quot;Adaptive percussion development&quot;, &quot;Original sound experimentation&quot;, &quot;Creative audio workflow&quot;]}, {&quot;id&quot;: &quot;iconforge&quot;, &quot;name&quot;: &quot;IconForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Icon and visual asset creation&quot;, &quot;mark&quot;: &quot;IF&quot;, &quot;description&quot;: &quot;A focused creative utility for preparing application icons and project visual identity assets.&quot;, &quot;features&quot;: [&quot;Application icon preparation&quot;, &quot;Project visual identity workflow&quot;, &quot;Mobile-first creative interface&quot;, &quot;Export-ready asset organisation&quot;]}, {&quot;id&quot;: &quot;introforge&quot;, &quot;name&quot;: &quot;IntroForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Intro and presentation creation&quot;, &quot;mark&quot;: &quot;IN&quot;, &quot;description&quot;: &quot;A dedicated creative tool for preparing, organising and managing application and game introductions separately from the main runtime.&quot;, &quot;features&quot;: [&quot;Application and game intro preparation&quot;, &quot;Separate introduction workflow&quot;, &quot;Project-friendly asset organisation&quot;, &quot;Mobile development focus&quot;]}, {&quot;id&quot;: &quot;auto-snap-forge&quot;, &quot;name&quot;: &quot;Auto Snap Forge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Document and screen-capture utility&quot;, &quot;mark&quot;: &quot;AS&quot;, &quot;description&quot;: &quot;A mobile utility designed to automate long-document scrolling and sequential screen-capture workflows.&quot;, &quot;features&quot;: [&quot;Automated long-document scrolling&quot;, &quot;Sequential screen capture&quot;, &quot;Full-document workflow assistance&quot;, &quot;Mobile-first operation&quot;]}, {&quot;id&quot;: &quot;ambience-of-war&quot;, &quot;name&quot;: &quot;Ambience of War&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;AW&quot;, &quot;description&quot;: &quot;An original atmospheric audio experience created for historical and dramatic listening.&quot;, &quot;features&quot;: [&quot;Original sound design&quot;, &quot;Immersive listening&quot;, &quot;Mobile playback&quot;]}, {&quot;id&quot;: &quot;pythagoras-oracle&quot;, &quot;name&quot;: &quot;Pythagoras Oracle&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;PO&quot;, &quot;description&quot;: &quot;An interactive numerical exploration application developed by Harmony Equilibrium.&quot;, &quot;features&quot;: [&quot;Interactive numerical exploration&quot;, &quot;Mobile interface&quot;, &quot;Research-inspired presentation&quot;]}, {&quot;id&quot;: &quot;juice-box-wars&quot;, &quot;name&quot;: &quot;Juice Box Wars&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android game&quot;, &quot;mark&quot;: &quot;JB&quot;, &quot;description&quot;: &quot;A serious tactical action game built around an absurd juice-carton battlefield.&quot;, &quot;features&quot;: [&quot;Tactical defence gameplay&quot;, &quot;Multiple support weapons&quot;, &quot;Comic battlefield identity&quot;, &quot;Original audio and visual design&quot;]}, {&quot;id&quot;: &quot;snafu&quot;, &quot;name&quot;: &quot;SNAFU Historical Games&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android historical games&quot;, &quot;mark&quot;: &quot;SN&quot;, &quot;description&quot;: &quot;A developing series of historically inspired tactical games focused on battlefield decisions and human stories.&quot;, &quot;features&quot;: [&quot;Historical scenarios&quot;, &quot;Tactical command&quot;, &quot;Original battlefield systems&quot;, &quot;Multiple planned theatres&quot;]}, {&quot;id&quot;: &quot;audiobooks&quot;, &quot;name&quot;: &quot;Harmony Equilibrium Audiobooks&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Under production&quot;, &quot;platform&quot;: &quot;Audiobooks&quot;, &quot;mark&quot;: &quot;AB&quot;, &quot;description&quot;: &quot;Original audiobooks are being written, recorded and produced. Titles and release information will be announced when ready.&quot;, &quot;features&quot;: [&quot;Original stories and publications&quot;, &quot;Produced audio editions&quot;, &quot;Release details coming later&quot;]}, {&quot;id&quot;: &quot;custom-software&quot;, &quot;name&quot;: &quot;Custom Software&quot;, &quot;category&quot;: &quot;Services&quot;, &quot;status&quot;: &quot;Enquiries opening soon&quot;, &quot;platform&quot;: &quot;Custom development&quot;, &quot;mark&quot;: &quot;CS&quot;, &quot;description&quot;: &quot;Original apps, games, business tools, educational projects and project-improvement work.&quot;, &quot;features&quot;: [&quot;Android applications&quot;, &quot;Games and creative tools&quot;, &quot;Business and educational software&quot;, &quot;Project improvement&quot;]}]</script>
+</body>
+</html>
