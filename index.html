@@ -1,13 +1,13 @@
-<!doctype html>
-<!-- HARMONY EQUILIBRIUM SELF-CONTAINED WEB LAUNCH FILE V3 — CREATOR PATH + CODEFORGE TUTORIAL -->
+<!DOCTYPE html>
+<!-- HARMONY EQUILIBRIUM SELF-CONTAINED WEB LAUNCH FILE V5 — TUTORIAL APK DOWNLOADS -->
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Harmony Equilibrium connects artificial intelligence with human intelligence through interaction. Discover CodeForge, Forge tools, direct Android publishing, software, games, audio and original research.">
-  <meta name="theme-color" content="#080b10">
-  <title>Harmony Equilibrium</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Harmony Equilibrium connects artificial intelligence with human intelligence through interaction. Discover CodeForge, Forge tools, direct Android publishing, software, games, audio and original research." name="description"/>
+<meta content="#080b10" name="theme-color"/>
+<title>Harmony Equilibrium</title>
+<style>
 
 :root {
   --bg: #080b10;
@@ -1020,394 +1020,1159 @@ blockquote {
   .release-board { grid-template-columns: 1fr; }
 }
 
-  </style>
+  
+/* Tutorial Centre — V4 real working tutorial library */
+.tutorial-centre-heading { max-width: 900px; }
+.tutorial-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:2rem 0; }
+.tutorial-stats article { padding:1.4rem; border:1px solid var(--line); border-radius:18px; background:linear-gradient(145deg,rgba(232,182,92,.10),rgba(83,163,255,.06)); text-align:center; }
+.tutorial-stats strong { display:block; color:var(--gold-2); font-size:2rem; line-height:1; }
+.tutorial-stats span { display:block; margin-top:.55rem; color:var(--muted); font-size:.86rem; text-transform:uppercase; letter-spacing:.08em; }
+.tutorial-principles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:0 0 1.2rem; }
+.tutorial-principles article { padding:1.25rem; border:1px solid rgba(83,163,255,.22); border-radius:16px; background:rgba(20,27,37,.76); }
+.tutorial-principles h3 { margin:0 0 .4rem; font-size:1.05rem; }
+.tutorial-principles p { margin:0; color:var(--muted); font-size:.92rem; }
+.learning-paths { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.85rem; margin:1.4rem 0 2rem; }
+.learning-paths article { padding:1.15rem; border:1px solid rgba(232,182,92,.18); border-radius:15px; background:rgba(8,11,16,.58); }
+.learning-paths span { color:var(--blue); font-size:.72rem; font-weight:900; letter-spacing:.12em; }
+.learning-paths h3 { margin:.35rem 0; font-size:1rem; }
+.learning-paths p { margin:0; color:var(--muted); font-size:.86rem; }
+.tutorial-toolbar { position:sticky; top:78px; z-index:20; margin:0 0 1.25rem; padding:1rem; border:1px solid var(--line); border-radius:18px; background:rgba(8,11,16,.94); backdrop-filter:blur(16px); box-shadow:0 16px 38px rgba(0,0,0,.25); }
+.tutorial-search { display:block; }
+.tutorial-search span { display:block; margin-bottom:.4rem; color:var(--gold-2); font-size:.78rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+.tutorial-search input { width:100%; padding:.86rem 1rem; color:var(--text); border:1px solid rgba(83,163,255,.28); border-radius:12px; outline:none; background:var(--panel); }
+.tutorial-search input:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(83,163,255,.12); }
+.tutorial-filter-row { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.8rem; }
+.tutorial-filter, .tutorial-view-actions button { padding:.58rem .78rem; border:1px solid rgba(232,182,92,.24); border-radius:999px; background:rgba(255,255,255,.025); cursor:pointer; font-size:.82rem; }
+.tutorial-filter:hover, .tutorial-filter.active, .tutorial-view-actions button:hover { border-color:var(--gold); color:#111; background:var(--gold); }
+.tutorial-view-actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:.75rem; }
+.tutorial-catalogue { display:grid; gap:.9rem; }
+.tutorial-card { overflow:hidden; border:1px solid rgba(232,182,92,.22); border-radius:18px; background:linear-gradient(150deg,rgba(20,27,37,.96),rgba(10,14,20,.98)); box-shadow:0 14px 38px rgba(0,0,0,.18); }
+.tutorial-card[open] { border-color:rgba(232,182,92,.5); }
+.tutorial-card summary { display:grid; grid-template-columns:72px minmax(0,1fr) auto; gap:1rem; align-items:center; padding:1.1rem; cursor:pointer; list-style:none; }
+.tutorial-card summary::-webkit-details-marker { display:none; }
+.tutorial-card summary::after { content:'＋'; color:var(--gold); font-size:1.35rem; grid-column:4; }
+.tutorial-card[open] summary::after { content:'−'; }
+.tutorial-card-mark { display:grid; place-items:center; min-height:52px; padding:.45rem; border:1px solid var(--line); border-radius:12px; color:var(--gold-2); background:rgba(232,182,92,.07); font-weight:900; font-size:.78rem; text-align:center; }
+.tutorial-card-copy strong { display:block; font-size:1.08rem; }
+.tutorial-card-copy small { display:block; margin-top:.25rem; color:var(--muted); line-height:1.45; }
+.tutorial-card-meta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; min-width:130px; }
+.tutorial-card-meta em { color:var(--green); font-style:normal; font-weight:800; }
+.tutorial-card-meta b { color:var(--muted); font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+.tutorial-card-body { padding:0 1rem 1rem; border-top:1px solid rgba(232,182,92,.12); }
+.tutorial-source-note { margin:1rem 0; padding:.9rem 1rem; border-left:3px solid var(--blue); color:var(--muted); background:rgba(83,163,255,.06); font-size:.88rem; }
+.tutorial-source-note strong { color:var(--text); }
+.tutorial-stage-list { display:grid; gap:.65rem; margin:0; padding:0; list-style:none; counter-reset:tutorial; }
+.tutorial-stage { display:grid; grid-template-columns:42px minmax(0,1fr); gap:.85rem; padding:.9rem; border:1px solid rgba(255,255,255,.07); border-radius:14px; background:rgba(255,255,255,.018); }
+.stage-index { display:grid; place-items:center; width:36px; height:36px; border-radius:50%; color:#101010; background:var(--gold); font-weight:900; }
+.tutorial-stage h4 { margin:0 0 .3rem; font-size:.98rem; }
+.tutorial-stage p { margin:0; color:var(--muted); font-size:.9rem; }
+.stage-action { display:inline-block; margin-top:.55rem; padding:.22rem .55rem; border-radius:999px; color:var(--blue); background:rgba(83,163,255,.08); font-size:.72rem; font-weight:850; letter-spacing:.04em; }
+.tutorial-empty { padding:2rem; border:1px dashed var(--line); border-radius:16px; color:var(--muted); text-align:center; }
+.tutorial-release-bridge { display:grid; grid-template-columns:.8fr 1.2fr; gap:1.4rem; align-items:center; margin-top:2rem; padding:1.5rem; border:1px solid rgba(91,213,154,.28); border-radius:18px; background:linear-gradient(145deg,rgba(91,213,154,.08),rgba(83,163,255,.06)); }
+.tutorial-release-bridge h3, .tutorial-release-bridge p { margin:0; }
+.tutorial-release-bridge > p { color:var(--muted); }
+@media (max-width:900px) { .learning-paths{grid-template-columns:repeat(2,minmax(0,1fr));} .tutorial-principles{grid-template-columns:1fr;} .tutorial-card summary{grid-template-columns:58px minmax(0,1fr) auto;} .tutorial-card-meta{display:none;} .tutorial-card summary::after{grid-column:3;} }
+@media (max-width:680px) { .tutorial-stats{grid-template-columns:1fr;} .learning-paths{grid-template-columns:1fr;} .tutorial-toolbar{top:68px;} .tutorial-card summary{grid-template-columns:52px minmax(0,1fr) auto;gap:.7rem;padding:.85rem;} .tutorial-card-copy small{font-size:.82rem;} .tutorial-release-bridge{grid-template-columns:1fr;} .tutorial-view-actions{justify-content:stretch;} .tutorial-view-actions button{flex:1;} }
+
+
+/* Tutorial APK downloads — V5 */
+.tutorial-stats { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.tutorial-apk-notice {
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1rem; align-items:center;
+  margin:0 0 1.25rem; padding:1.15rem 1.25rem;
+  border:1px solid rgba(91,213,154,.34); border-radius:18px;
+  background:linear-gradient(145deg,rgba(91,213,154,.10),rgba(83,163,255,.07));
+}
+.tutorial-apk-notice strong { display:block; color:var(--green); margin-bottom:.25rem; }
+.tutorial-apk-notice p { margin:0; color:var(--muted); }
+.tutorial-apk-badge {
+  white-space:nowrap; padding:.6rem .8rem; border:1px solid rgba(91,213,154,.42);
+  border-radius:999px; color:var(--green); background:rgba(91,213,154,.08);
+  font-size:.78rem; font-weight:900; letter-spacing:.06em; text-transform:uppercase;
+}
+.tutorial-apk-download {
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1rem; align-items:center;
+  margin:1rem 0; padding:1rem; border:1px solid rgba(91,213,154,.34);
+  border-radius:15px; background:rgba(91,213,154,.055);
+}
+.tutorial-apk-download h4 { margin:0 0 .25rem; color:var(--green); font-size:1rem; }
+.tutorial-apk-download p { margin:0; color:var(--muted); font-size:.87rem; line-height:1.5; }
+.tutorial-apk-button {
+  display:inline-flex; align-items:center; justify-content:center; min-width:205px;
+  padding:.82rem 1rem; border:1px solid var(--green); border-radius:12px;
+  color:#07110d; background:var(--green); font-weight:900; text-decoration:none;
+  box-shadow:0 10px 24px rgba(91,213,154,.14);
+}
+.tutorial-apk-button:hover { transform:translateY(-1px); filter:brightness(1.05); }
+.tutorial-apk-detail { display:block; margin-top:.3rem; color:var(--muted); font-size:.76rem; }
+@media (max-width:900px) { .tutorial-stats{grid-template-columns:repeat(2,minmax(0,1fr));} }
+@media (max-width:680px) {
+  .tutorial-stats{grid-template-columns:1fr;}
+  .tutorial-apk-notice,.tutorial-apk-download{grid-template-columns:1fr;}
+  .tutorial-apk-badge{justify-self:start;}
+  .tutorial-apk-button{width:100%;min-width:0;}
+}
+
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" id="top">
-    <a class="brand" href="#home" aria-label="Harmony Equilibrium home">
-      <span class="brand-mark" aria-hidden="true"><span>H</span><i></i><span>E</span></span>
-      <span>
-        <strong>HARMONY EQUILIBRIUM</strong>
-        <small>Artificial Intelligence Connected With Human Intelligence</small>
-      </span>
-    </a>
-
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
-      <a href="#connection">The Connection</a>
-      <a href="#store">Store</a>
-      <a href="#creator-path">Creator Path</a>
-      <a href="#codeforge-tutorial">CodeForge Tutorial</a>
-      <a href="#forge-tools">Forge Tools</a>
-      <a href="#research">Research</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero section" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow">THE HARMONY SITUATION ROOM</p>
-        <h1>Artificial Intelligence<br><span>Connected With</span><br>Human Intelligence.</h1>
-        <p class="hero-definition">Harmony Equilibrium connects artificial intelligence with human intelligence through interaction.</p>
-        <p class="hero-support">Software, Forge tools, games, private AI research, audio production and original ideas—created through a powerful human–AI connection.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#store">Explore Harmony</a>
-          <a class="button" href="#connection">Discover the Connection</a>
-        </div>
-      </div>
-
-      <div class="connection-visual" aria-label="Two powerful sources connected through interaction">
-        <article>
-          <span>AI</span>
-          <strong>Artificial Intelligence</strong>
-          <small>Speed · Memory · Analysis · Capability</small>
-        </article>
-        <div class="energy-line" aria-hidden="true"><i></i><i></i><i></i></div>
-        <article>
-          <span>HI</span>
-          <strong>Human Intelligence</strong>
-          <small>Purpose · Judgement · Creativity · Control</small>
-        </article>
-      </div>
-    </section>
-
-    <section class="section connection-section" id="connection">
-      <div class="section-heading">
-        <p class="eyebrow">THE CONNECTION</p>
-        <h2>Two powerful sources of intelligence—connected.</h2>
-        <p>Neither intelligence is dissolved into the other. Harmony Equilibrium creates a working connection in which each contributes its own strengths.</p>
-      </div>
-      <div class="principle-grid">
-        <article class="panel">
-          <span class="panel-number">01</span>
-          <h3>Artificial Intelligence</h3>
-          <p>Contributes speed, memory, analysis, pattern recognition and specialised capability.</p>
-        </article>
-        <article class="panel">
-          <span class="panel-number">02</span>
-          <h3>Human Intelligence</h3>
-          <p>Provides purpose, judgement, creativity, values, lived experience and final control.</p>
-        </article>
-        <article class="panel emphasis">
-          <span class="panel-number">03</span>
-          <h3>Interaction</h3>
-          <p>The connection becomes productive through guided conversation, testing, correction, approval and shared creation.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="store">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">HARMONY STORE</p>
-          <h2>Products, projects and creative services.</h2>
-          <p>Ready-to-package Android titles are moving toward direct APK release. Direct payments, creator uploads and digital delivery are not open yet.</p>
-        </div>
-        <button class="button interest-button" type="button" data-open-interest>
-          Interest list <span data-interest-count>0</span>
-        </button>
-      </div>
-
-      <div class="store-controls">
-        <label class="search-field">
-          <span>Search</span>
-          <input id="store-search" type="search" placeholder="Search Harmony Store" autocomplete="off">
-        </label>
-        <div class="filter-row" role="group" aria-label="Store filters">
-          <button type="button" class="filter active" data-filter="All">All</button>
-          <button type="button" class="filter" data-filter="Software">Software</button>
-          <button type="button" class="filter" data-filter="Forge Tools">Forge Tools</button>
-          <button type="button" class="filter" data-filter="Games">Games</button>
-          <button type="button" class="filter" data-filter="Audio and Media">Audio &amp; Media</button>
-          <button type="button" class="filter" data-filter="Services">Services</button>
-        </div>
-      </div>
-
-      <div id="product-grid" class="product-grid" aria-live="polite"></div>
-      <p id="store-empty" class="empty-state" hidden>No Harmony Store entries match that search.</p>
-    </section>
-
-
-    <section class="section creator-section" id="creator-path">
-      <div class="section-heading">
-        <p class="eyebrow">FROM IDEA TO RELEASE</p>
-        <h2>Create it in CodeForge. Release it through Harmony Equilibrium.</h2>
-        <p>CodeForge is the mobile creation and packaging environment. Harmony Equilibrium is the public ecosystem for presenting, publishing and selling finished work. Together they form one continuous path from the first line of code to a customer-ready Android application.</p>
-      </div>
-
-      <div class="creator-bridge">
-        <article class="bridge-card">
-          <span class="bridge-mark">CF</span>
-          <h3>CodeForge Creativity 223</h3>
-          <p>Create the project, organise files, write and refine code, test the real application, prepare identity and package a standalone Android release.</p>
-        </article>
-        <article class="bridge-card">
-          <span class="bridge-mark">HE</span>
-          <h3>Harmony Equilibrium</h3>
-          <p>Present the finished work, create the product listing, set the release status and—when the publishing system opens—offer the signed APK directly through Harmony Store.</p>
-        </article>
-      </div>
-
-      <div class="path-grid" aria-label="Harmony creator release path">
-        <article class="path-card"><span class="step-no">STEP 01</span><h3>Create</h3><p>Begin a new project or continue an existing project inside CodeForge.</p></article>
-        <article class="path-card"><span class="step-no">STEP 02</span><h3>Build</h3><p>Develop the interface, behaviour, media and project identity using the mobile workspace and Forge tools.</p></article>
-        <article class="path-card"><span class="step-no">STEP 03</span><h3>Run</h3><p>Launch the genuine project through the CodeForge runtime and correct anything that does not behave as intended.</p></article>
-        <article class="path-card"><span class="step-no">STEP 04</span><h3>Package</h3><p>Prepare a signed standalone APK with the code, runtime and required assets bundled for installation.</p></article>
-        <article class="path-card"><span class="step-no">STEP 05</span><h3>List</h3><p>Add the title, description, screenshots, version, price and installation information to Harmony Store.</p></article>
-        <article class="path-card"><span class="step-no">STEP 06</span><h3>Release</h3><p>Publish directly without a traditional app-store review queue. Customers receive the finished APK.</p></article>
-      </div>
-
-      <div class="creator-callout">
-        <div>
-          <strong>Create today.<br>Publish today.<br>Sell today.</strong>
-          <p>The goal is a same-day independent creator pathway with no compulsory tester recruitment or weeks-long release waiting period.</p>
-        </div>
-        <span class="phase-badge">Future Harmony Store publishing experience</span>
-      </div>
-    </section>
-
-    <section class="section tutorial-section" id="codeforge-tutorial">
-      <div class="section-heading">
-        <p class="eyebrow">CODEFORGE PUBLIC TUTORIAL</p>
-        <h2>From a project idea to a release-ready Android package.</h2>
-        <p>This public overview introduces the CodeForge workflow without exposing private AI architecture or internal development systems. Exact controls may continue to be refined before commercial release.</p>
-      </div>
-
-      <div class="tutorial-summary">
-        <article>
-          <h3>What CodeForge is</h3>
-          <p>A mobile development station designed to let creators write, organise, run and prepare real Python and Kivy projects without moving the creative workflow to a conventional desktop environment.</p>
-        </article>
-        <article>
-          <h3>The tutorial standard</h3>
-          <p>The Tutorial Edition must perform the same genuine project operation as the commercial product. A demonstration is not accepted as proof unless the real workflow succeeds.</p>
-        </article>
-      </div>
-
-      <div class="tutorial-grid">
-        <article class="tutorial-step"><span class="tutorial-number">1</span><div><h3>Open HOME</h3><p>Start the guided project, open a saved project or enter the workspace. The Tutorial Edition will use a bundled demonstration project and a controlled learning path.</p></div></article>
-        <article class="tutorial-step"><span class="tutorial-number">2</span><div><h3>Organise FILES</h3><p>Keep the core project files together. Android projects use <code>main.py</code>, the existing <code>buildozer.spec</code> and the required image, sound and data assets.</p></div></article>
-        <article class="tutorial-step"><span class="tutorial-number">3</span><div><h3>Work in EDITOR</h3><p>Write or refine the application code while preserving the proven project structure. CodeForge is designed for incremental improvement rather than destructive rebuilding.</p></div></article>
-        <article class="tutorial-step"><span class="tutorial-number">4</span><div><h3>Test in RUNTIME</h3><p>Run the genuine application, use its controls, inspect layout and behaviour, and return to the editor when a repair or refinement is required.</p></div></article>
-        <article class="tutorial-step"><span class="tutorial-number">5</span><div><h3>Use the Forge tools</h3><p>Prepare icons with IconForge, introductions with IntroForge, sound ideas with MusicForge and long-document promotional captures with Auto Snap Forge.</p></div></article>
-        <article class="tutorial-step"><span class="tutorial-number">6</span><div><h3>Prepare APK LAB</h3><p>Set the permanent package domain, unique package name, application version and release identity. Future updates retain the same package and signing identity.</p></div></article>
-        <article class="tutorial-step"><span class="tutorial-number">7</span><div><h3>Export and build</h3><p>Export the selected project for the Android build process. The release result is a signed APK for direct customers; an AAB can also be prepared for Google Play.</p></div></article>
-        <article class="tutorial-step"><span class="tutorial-number">8</span><div><h3>Publish through Harmony</h3><p>Create the public listing, state the real release status and—when creator publishing opens—make the verified APK available through Harmony Store.</p></div></article>
-      </div>
-
-      <div class="tutorial-note">
-        <strong>Release rule:</strong>
-        <p>APK is the direct customer download. AAB is the publishing package used for Google Play. Harmony Store is being designed around the signed standalone APK so creators can move from completion to release without a traditional review queue.</p>
-      </div>
-    </section>
-
-    <section class="section compact-section" id="release-board">
-      <div class="section-heading">
-        <p class="eyebrow">CURRENT RELEASE BOARD</p>
-        <h2>Honest status. No invented launch claims.</h2>
-        <p>The public website is live. Finished Android projects are being prepared as release packages, while unfinished projects remain clearly marked as development work.</p>
-      </div>
-      <div class="release-board">
-        <article class="release-card live"><strong>Harmony Equilibrium</strong><small>Official public website and ecosystem foundation.</small><span class="release-state">Website live</span></article>
-        <article class="release-card"><strong>Juice Box Wars</strong><small>Android game moving into release packaging.</small><span class="release-state">Ready to package</span></article>
-        <article class="release-card"><strong>Pythagoras Oracle</strong><small>Interactive numerical exploration application.</small><span class="release-state">Ready to package</span></article>
-        <article class="release-card"><strong>Ambience of War</strong><small>Original atmospheric mobile audio experience.</small><span class="release-state">Ready to package</span></article>
-        <article class="release-card hold"><strong>SNAFU Historical Games</strong><small>Development continues. Release screenshots are intentionally being held back.</small><span class="release-state">In development</span></article>
-      </div>
-    </section>
-
-    <section class="section forge-section" id="forge-tools">
-      <div class="section-heading">
-        <p class="eyebrow">HARMONY FORGE TOOLS</p>
-        <h2>Creative tools that help create other things.</h2>
-        <p>Four focused mobile tools separate specialised creative tasks into clear working environments.</p>
-      </div>
-      <div class="forge-grid">
-        <button class="forge-card" type="button" data-product="musicforge">
-          <span>MF</span><strong>MusicForge</strong><small>Music, rhythm and sound creation</small>
-        </button>
-        <button class="forge-card" type="button" data-product="iconforge">
-          <span>IF</span><strong>IconForge</strong><small>Icons and visual identity assets</small>
-        </button>
-        <button class="forge-card" type="button" data-product="introforge">
-          <span>IN</span><strong>IntroForge</strong><small>Application and game introductions</small>
-        </button>
-        <button class="forge-card" type="button" data-product="auto-snap-forge">
-          <span>AS</span><strong>Auto Snap Forge</strong><small>Long-document capture workflows</small>
-        </button>
-      </div>
-    </section>
-
-    <section class="section dark-section" id="ai">
-      <div class="section-heading">
-        <p class="eyebrow">ARTIFICIAL INTELLIGENCE</p>
-        <h2>Human-guided. Private where it needs to be.</h2>
-        <p>Harmony Equilibrium develops original artificial-intelligence research while protecting internal architecture, training methods and proprietary development records.</p>
-      </div>
-      <div class="status-grid">
-        <article class="status-card">
-          <p>SUPER INTELLIGENCE</p>
-          <h3>Private research and development</h3>
-          <p>A long-term Harmony Equilibrium programme exploring future human-guided intelligence systems.</p>
-          <small>Internal methods, capabilities, tests and milestones are intentionally confidential.</small>
-        </article>
-        <article class="status-card">
-          <p>DANGER CLOSE AI</p>
-          <h3>Human responsibility remains central</h3>
-          <p>Critical work requires evidence, clear limits, human review and accountable decisions.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="research">
-      <div class="section-heading">
-        <p class="eyebrow">RESEARCH CENTRE</p>
-        <h2>Public principles without private development records.</h2>
-      </div>
-      <div class="research-flow" aria-label="Public research standard">
-        <span>Idea</span><b>&gt;</b><span>Prototype</span><b>&gt;</b><span>Practical Test</span><b>&gt;</b><span>Refinement</span><b>&gt;</b><span>Public Release</span>
-      </div>
-      <div class="principle-grid two">
-        <article class="panel">
-          <h3>Commercial Tutorial Fidelity</h3>
-          <p>A tutorial is trusted only when it performs the same genuine operation as the commercial product.</p>
-          <strong class="status positive">Verified on device</strong>
-        </article>
-        <article class="panel">
-          <h3>Creative Research</h3>
-          <p>Ideas are documented, prototyped, tested and refined before they are presented as public products.</p>
-          <strong class="status">Ongoing</strong>
-        </article>
-      </div>
-      <blockquote>Public claims must match demonstrated capabilities.</blockquote>
-    </section>
-
-    <section class="section compact-section" id="audiobooks">
-      <div class="section-heading">
-        <p class="eyebrow">HARMONY EQUILIBRIUM AUDIOBOOKS</p>
-        <h2>Under production. Coming soon.</h2>
-        <p>Original audiobooks are being written, recorded and produced. Titles, previews and listening links will be announced when ready.</p>
-      </div>
-    </section>
-
-    <section class="section services-section" id="services">
-      <div class="section-heading">
-        <p class="eyebrow">CUSTOM SOFTWARE</p>
-        <h2>Bring the idea. Build it together.</h2>
-        <p>Original Android apps, games, business tools, educational software and project-improvement work.</p>
-      </div>
-      <div class="service-list">
-        <span>Android Apps</span>
-        <span>Artificial Intelligence</span>
-        <span>Games</span>
-        <span>Business Software</span>
-        <span>Educational Software</span>
-        <span>Pimp My Project!</span>
-      </div>
-      <p class="notice">The verified public enquiry channel is being prepared. No inactive form is presented as though it sends a message.</p>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">ABOUT HARMONY EQUILIBRIUM</p>
-        <h2>Software, AI, research, publishing, music and digital innovation.</h2>
-        <p>Harmony Equilibrium is the creative company and ecosystem established by Jamon Allan Hartzer in Western Australia.</p>
-      </div>
-      <div class="quote-grid">
-        <blockquote>“We create things that create things.”</blockquote>
-        <blockquote>“Being Australian is not about the place you are from; it’s who you are in that place.”</blockquote>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div>
-      <strong>HARMONY EQUILIBRIUM</strong>
-      <p>Artificial Intelligence Connected With Human Intelligence.</p><p>Create. Build. Publish. Sell.</p>
-    </div>
-    <nav aria-label="Legal and information">
-      <button class="footer-link" type="button" data-open-legal="privacy-dialog">Privacy Notice</button>
-      <button class="footer-link" type="button" data-open-legal="terms-dialog">Website Terms</button>
-      <a href="#top">Back to top</a>
-    </nav>
-    <small>© 2026 Jamon Allan Hartzer · Western Australia</small>
-  </footer>
-
-  <dialog id="product-dialog" class="modal">
-    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
-    <div id="product-dialog-content"></div>
-  </dialog>
-
-  <dialog id="interest-dialog" class="modal">
-    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
-    <div>
-      <p class="eyebrow">MY INTEREST LIST</p>
-      <h2>Saved on this device.</h2>
-      <p>This list does not create an account, order, payment, reservation or subscription.</p>
-      <div id="interest-list" class="interest-list"></div>
-      <button class="button" type="button" data-clear-interest>Clear interest list</button>
-    </div>
-  </dialog>
-
-
-  <dialog id="privacy-dialog" class="modal legal-modal">
-    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
-    <div><p class="eyebrow">PUBLIC PREVIEW</p>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+<a aria-label="Harmony Equilibrium home" class="brand" href="#home">
+<span aria-hidden="true" class="brand-mark"><span>H</span><i></i><span>E</span></span>
+<span>
+<strong>HARMONY EQUILIBRIUM</strong>
+<small>Artificial Intelligence Connected With Human Intelligence</small>
+</span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="menu-button" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="primary-nav" id="primary-nav">
+<a href="#connection">The Connection</a>
+<a href="#store">Store</a>
+<a href="#creator-path">Creator Path</a>
+<a href="#codeforge-tutorial">Tutorial Centre</a>
+<a href="#forge-tools">Forge Tools</a>
+<a href="#research">Research</a>
+<a href="#about">About</a>
+</nav>
+</header>
+<main id="main">
+<section class="hero section" id="home">
+<div class="hero-copy">
+<p class="eyebrow">THE HARMONY SITUATION ROOM</p>
+<h1>Artificial Intelligence<br/><span>Connected With</span><br/>Human Intelligence.</h1>
+<p class="hero-definition">Harmony Equilibrium connects artificial intelligence with human intelligence through interaction.</p>
+<p class="hero-support">Software, Forge tools, games, private AI research, audio production and original ideas—created through a powerful human–AI connection.</p>
+<div class="hero-actions">
+<a class="button primary" href="#store">Explore Harmony</a>
+<a class="button" href="#connection">Discover the Connection</a>
+</div>
+</div>
+<div aria-label="Two powerful sources connected through interaction" class="connection-visual">
+<article>
+<span>AI</span>
+<strong>Artificial Intelligence</strong>
+<small>Speed · Memory · Analysis · Capability</small>
+</article>
+<div aria-hidden="true" class="energy-line"><i></i><i></i><i></i></div>
+<article>
+<span>HI</span>
+<strong>Human Intelligence</strong>
+<small>Purpose · Judgement · Creativity · Control</small>
+</article>
+</div>
+</section>
+<section class="section connection-section" id="connection">
+<div class="section-heading">
+<p class="eyebrow">THE CONNECTION</p>
+<h2>Two powerful sources of intelligence—connected.</h2>
+<p>Neither intelligence is dissolved into the other. Harmony Equilibrium creates a working connection in which each contributes its own strengths.</p>
+</div>
+<div class="principle-grid">
+<article class="panel">
+<span class="panel-number">01</span>
+<h3>Artificial Intelligence</h3>
+<p>Contributes speed, memory, analysis, pattern recognition and specialised capability.</p>
+</article>
+<article class="panel">
+<span class="panel-number">02</span>
+<h3>Human Intelligence</h3>
+<p>Provides purpose, judgement, creativity, values, lived experience and final control.</p>
+</article>
+<article class="panel emphasis">
+<span class="panel-number">03</span>
+<h3>Interaction</h3>
+<p>The connection becomes productive through guided conversation, testing, correction, approval and shared creation.</p>
+</article>
+</div>
+</section>
+<section class="section" id="store">
+<div class="section-heading split-heading">
+<div>
+<p class="eyebrow">HARMONY STORE</p>
+<h2>Products, projects and creative services.</h2>
+<p>Ready-to-package Android titles are moving toward direct APK release. Direct payments, creator uploads and digital delivery are not open yet.</p>
+</div>
+<button class="button interest-button" data-open-interest="" type="button">
+          Interest list <span data-interest-count="">0</span>
+</button>
+</div>
+<div class="store-controls">
+<label class="search-field">
+<span>Search</span>
+<input autocomplete="off" id="store-search" placeholder="Search Harmony Store" type="search"/>
+</label>
+<div aria-label="Store filters" class="filter-row" role="group">
+<button class="filter active" data-filter="All" type="button">All</button>
+<button class="filter" data-filter="Software" type="button">Software</button>
+<button class="filter" data-filter="Forge Tools" type="button">Forge Tools</button>
+<button class="filter" data-filter="Games" type="button">Games</button>
+<button class="filter" data-filter="Audio and Media" type="button">Audio &amp; Media</button>
+<button class="filter" data-filter="Services" type="button">Services</button>
+</div>
+</div>
+<div aria-live="polite" class="product-grid" id="product-grid"></div>
+<p class="empty-state" hidden="" id="store-empty">No Harmony Store entries match that search.</p>
+</section>
+<section class="section creator-section" id="creator-path">
+<div class="section-heading">
+<p class="eyebrow">FROM IDEA TO RELEASE</p>
+<h2>Create it in CodeForge. Release it through Harmony Equilibrium.</h2>
+<p>CodeForge is the mobile creation and packaging environment. Harmony Equilibrium is the public ecosystem for presenting, publishing and selling finished work. Together they form one continuous path from the first line of code to a customer-ready Android application.</p>
+</div>
+<div class="creator-bridge">
+<article class="bridge-card">
+<span class="bridge-mark">CF</span>
+<h3>CodeForge Creativity 223</h3>
+<p>Create the project, organise files, write and refine code, test the real application, prepare identity and package a standalone Android release.</p>
+</article>
+<article class="bridge-card">
+<span class="bridge-mark">HE</span>
+<h3>Harmony Equilibrium</h3>
+<p>Present the finished work, create the product listing, set the release status and—when the publishing system opens—offer the signed APK directly through Harmony Store.</p>
+</article>
+</div>
+<div aria-label="Harmony creator release path" class="path-grid">
+<article class="path-card"><span class="step-no">STEP 01</span><h3>Create</h3><p>Begin a new project or continue an existing project inside CodeForge.</p></article>
+<article class="path-card"><span class="step-no">STEP 02</span><h3>Build</h3><p>Develop the interface, behaviour, media and project identity using the mobile workspace and Forge tools.</p></article>
+<article class="path-card"><span class="step-no">STEP 03</span><h3>Run</h3><p>Launch the genuine project through the CodeForge runtime and correct anything that does not behave as intended.</p></article>
+<article class="path-card"><span class="step-no">STEP 04</span><h3>Package</h3><p>Prepare a signed standalone APK with the code, runtime and required assets bundled for installation.</p></article>
+<article class="path-card"><span class="step-no">STEP 05</span><h3>List</h3><p>Add the title, description, screenshots, version, price and installation information to Harmony Store.</p></article>
+<article class="path-card"><span class="step-no">STEP 06</span><h3>Release</h3><p>Publish directly without a traditional app-store review queue. Customers receive the finished APK.</p></article>
+</div>
+<div class="creator-callout">
+<div>
+<strong>Create today.<br/>Publish today.<br/>Sell today.</strong>
+<p>The goal is a same-day independent creator pathway with no compulsory tester recruitment or weeks-long release waiting period.</p>
+</div>
+<span class="phase-badge">Future Harmony Store publishing experience</span>
+</div>
+</section>
+<section class="section tutorial-section" id="codeforge-tutorial">
+<div class="section-heading tutorial-centre-heading">
+<p class="eyebrow">CODEFORGE TUTORIAL CENTRE</p>
+<h2>Real lessons built from the working interactive tutorials.</h2>
+<p>This is no longer a placeholder overview. Every guide below follows a genuine CodeForge tutorial sequence and uses the same visible controls and working pathways taught inside the software.</p>
+</div>
+<div aria-label="Tutorial centre summary" class="tutorial-stats">
+<article><strong>13</strong><span>interactive tutorials</span></article>
+<article><strong>186</strong><span>guided stages</span></article>
+<article><strong>1</strong><span>creation-to-release pathway</span></article>
+<article><strong>2</strong><span>tutorial APK downloads</span></article></div>
+<div class="tutorial-apk-notice"><div><strong>Direct Android tutorial downloads are now live.</strong><p>The available tutorial cards include installable ARM64 APK buttons. Android may ask you to allow installs from your browser or file manager.</p></div><span class="tutorial-apk-badge">2 APKs available</span></div><div class="tutorial-principles">
+<article><h3>Genuine operations</h3><p>The lessons use real CodeForge panels and controls. Prepared text is labelled as tutorial input rather than presented as generated output.</p></article>
+<article><h3>Human responsibility</h3><p>WriterForge and CaseForge support judgement; they do not replace it. Trust Virus AI flags evidence for review rather than declaring guilt automatically.</p></article>
+<article><h3>Protected machinery</h3><p>The public centre explains what learners do and what each stage proves without publishing private source, specialist architecture or internal development records.</p></article>
+</div>
+<div aria-label="Suggested learning paths" class="learning-paths">
+<article><span>PATH 1</span><h3>Create and release</h3><p>Files, Editor &amp; Runtime → APK &amp; AAB Creation → Harmony publishing pathway.</p></article>
+<article><span>PATH 2</span><h3>Research and evidence</h3><p>Ask Web → ClipForge → CaseForge → Advanced CaseForge.</p></article>
+<article><span>PATH 3</span><h3>Write and repair</h3><p>WriterForge → Advanced WriterForge → Dot Indentification → Indent Fix → Trust Virus AI.</p></article>
+<article><span>PATH 4</span><h3>Audio and voice</h3><p>Harmony Room → Advanced Voice AI.</p></article>
+</div>
+<div class="tutorial-toolbar">
+<label class="tutorial-search"><span>Search tutorials and stages</span><input autocomplete="off" id="tutorial-search" placeholder="Try APK, Wikipedia, spelling, indentation, audio…" type="search"/></label>
+<div aria-label="Tutorial categories" class="tutorial-filter-row" role="group">
+<button class="tutorial-filter active" data-tutorial-filter="All" type="button">All</button>
+<button class="tutorial-filter" data-tutorial-filter="Core" type="button">Core</button>
+<button class="tutorial-filter" data-tutorial-filter="Research" type="button">Research</button>
+<button class="tutorial-filter" data-tutorial-filter="Writing" type="button">Writing</button>
+<button class="tutorial-filter" data-tutorial-filter="Repair &amp; Safety" type="button">Repair &amp; Safety</button>
+<button class="tutorial-filter" data-tutorial-filter="Audio &amp; Voice" type="button">Audio &amp; Voice</button>
+<button class="tutorial-filter" data-tutorial-filter="Release" type="button">Release</button>
+</div>
+<div class="tutorial-view-actions">
+<button data-tutorial-open-all="" type="button">Expand visible</button>
+<button data-tutorial-close-all="" type="button">Collapse all</button>
+</div>
+</div>
+<div class="tutorial-catalogue" id="tutorial-catalogue">
+<details class="tutorial-card" data-category="Core" data-search="files, editor &amp; runtime core foundation create a real demonstration project, inspect its files and source, then run it inside codeforge. tutorial edition t050 1 of 3 — files codeforge creates the colour motion demonstration project and opens its project folder in files. the folder contains main.py and buildozer.spec; main.py holds the colourful animation used in the lesson. open in editor 2 of 3 — editor inspect the genuine main.py loaded from the demonstration project. the lesson connects the visible project files to the editable source before moving into runtime. continue to runtime 3 of 3 — runtime runtime executes the currently loaded main.py inside codeforge. run the colourful moving animation, use its speed control, then use stop app to return and complete the independent module. run demonstration" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">Tutorial Edition T050</span>
+<span class="tutorial-card-copy"><strong>Files, Editor &amp; Runtime</strong><small>Create a real demonstration project, inspect its files and source, then run it inside CodeForge.</small></span>
+<span class="tutorial-card-meta"><em>3 stages</em><b>Foundation</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> Tutorial Edition T050. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div><div class="tutorial-apk-download"><div><h4>WORKING ANDROID TUTORIAL APK</h4><p>Install the working Files, Editor &amp; Runtime tutorial APK on a 64-bit Android device.</p><span class="tutorial-apk-detail">ARM64 • 21.1 MB • SHA-256 437162e1ae08…</span></div><a aria-label="Download Files, Editor &amp; Runtime Android tutorial APK" class="tutorial-apk-button" download="Files_Editor_Runtime_Tutorial_ARM64.apk" href="downloads/Files_Editor_Runtime_Tutorial_ARM64.apk" type="application/vnd.android.package-archive">DOWNLOAD TUTORIAL APK</a></div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>FILES</h4><p>CodeForge creates the Colour Motion demonstration project and opens its project folder in Files. The folder contains main.py and buildozer.spec; main.py holds the colourful animation used in the lesson.</p><span class="stage-action">ACTION: OPEN IN EDITOR</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>EDITOR</h4><p>Inspect the genuine main.py loaded from the demonstration project. The lesson connects the visible project files to the editable source before moving into Runtime.</p><span class="stage-action">ACTION: CONTINUE TO RUNTIME</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>RUNTIME</h4><p>Runtime executes the currently loaded main.py inside CodeForge. Run the colourful moving animation, use its speed control, then use STOP APP to return and complete the independent module.</p><span class="stage-action">ACTION: RUN DEMONSTRATION</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Release" data-search="apk &amp; aab creation release complete standalone prepare android identity, check the project, export apk/aab packages, use the universal builder and preserve the keystore. a001 1 of 10 — the active project codeforge has created one safe demonstration project for this lesson. an android project needs main.py and buildozer.spec at its root. the apk lab is already locked onto this tutorial project. show project 2 of 10 — app name and android identity open app identity. change the home-screen app name, the unique package name, the package domain and the version. the full android application id is package domain + package name. open app identity 3 of 10 — package name rule every separate android app must have a different package name. apps may share your developer package domain, but reusing the complete android id causes android to treat them as the same application. identity example 4 of 10 — buildozer.spec spec creates or repairs buildozer.spec. this file carries the app title, package identity, version, python requirements, orientation and packaged asset types into the android build. run spec 5 of 10 — project readiness check check reviews the active project before export. use it to confirm that main.py and buildozer.spec exist and that the project is ready to package. run check 6 of 10 — colab apk export colab apk export creates the phone-to-cloud build package for an installable apk. codeforge preserves the identity saved in app identity. create apk export 7 of 10 — latest_selected_project.zip the universal builder looks for latest_selected_project.zip in google drive. replace the older file with the newest codeforge export and check its timestamp so colab cannot select a stale project. show drive workflow 8 of 10 — universal google colab builder open the universal codeforge builder notebook in colab and run its build cell. the resulting apk and codeforge_colab_results.zip are written to drive/colab_export. show universal build 9 of 10 — colab aab export colab aab export prepares the android app bundle route used for google play. an apk is ideal for direct installation and testing; an aab is the store upload format. create aab export 10 of 10 — keystore and future updates keep the same keystore and alias for every future update of an app. losing the signing key can prevent you from publishing updates under the same android identity. the apk/aab tutorial is now complete. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">A001</span>
+<span class="tutorial-card-copy"><strong>APK &amp; AAB Creation</strong><small>Prepare Android identity, check the project, export APK/AAB packages, use the Universal Builder and preserve the keystore.</small></span>
+<span class="tutorial-card-meta"><em>10 stages</em><b>Complete standalone</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> A001. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>THE ACTIVE PROJECT</h4><p>CodeForge has created one safe demonstration project for this lesson. An Android project needs main.py and buildozer.spec at its root. The APK Lab is already locked onto this tutorial project.</p><span class="stage-action">ACTION: SHOW PROJECT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>APP NAME AND ANDROID IDENTITY</h4><p>Open APP IDENTITY. Change the home-screen App Name, the unique Package Name, the Package Domain and the Version. The full Android application ID is Package Domain + Package Name.</p><span class="stage-action">ACTION: OPEN APP IDENTITY</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>PACKAGE NAME RULE</h4><p>Every separate Android app must have a different package name. Apps may share your developer package domain, but reusing the complete Android ID causes Android to treat them as the same application.</p><span class="stage-action">ACTION: IDENTITY EXAMPLE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>BUILDOZER.SPEC</h4><p>SPEC creates or repairs buildozer.spec. This file carries the app title, package identity, version, Python requirements, orientation and packaged asset types into the Android build.</p><span class="stage-action">ACTION: RUN SPEC</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>PROJECT READINESS CHECK</h4><p>CHECK reviews the active project before export. Use it to confirm that main.py and buildozer.spec exist and that the project is ready to package.</p><span class="stage-action">ACTION: RUN CHECK</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>COLAB APK EXPORT</h4><p>COLAB APK EXPORT creates the phone-to-cloud build package for an installable APK. CodeForge preserves the identity saved in APP IDENTITY.</p><span class="stage-action">ACTION: CREATE APK EXPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>LATEST_SELECTED_PROJECT.ZIP</h4><p>The Universal Builder looks for LATEST_SELECTED_PROJECT.zip in Google Drive. Replace the older file with the newest CodeForge export and check its timestamp so Colab cannot select a stale project.</p><span class="stage-action">ACTION: SHOW DRIVE WORKFLOW</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>UNIVERSAL GOOGLE COLAB BUILDER</h4><p>Open the Universal CodeForge Builder notebook in Colab and run its build cell. The resulting APK and CODEFORGE_COLAB_RESULTS.zip are written to Drive/COLAB_EXPORT.</p><span class="stage-action">ACTION: SHOW UNIVERSAL BUILD</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>COLAB AAB EXPORT</h4><p>COLAB AAB EXPORT prepares the Android App Bundle route used for Google Play. An APK is ideal for direct installation and testing; an AAB is the store upload format.</p><span class="stage-action">ACTION: CREATE AAB EXPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>KEYSTORE AND FUTURE UPDATES</h4><p>Keep the same keystore and alias for every future update of an app. Losing the signing key can prevent you from publishing updates under the same Android identity. The APK/AAB tutorial is now complete.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Research" data-search="ask web research live research use real search routes, live wikipedia and page text, then move captured research into clipforge and caseforge. aw002 1 of 16 — real ask web workspace this is the genuine pass253 codeforge web research panel. the commercial controls remain active. the tutorial guide only sequences the investigation. show workspace 2 of 16 — load the research question load the prepared arnhem research question into the real query box. this is tutorial input only; ask web has not produced a result yet. load question 3 of 16 — broad search web mode run the genuine search web callback. it prepares codeforge's broad live-search route and explains how search web differs from wikipedia, yandex and page text. search web 4 of 16 — yandex search mode run the genuine yandex callback with the same question. this selects the provider-specific search route without inventing a search result. yandex 5 of 16 — load a concise article topic wikipedia article lookup works best with a concise topic. load operation market garden into the real query box. this changes only the prepared input. load wiki topic 6 of 16 — live wikipedia research card run the genuine wikipedia callback. codeforge requests a live compact research card and records the actual source url. no summary is supplied by the tutorial. wikipedia 7 of 16 — live page text article view run the genuine page text callback. codeforge requests the fuller live article, cleans it for phone reading and keeps the source url. the stage completes only when a real article view or an honest fetch failure is visible. page text 8 of 16 — copy the real source url run the genuine copy url callback. it copies the current live source address selected by ask web. copy url 9 of 16 — copy the real research text run the genuine copy text callback. it copies ask web's captured query, url and live research/page text. copy text 10 of 16 — send to clipforge run the genuine clipforge callback. ask web writes the captured live research to this tutorial's isolated subject folder. the tutorial verifies that a real file was created. clipforge 11 of 16 — send to caseforge run the genuine caseforge callback. ask web writes a real web_caseforge report and transfers the captured research into the genuine caseforge output area. this does not enter the separate caseforge tutorial. caseforge 12 of 16 — add to both run the genuine add both callback. ask web performs its normal clipforge and caseforge handoffs together, and the tutorial verifies both real files. add both 13 of 16 — return to the research card run the genuine back results callback. the tutorial verifies that it restores the exact live wikipedia research card, character for character, from before page text opened. back results 14 of 16 — view the live webpage run the genuine view web callback. codeforge attempts to open the selected live wikipedia page inside its native web view. use android back / back to codeforge to return. a genuine diagnostic is acceptable if the device cannot attach the web view. view web 15 of 16 — return card run the genuine return callback after coming back from the live page. it displays codeforge's real browser-return guidance. return 16 of 16 — clear ask web run the genuine clear callback. it empties the query, visible result and stored ask web state. clear" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">AW002</span>
+<span class="tutorial-card-copy"><strong>Ask Web</strong><small>Use real search routes, live Wikipedia and page text, then move captured research into ClipForge and CaseForge.</small></span>
+<span class="tutorial-card-meta"><em>16 stages</em><b>Live research</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> AW002. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>REAL ASK WEB WORKSPACE</h4><p>This is the genuine PASS253 CODEFORGE WEB RESEARCH panel. The commercial controls remain active. The tutorial guide only sequences the investigation.</p><span class="stage-action">ACTION: SHOW WORKSPACE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>LOAD THE RESEARCH QUESTION</h4><p>Load the prepared Arnhem research question into the real query box. This is tutorial input only; Ask Web has not produced a result yet.</p><span class="stage-action">ACTION: LOAD QUESTION</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>BROAD SEARCH WEB MODE</h4><p>Run the genuine SEARCH WEB callback. It prepares CodeForge's broad live-search route and explains how SEARCH WEB differs from Wikipedia, Yandex and PAGE TEXT.</p><span class="stage-action">ACTION: SEARCH WEB</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>YANDEX SEARCH MODE</h4><p>Run the genuine YANDEX callback with the same question. This selects the provider-specific search route without inventing a search result.</p><span class="stage-action">ACTION: YANDEX</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>LOAD A CONCISE ARTICLE TOPIC</h4><p>Wikipedia article lookup works best with a concise topic. Load Operation Market Garden into the real query box. This changes only the prepared input.</p><span class="stage-action">ACTION: LOAD WIKI TOPIC</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>LIVE WIKIPEDIA RESEARCH CARD</h4><p>Run the genuine WIKIPEDIA callback. CodeForge requests a live compact research card and records the actual source URL. No summary is supplied by the tutorial.</p><span class="stage-action">ACTION: WIKIPEDIA</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>LIVE PAGE TEXT ARTICLE VIEW</h4><p>Run the genuine PAGE TEXT callback. CodeForge requests the fuller live article, cleans it for phone reading and keeps the source URL. The stage completes only when a real article view or an honest fetch failure is visible.</p><span class="stage-action">ACTION: PAGE TEXT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>COPY THE REAL SOURCE URL</h4><p>Run the genuine COPY URL callback. It copies the current live source address selected by Ask Web.</p><span class="stage-action">ACTION: COPY URL</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>COPY THE REAL RESEARCH TEXT</h4><p>Run the genuine COPY TEXT callback. It copies Ask Web's captured query, URL and live research/page text.</p><span class="stage-action">ACTION: COPY TEXT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>SEND TO CLIPFORGE</h4><p>Run the genuine CLIPFORGE callback. Ask Web writes the captured live research to this tutorial's isolated subject folder. The tutorial verifies that a real file was created.</p><span class="stage-action">ACTION: CLIPFORGE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>SEND TO CASEFORGE</h4><p>Run the genuine CASEFORGE callback. Ask Web writes a real web_caseforge report and transfers the captured research into the genuine CaseForge output area. This does not enter the separate CaseForge tutorial.</p><span class="stage-action">ACTION: CASEFORGE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>ADD TO BOTH</h4><p>Run the genuine ADD BOTH callback. Ask Web performs its normal ClipForge and CaseForge handoffs together, and the tutorial verifies both real files.</p><span class="stage-action">ACTION: ADD BOTH</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>RETURN TO THE RESEARCH CARD</h4><p>Run the genuine BACK RESULTS callback. The tutorial verifies that it restores the exact live Wikipedia research card, character for character, from before PAGE TEXT opened.</p><span class="stage-action">ACTION: BACK RESULTS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>VIEW THE LIVE WEBPAGE</h4><p>Run the genuine VIEW WEB callback. CodeForge attempts to open the selected live Wikipedia page inside its native web view. Use Android BACK / BACK TO CODEFORGE to return. A genuine diagnostic is acceptable if the device cannot attach the web view.</p><span class="stage-action">ACTION: VIEW WEB</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>RETURN CARD</h4><p>Run the genuine RETURN callback after coming back from the live page. It displays CodeForge's real browser-return guidance.</p><span class="stage-action">ACTION: RETURN</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">16</span>
+<div><h4>CLEAR ASK WEB</h4><p>Run the genuine CLEAR callback. It empties the query, visible result and stored Ask Web state.</p><span class="stage-action">ACTION: CLEAR</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Research" data-search="clipforge research commercial workflow create a subject basket, collect two genuine web articles, preserve them and send the complete research to caseforge. c003 1 of 15 — real clipforge workspace this is the genuine pass253 clipforge panel. its commercial controls remain active. the tutorial guide only sequences the lesson. show clipforge 2 of 15 — create the research subject create one isolated subject basket for the arnhem investigation. the tutorial resets only this practice subject and leaves every other clipforge subject untouched. create subject 3 of 15 — access the web for article one run clipforge's real yandex callback. open a genuine article about operation market garden or arnhem, select and copy at least several paragraphs, then use back to codeforge to return. open web — article 1 4 of 15 — clip the first real article run the genuine clip callback. the stage completes only when the android clipboard contains substantial article text rather than the search url, and the real subject file grows. clip article 1 5 of 15 — load and review article one run the genuine load callback. clipforge reloads the saved basket from disk so you can verify the first web article is stored under the active subject. load article 1 6 of 15 — access the web for article two open yandex again through the real clipforge callback. choose a different article or source, copy several paragraphs, then return to codeforge. open web — article 2 7 of 15 — clip the second real article run the genuine clip callback again. the tutorial verifies that the second clipboard article differs from the first and that clipforge appends it instead of replacing the existing basket. clip article 2 8 of 15 — load the combined article basket run load again. the real subject file must now contain both copied web articles and a larger verified clip-block count. load both articles 9 of 15 — copy the complete basket run the genuine copy callback. clipforge copies the complete two-article subject basket to the android clipboard. copy basket 10 of 15 — clear only the visible view run the genuine clear callback. this empties the visible editor but does not delete the saved subject file. clear view 11 of 15 — paste the copied basket back run the genuine paste callback. the complete copied basket returns to the editor from the android clipboard. paste basket 12 of 15 — save the restored basket run the genuine save callback. clipforge writes the visible two-article basket back to the same subject file. save basket 13 of 15 — open the subject vault run the genuine list and subjects controls. the tutorial verifies that the arnhem practice subject appears in the real clipforge subject vault. open subjects 14 of 15 — send the research to caseforge run clipforge's genuine case callback. it transfers the complete saved basket to the real caseforge input area. this demonstrates the handoff without entering the separate caseforge tutorial. send to case 15 of 15 — preserve the web research reload the completed subject and finish. both genuine web articles remain saved in the clipforge basket for later use. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">C003</span>
+<span class="tutorial-card-copy"><strong>ClipForge</strong><small>Create a subject basket, collect two genuine web articles, preserve them and send the complete research to CaseForge.</small></span>
+<span class="tutorial-card-meta"><em>15 stages</em><b>Commercial workflow</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> C003. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>REAL CLIPFORGE WORKSPACE</h4><p>This is the genuine PASS253 ClipForge panel. Its commercial controls remain active. The tutorial guide only sequences the lesson.</p><span class="stage-action">ACTION: SHOW CLIPFORGE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>CREATE THE RESEARCH SUBJECT</h4><p>Create one isolated subject basket for the Arnhem investigation. The tutorial resets only this practice subject and leaves every other ClipForge subject untouched.</p><span class="stage-action">ACTION: CREATE SUBJECT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>ACCESS THE WEB FOR ARTICLE ONE</h4><p>Run ClipForge's real YANDEX callback. Open a genuine article about Operation Market Garden or Arnhem, select and copy at least several paragraphs, then use BACK TO CODEFORGE to return.</p><span class="stage-action">ACTION: OPEN WEB — ARTICLE 1</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>CLIP THE FIRST REAL ARTICLE</h4><p>Run the genuine CLIP callback. The stage completes only when the Android clipboard contains substantial article text rather than the search URL, and the real subject file grows.</p><span class="stage-action">ACTION: CLIP ARTICLE 1</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>LOAD AND REVIEW ARTICLE ONE</h4><p>Run the genuine LOAD callback. ClipForge reloads the saved basket from disk so you can verify the first web article is stored under the active subject.</p><span class="stage-action">ACTION: LOAD ARTICLE 1</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>ACCESS THE WEB FOR ARTICLE TWO</h4><p>Open Yandex again through the real ClipForge callback. Choose a different article or source, copy several paragraphs, then return to CodeForge.</p><span class="stage-action">ACTION: OPEN WEB — ARTICLE 2</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>CLIP THE SECOND REAL ARTICLE</h4><p>Run the genuine CLIP callback again. The tutorial verifies that the second clipboard article differs from the first and that ClipForge appends it instead of replacing the existing basket.</p><span class="stage-action">ACTION: CLIP ARTICLE 2</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>LOAD THE COMBINED ARTICLE BASKET</h4><p>Run LOAD again. The real subject file must now contain both copied web articles and a larger verified clip-block count.</p><span class="stage-action">ACTION: LOAD BOTH ARTICLES</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>COPY THE COMPLETE BASKET</h4><p>Run the genuine COPY callback. ClipForge copies the complete two-article subject basket to the Android clipboard.</p><span class="stage-action">ACTION: COPY BASKET</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>CLEAR ONLY THE VISIBLE VIEW</h4><p>Run the genuine CLEAR callback. This empties the visible editor but does not delete the saved subject file.</p><span class="stage-action">ACTION: CLEAR VIEW</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>PASTE THE COPIED BASKET BACK</h4><p>Run the genuine PASTE callback. The complete copied basket returns to the editor from the Android clipboard.</p><span class="stage-action">ACTION: PASTE BASKET</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>SAVE THE RESTORED BASKET</h4><p>Run the genuine SAVE callback. ClipForge writes the visible two-article basket back to the same subject file.</p><span class="stage-action">ACTION: SAVE BASKET</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>OPEN THE SUBJECT VAULT</h4><p>Run the genuine LIST and SUBJECTS controls. The tutorial verifies that the Arnhem practice subject appears in the real ClipForge subject vault.</p><span class="stage-action">ACTION: OPEN SUBJECTS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>SEND THE RESEARCH TO CASEFORGE</h4><p>Run ClipForge's genuine CASE callback. It transfers the complete saved basket to the real CaseForge input area. This demonstrates the handoff without entering the separate CaseForge tutorial.</p><span class="stage-action">ACTION: SEND TO CASE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>PRESERVE THE WEB RESEARCH</h4><p>Reload the completed subject and finish. Both genuine web articles remain saved in the ClipForge basket for later use.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Research" data-search="caseforge research foundation analyse one source or a complete subject basket, add human judgement, save reports and keep evidence connected. cf001 1 of 15 — caseforge workspace caseforge is the analysis and reporting workspace. it receives a single source from ask web or a complete subject basket from clipforge, then keeps the review attached to a named investigation. show caseforge 2 of 15 — choose the subject the subject is the investigation identity. use a clear name so the evidence basket and caseforge reports remain connected instead of becoming anonymous files. set subject 3 of 15 — where evidence comes from ask web normally supplies one researched source. clipforge supplies several sources and notes collected under one subject. caseforge can review either form. show input routes 4 of 15 — paste one source paste places clipboard evidence into the caseforge editor. this demonstration uses a complete source record containing its question, title, url and readable text. paste source 5 of 15 — analyze a single clip analyze reviews only the material currently visible in the editor. use it for one article, one statement, one error report or another focused piece of evidence. analyze 6 of 15 — read the single-clip report the report identifies the subject context and preserves the reviewed material. read it critically: caseforge organises the review, but the investigator still decides what is reliable, disputed or incomplete. show report guide 7 of 15 — clipforge evidence basket for a larger investigation, collect several articles and your own notes in clipforge first. this creates one reusable basket instead of scattered fragments. show full basket 8 of 15 — send the basket to caseforge clipforge's send case route carries the active subject and its complete basket into caseforge. the standalone lesson demonstrates that same handoff safely. send to caseforge 9 of 15 — load subject load subject retrieves the whole saved basket belonging to the active subject. this is different from paste, which only loads the current clipboard contents. load subject 10 of 15 — analyze all analyze all reviews the complete subject basket. use it when claims, supporting details, conflicts and open questions need to be considered together. analyze all 11 of 15 — add human judgement good investigations record unanswered questions and next checks. add an investigator note before the final report rather than treating collected text as an automatic conclusion. add investigator note 12 of 15 — copy the report copy places the current caseforge report on the clipboard so it can be quoted, shared, moved into writerforge or stored somewhere outside codeforge. copy report 13 of 15 — save the report save writes a timestamped report inside the active subject folder. keep the subject name and source references intact so the report remains auditable later. save report 14 of 15 — send a clip back send clip transfers the current editor material back to clipforge. this is useful when analysis reveals a quotation, note or follow-up item that belongs in the basket. send clip 15 of 15 — caseforge complete you have used both caseforge analysis paths, copied and saved a report, and followed the working links between ask web, clipforge and caseforge. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">CF001</span>
+<span class="tutorial-card-copy"><strong>CaseForge</strong><small>Analyse one source or a complete subject basket, add human judgement, save reports and keep evidence connected.</small></span>
+<span class="tutorial-card-meta"><em>15 stages</em><b>Foundation</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> CF001. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>CASEFORGE WORKSPACE</h4><p>CaseForge is the analysis and reporting workspace. It receives a single source from Ask Web or a complete subject basket from ClipForge, then keeps the review attached to a named investigation.</p><span class="stage-action">ACTION: SHOW CASEFORGE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>CHOOSE THE SUBJECT</h4><p>The subject is the investigation identity. Use a clear name so the evidence basket and CaseForge reports remain connected instead of becoming anonymous files.</p><span class="stage-action">ACTION: SET SUBJECT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>WHERE EVIDENCE COMES FROM</h4><p>Ask Web normally supplies one researched source. ClipForge supplies several sources and notes collected under one subject. CaseForge can review either form.</p><span class="stage-action">ACTION: SHOW INPUT ROUTES</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>PASTE ONE SOURCE</h4><p>PASTE places clipboard evidence into the CaseForge editor. This demonstration uses a complete source record containing its question, title, URL and readable text.</p><span class="stage-action">ACTION: PASTE SOURCE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>ANALYZE A SINGLE CLIP</h4><p>ANALYZE reviews only the material currently visible in the editor. Use it for one article, one statement, one error report or another focused piece of evidence.</p><span class="stage-action">ACTION: ANALYZE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>READ THE SINGLE-CLIP REPORT</h4><p>The report identifies the subject context and preserves the reviewed material. Read it critically: CaseForge organises the review, but the investigator still decides what is reliable, disputed or incomplete.</p><span class="stage-action">ACTION: SHOW REPORT GUIDE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>CLIPFORGE EVIDENCE BASKET</h4><p>For a larger investigation, collect several articles and your own notes in ClipForge first. This creates one reusable basket instead of scattered fragments.</p><span class="stage-action">ACTION: SHOW FULL BASKET</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>SEND THE BASKET TO CASEFORGE</h4><p>ClipForge's SEND CASE route carries the active subject and its complete basket into CaseForge. The standalone lesson demonstrates that same handoff safely.</p><span class="stage-action">ACTION: SEND TO CASEFORGE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>LOAD SUBJECT</h4><p>LOAD SUBJECT retrieves the whole saved basket belonging to the active subject. This is different from PASTE, which only loads the current clipboard contents.</p><span class="stage-action">ACTION: LOAD SUBJECT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>ANALYZE ALL</h4><p>ANALYZE ALL reviews the complete subject basket. Use it when claims, supporting details, conflicts and open questions need to be considered together.</p><span class="stage-action">ACTION: ANALYZE ALL</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>ADD HUMAN JUDGEMENT</h4><p>Good investigations record unanswered questions and next checks. Add an investigator note before the final report rather than treating collected text as an automatic conclusion.</p><span class="stage-action">ACTION: ADD INVESTIGATOR NOTE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>COPY THE REPORT</h4><p>COPY places the current CaseForge report on the clipboard so it can be quoted, shared, moved into WriterForge or stored somewhere outside CodeForge.</p><span class="stage-action">ACTION: COPY REPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>SAVE THE REPORT</h4><p>SAVE writes a timestamped report inside the active subject folder. Keep the subject name and source references intact so the report remains auditable later.</p><span class="stage-action">ACTION: SAVE REPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>SEND A CLIP BACK</h4><p>SEND CLIP transfers the current editor material back to ClipForge. This is useful when analysis reveals a quotation, note or follow-up item that belongs in the basket.</p><span class="stage-action">ACTION: SEND CLIP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>CASEFORGE COMPLETE</h4><p>You have used both CaseForge analysis paths, copied and saved a report, and followed the working links between Ask Web, ClipForge and CaseForge.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Research" data-search="advanced caseforge — arnhem investigation research advanced run a 23-stage investigation using genuine web research, clipforge and caseforge panels with generated event and claim analysis. acf003 1 of 23 - real pass251 caseforge this tutorial mounts the actual pass251 caseforge panel. the editor, report scrollview, load subject, analyze all and the five bottom controls are the commercial controls. show caseforge 2 of 23 - create the arnhem subject the real caseforge and clipforge subject setters will activate a separate tutorial subject. all tutorial clips and reports are redirected to a disposable practice folder. set real subject 3 of 23 - define the research question the question is loaded into the real web research query box as input: why did operation market garden fail to secure arnhem, and which factors were most decisive? load question 4 of 23 - real yandex search mode the tutorial calls the same search_yandex method as pass251's yandex button. it prepares the real provider-specific search url without inventing search results. run yandex 5 of 23 - real wikipedia card the real wikipedia callback requests a compact operation market garden research card. its output depends on the live fetch and pass251 fallback behaviour. run wikipedia 6 of 23 - real page text page text calls pass251 open_result. it attempts the genuine cleaned article reader. a network or page failure must remain visible as a real failure, never a prepared result. run page text 7 of 23 - search intelligence warnings a narrower query tests one proposed cause: intelligence warnings and german armoured forces near arnhem. the actual search web callback prepares the live search route. search intelligence 8 of 23 - search radio failures a second focused query tests communications and radio range. this is another real search web operation, not a tutorial-authored answer. search radios 9 of 23 - clip source a for guaranteed offline practice, a clearly labelled arnhem source record is placed on the android clipboard. acf003 waits for confirmation, then invokes clipforge's real clip callback. it is input, not analysis output. real clip a 10 of 23 - clip source b the real clip callback appends a separate bridge-defence and losses record to the same subject. real clip b 11 of 23 - clip source c the real clip callback appends ground-corridor delay and campaign-outcome evidence. real clip c 12 of 23 - clip source d the real clip callback appends intelligence and communications evidence. real clip d 13 of 23 - test duplicate merging one casualty sentence is deliberately clipped twice. the android clipboard is verified before the real clip callback, then pass251 must merge the repetition rather than count independent evidence. clip duplicate 14 of 23 - load the real clipforge basket clipforge load reads the saved subject basket from disk. scroll through the genuine basket headers, timestamps and source records. real load 15 of 23 - send the subject to caseforge clipforge case uses its genuine send_to_case route. the active subject and basket are handed to the actual caseforge editor. real case handoff 16 of 23 - analyze one source caseforge analyze reviews only source a in the editor. the complete single-clip report is generated by pass251 caseai. real analyze 17 of 23 - load subject the real load subject callback retrieves the complete saved clipforge basket into caseforge. real load subject 18 of 23 - analyze all the real analyze all callback runs pass251 evidence cleaning, duplicate merging, event fusion, relationship inference, claim ledger, contradiction check and assessment. real analyze all 19 of 23 - read the generated event graph do not replace this report. scroll to historical relationship graph. the prepared input now contains distinct movement, defence, casualty, outcome and consequence statements; every visible link, basis and inferred status must still be produced by pass251. keep real report 20 of 23 - read the generated claim ledger scroll to fused claim ledger, contradiction check and caseforge assessment. note how duplicate copies affect support without becoming independent verification. keep real report 21 of 23 - copy the real report the commercial copy callback places the current pass251 report on the clipboard. real copy 22 of 23 - save the real report the commercial save callback writes the report to the tutorial subject folder and preserves the exact generated analysis. real save 23 of 23 - advanced caseforge complete you used only genuine pass251 search, collection and analysis pathways. no claim map, agreement map, conflict map or gap register was fabricated by the tutorial. complete" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">ACF003</span>
+<span class="tutorial-card-copy"><strong>Advanced CaseForge — Arnhem Investigation</strong><small>Run a 23-stage investigation using genuine Web Research, ClipForge and CaseForge panels with generated event and claim analysis.</small></span>
+<span class="tutorial-card-meta"><em>23 stages</em><b>Advanced</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> ACF003. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>REAL PASS251 CASEFORGE</h4><p>This tutorial mounts the actual PASS251 CaseForge panel. The editor, report ScrollView, LOAD SUBJECT, ANALYZE ALL and the five bottom controls are the commercial controls.</p><span class="stage-action">ACTION: SHOW CASEFORGE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>CREATE THE ARNHEM SUBJECT</h4><p>The real CaseForge and ClipForge subject setters will activate a separate tutorial subject. All tutorial clips and reports are redirected to a disposable practice folder.</p><span class="stage-action">ACTION: SET REAL SUBJECT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>DEFINE THE RESEARCH QUESTION</h4><p>The question is loaded into the real Web Research query box as input: Why did Operation Market Garden fail to secure Arnhem, and which factors were most decisive?</p><span class="stage-action">ACTION: LOAD QUESTION</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>REAL YANDEX SEARCH MODE</h4><p>The tutorial calls the same search_yandex method as PASS251's YANDEX button. It prepares the real provider-specific search URL without inventing search results.</p><span class="stage-action">ACTION: RUN YANDEX</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>REAL WIKIPEDIA CARD</h4><p>The real WIKIPEDIA callback requests a compact Operation Market Garden research card. Its output depends on the live fetch and PASS251 fallback behaviour.</p><span class="stage-action">ACTION: RUN WIKIPEDIA</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>REAL PAGE TEXT</h4><p>PAGE TEXT calls PASS251 open_result. It attempts the genuine cleaned article reader. A network or page failure must remain visible as a real failure, never a prepared result.</p><span class="stage-action">ACTION: RUN PAGE TEXT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>SEARCH INTELLIGENCE WARNINGS</h4><p>A narrower query tests one proposed cause: intelligence warnings and German armoured forces near Arnhem. The actual SEARCH WEB callback prepares the live search route.</p><span class="stage-action">ACTION: SEARCH INTELLIGENCE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>SEARCH RADIO FAILURES</h4><p>A second focused query tests communications and radio range. This is another real SEARCH WEB operation, not a tutorial-authored answer.</p><span class="stage-action">ACTION: SEARCH RADIOS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>CLIP SOURCE A</h4><p>For guaranteed offline practice, a clearly labelled Arnhem source record is placed on the Android clipboard. ACF003 waits for confirmation, then invokes ClipForge's real CLIP callback. It is input, not analysis output.</p><span class="stage-action">ACTION: REAL CLIP A</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>CLIP SOURCE B</h4><p>The real CLIP callback appends a separate bridge-defence and losses record to the same subject.</p><span class="stage-action">ACTION: REAL CLIP B</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>CLIP SOURCE C</h4><p>The real CLIP callback appends ground-corridor delay and campaign-outcome evidence.</p><span class="stage-action">ACTION: REAL CLIP C</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>CLIP SOURCE D</h4><p>The real CLIP callback appends intelligence and communications evidence.</p><span class="stage-action">ACTION: REAL CLIP D</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>TEST DUPLICATE MERGING</h4><p>One casualty sentence is deliberately clipped twice. The Android clipboard is verified before the real CLIP callback, then PASS251 must merge the repetition rather than count independent evidence.</p><span class="stage-action">ACTION: CLIP DUPLICATE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>LOAD THE REAL CLIPFORGE BASKET</h4><p>ClipForge LOAD reads the saved subject basket from disk. Scroll through the genuine basket headers, timestamps and source records.</p><span class="stage-action">ACTION: REAL LOAD</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>SEND THE SUBJECT TO CASEFORGE</h4><p>ClipForge CASE uses its genuine send_to_case route. The active subject and basket are handed to the actual CaseForge editor.</p><span class="stage-action">ACTION: REAL CASE HANDOFF</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">16</span>
+<div><h4>ANALYZE ONE SOURCE</h4><p>CaseForge ANALYZE reviews only Source A in the editor. The complete single-clip report is generated by PASS251 CaseAI.</p><span class="stage-action">ACTION: REAL ANALYZE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">17</span>
+<div><h4>LOAD SUBJECT</h4><p>The real LOAD SUBJECT callback retrieves the complete saved ClipForge basket into CaseForge.</p><span class="stage-action">ACTION: REAL LOAD SUBJECT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">18</span>
+<div><h4>ANALYZE ALL</h4><p>The real ANALYZE ALL callback runs PASS251 evidence cleaning, duplicate merging, event fusion, relationship inference, claim ledger, contradiction check and assessment.</p><span class="stage-action">ACTION: REAL ANALYZE ALL</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">19</span>
+<div><h4>READ THE GENERATED EVENT GRAPH</h4><p>Do not replace this report. Scroll to HISTORICAL RELATIONSHIP GRAPH. The prepared input now contains distinct movement, defence, casualty, outcome and consequence statements; every visible link, basis and INFERRED status must still be produced by PASS251.</p><span class="stage-action">ACTION: KEEP REAL REPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">20</span>
+<div><h4>READ THE GENERATED CLAIM LEDGER</h4><p>Scroll to FUSED CLAIM LEDGER, CONTRADICTION CHECK and CASEFORGE ASSESSMENT. Note how duplicate copies affect support without becoming independent verification.</p><span class="stage-action">ACTION: KEEP REAL REPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">21</span>
+<div><h4>COPY THE REAL REPORT</h4><p>The commercial COPY callback places the current PASS251 report on the clipboard.</p><span class="stage-action">ACTION: REAL COPY</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">22</span>
+<div><h4>SAVE THE REAL REPORT</h4><p>The commercial SAVE callback writes the report to the tutorial subject folder and preserves the exact generated analysis.</p><span class="stage-action">ACTION: REAL SAVE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">23</span>
+<div><h4>ADVANCED CASEFORGE COMPLETE</h4><p>You used only genuine PASS251 search, collection and analysis pathways. No Claim Map, Agreement Map, Conflict Map or Gap Register was fabricated by the tutorial.</p><span class="stage-action">ACTION: COMPLETE</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Writing" data-search="writerforge writing foundation bring material from caseforge into writerforge, inspect language and flow, revise as a human writer, then copy and save. wr001 1 of 16 — writerforge workspace writerforge is a word coach. the upper box contains your writing and the lower box shows analysis, alternatives and guidance. it helps you improve your own words; it does not replace your judgement or invent evidence. show workspace 2 of 16 — caseforge to writerforge caseforge should establish the evidence first. its report supplies the verified findings and unanswered questions. writerforge then helps turn those findings into readable writing without changing what the evidence says. show case report 3 of 16 — load a rough draft a prepared rough draft will now be loaded into writerforge. it deliberately contains a spelling mistake, weak wording and repetition so every coaching tool has something real to examine. load rough draft 4 of 16 — analyze analyze gives an overall report: word and sentence counts, context, spelling, phrase notes, word-category advice and repetition. use it for a first broad look before concentrating on individual problems. run analyze 5 of 16 — spell spell looks for known mistakes and likely misspellings. suggestions are guidance only: names, invented words and specialist terms may be correct even when they are unfamiliar to the checker. run spell 6 of 16 — doing words doing examines verbs. stronger verbs can replace vague combinations and make action clearer. choose the alternative that fits the meaning rather than the largest or most dramatic word. run doing 7 of 16 — describe describe examines descriptive words. it helps replace weak words such as good or bad with detail that better matches the scene, report or explanation. run describe 8 of 16 — nouns nouns identifies naming words and offers alternatives stored by writerforge. use precise nouns when they improve clarity, but keep the original term when accuracy matters more than variety. run nouns 9 of 16 — adverbs adverbs highlights words that modify actions or descriptions. sometimes an adverb is useful; sometimes one stronger verb is cleaner than an adverb plus a weak verb. run adverbs 10 of 16 — repetition repeat finds words used often. repetition may be accidental, deliberate for emphasis, or unavoidable in technical writing. writerforge points it out; the writer decides whether it should change. run repeat 11 of 16 — flow flow reviews sentence length, passive wording and dialogue or rhythm notes. it helps spot writing that feels cramped, repetitive or difficult to follow. run flow 12 of 16 — word help word help uses writerforge's stored alternatives and, when internet access is available, may add an online word list. the stored guidance remains useful when the internet list cannot be reached. show word help 13 of 16 — human revision the coaching reports do not rewrite the work automatically. review the advice, keep the verified meaning and make the final decisions yourself. a polished version of the same draft will now demonstrate that step. load revision 14 of 16 — copy copy places the current writerforge output on the clipboard. this is useful for moving a report or suggestion into the editor, another document or an external writing application. copy analysis 15 of 16 — save to clipforge clip saves the writing into the active subject folder. clipforge can therefore preserve research, notes and writerforge drafts under one named subject while caseforge keeps the evidence analysis connected to that subject. save draft 16 of 16 — writerforge complete you have followed the complete writerforge workflow: verified findings from caseforge, broad analysis, specialist word coaching, human revision, copying and preservation inside a clipforge subject. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">WR001</span>
+<span class="tutorial-card-copy"><strong>WriterForge</strong><small>Bring material from CaseForge into WriterForge, inspect language and flow, revise as a human writer, then copy and save.</small></span>
+<span class="tutorial-card-meta"><em>16 stages</em><b>Foundation</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> WR001. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>WRITERFORGE WORKSPACE</h4><p>WriterForge is a word coach. The upper box contains your writing and the lower box shows analysis, alternatives and guidance. It helps you improve your own words; it does not replace your judgement or invent evidence.</p><span class="stage-action">ACTION: SHOW WORKSPACE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>CASEFORGE TO WRITERFORGE</h4><p>CaseForge should establish the evidence first. Its report supplies the verified findings and unanswered questions. WriterForge then helps turn those findings into readable writing without changing what the evidence says.</p><span class="stage-action">ACTION: SHOW CASE REPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>LOAD A ROUGH DRAFT</h4><p>A prepared rough draft will now be loaded into WriterForge. It deliberately contains a spelling mistake, weak wording and repetition so every coaching tool has something real to examine.</p><span class="stage-action">ACTION: LOAD ROUGH DRAFT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>ANALYZE</h4><p>ANALYZE gives an overall report: word and sentence counts, context, spelling, phrase notes, word-category advice and repetition. Use it for a first broad look before concentrating on individual problems.</p><span class="stage-action">ACTION: RUN ANALYZE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>SPELL</h4><p>SPELL looks for known mistakes and likely misspellings. Suggestions are guidance only: names, invented words and specialist terms may be correct even when they are unfamiliar to the checker.</p><span class="stage-action">ACTION: RUN SPELL</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>DOING WORDS</h4><p>DOING examines verbs. Stronger verbs can replace vague combinations and make action clearer. Choose the alternative that fits the meaning rather than the largest or most dramatic word.</p><span class="stage-action">ACTION: RUN DOING</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>DESCRIBE</h4><p>DESCRIBE examines descriptive words. It helps replace weak words such as good or bad with detail that better matches the scene, report or explanation.</p><span class="stage-action">ACTION: RUN DESCRIBE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>NOUNS</h4><p>NOUNS identifies naming words and offers alternatives stored by WriterForge. Use precise nouns when they improve clarity, but keep the original term when accuracy matters more than variety.</p><span class="stage-action">ACTION: RUN NOUNS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>ADVERBS</h4><p>ADVERBS highlights words that modify actions or descriptions. Sometimes an adverb is useful; sometimes one stronger verb is cleaner than an adverb plus a weak verb.</p><span class="stage-action">ACTION: RUN ADVERBS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>REPETITION</h4><p>REPEAT finds words used often. Repetition may be accidental, deliberate for emphasis, or unavoidable in technical writing. WriterForge points it out; the writer decides whether it should change.</p><span class="stage-action">ACTION: RUN REPEAT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>FLOW</h4><p>FLOW reviews sentence length, passive wording and dialogue or rhythm notes. It helps spot writing that feels cramped, repetitive or difficult to follow.</p><span class="stage-action">ACTION: RUN FLOW</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>WORD HELP</h4><p>WORD HELP uses WriterForge's stored alternatives and, when internet access is available, may add an online word list. The stored guidance remains useful when the internet list cannot be reached.</p><span class="stage-action">ACTION: SHOW WORD HELP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>HUMAN REVISION</h4><p>The coaching reports do not rewrite the work automatically. Review the advice, keep the verified meaning and make the final decisions yourself. A polished version of the same draft will now demonstrate that step.</p><span class="stage-action">ACTION: LOAD REVISION</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>COPY</h4><p>COPY places the current WriterForge output on the clipboard. This is useful for moving a report or suggestion into the Editor, another document or an external writing application.</p><span class="stage-action">ACTION: COPY ANALYSIS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>SAVE TO CLIPFORGE</h4><p>CLIP saves the writing into the active subject folder. ClipForge can therefore preserve research, notes and WriterForge drafts under one named subject while CaseForge keeps the evidence analysis connected to that subject.</p><span class="stage-action">ACTION: SAVE DRAFT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">16</span>
+<div><h4>WRITERFORGE COMPLETE</h4><p>You have followed the complete WriterForge workflow: verified findings from CaseForge, broad analysis, specialist word coaching, human revision, copying and preservation inside a ClipForge subject.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Writing" data-search="advanced writerforge — arnhem scene workshop writing advanced use the genuine writerforge reports across rough input and a human revision while keeping all corrections advisory. awf006 1 of 17 — real writerforge workspace this is the genuine pass253 writerforge panel. the visible commercial controls remain active. the tutorial guide only sequences the lesson. show workspace 2 of 17 — load prepared rough input load a deliberately rough arnhem paragraph. it is labelled tutorial input, not text generated by writerforge. load rough input 3 of 17 — analyze the whole passage run the real analyze callback. writerforge reports word count, flow, spelling, image, word categories and repetition. analyze 4 of 17 — confirmed typos and advisory review run the real pass253 spell callback. it identifies yuong and nihgt as confirmed typo errors in the genuine writerforge report while leaving the prose unchanged. applying a correction remains the writer's decision; context-sensitive alternatives are optional suggestions. spell 5 of 17 — doing words run the real doing callback to inspect verbs and possible stronger action words. doing 6 of 17 — descriptive words run the real describe callback. writerforge examines descriptive choices without rewriting the passage automatically. describe 7 of 17 — nouns run the real nouns callback to inspect naming words such as soldiers, street and bridge. nouns 8 of 17 — adverbs run the real adverbs callback. the prepared input contains patiently, really and slowly for the engine to assess. adverbs 9 of 17 — repetition run the real repeat callback. repetition is evidence for human review, not an automatic instruction to remove every recurrence. repeat 10 of 17 — flow run the real flow callback to inspect sentence length and passive phrasing where detected. flow 11 of 17 — word help run the real word help callback. stored suggestions remain available; internet suggestions appear only when the service is reachable. word help 12 of 17 — load a human revision example load a prepared human-written revision for comparison. writerforge did not create this paragraph; it is a second tutorial input. load human revision 13 of 17 — reanalyze the revision run the same genuine analyze callback on the revised input and judge whether the report changed for the better. analyze 14 of 17 — check revised flow run the genuine flow callback again. this demonstrates repeated writerforge use during human revision. flow 15 of 17 — copy a real report run the genuine copy callback while the visible flow report is still present. copy transfers that report, not the prose input. copy report 16 of 17 — save the prose with clip use writerforge's real clip callback. the current revised prose is written to this tutorial's isolated clipforge subject folder. clip prose 17 of 17 — clear the workspace run the real clear callback. this empties the writing box and restores writerforge's cleared state. clear" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">AWF006</span>
+<span class="tutorial-card-copy"><strong>Advanced WriterForge — Arnhem Scene Workshop</strong><small>Use the genuine WriterForge reports across rough input and a human revision while keeping all corrections advisory.</small></span>
+<span class="tutorial-card-meta"><em>17 stages</em><b>Advanced</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> AWF006. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>REAL WRITERFORGE WORKSPACE</h4><p>This is the genuine PASS253 WriterForge panel. The visible commercial controls remain active. The tutorial guide only sequences the lesson.</p><span class="stage-action">ACTION: SHOW WORKSPACE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>LOAD PREPARED ROUGH INPUT</h4><p>Load a deliberately rough Arnhem paragraph. It is labelled tutorial input, not text generated by WriterForge.</p><span class="stage-action">ACTION: LOAD ROUGH INPUT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>ANALYZE THE WHOLE PASSAGE</h4><p>Run the real ANALYZE callback. WriterForge reports word count, flow, spelling, image, word categories and repetition.</p><span class="stage-action">ACTION: ANALYZE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>CONFIRMED TYPOS AND ADVISORY REVIEW</h4><p>Run the real PASS253 SPELL callback. It identifies yuong and nihgt as confirmed typo errors in the genuine WriterForge report while leaving the prose unchanged. Applying a correction remains the writer's decision; context-sensitive alternatives are optional suggestions.</p><span class="stage-action">ACTION: SPELL</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>DOING WORDS</h4><p>Run the real DOING callback to inspect verbs and possible stronger action words.</p><span class="stage-action">ACTION: DOING</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>DESCRIPTIVE WORDS</h4><p>Run the real DESCRIBE callback. WriterForge examines descriptive choices without rewriting the passage automatically.</p><span class="stage-action">ACTION: DESCRIBE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>NOUNS</h4><p>Run the real NOUNS callback to inspect naming words such as soldiers, street and bridge.</p><span class="stage-action">ACTION: NOUNS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>ADVERBS</h4><p>Run the real ADVERBS callback. The prepared input contains patiently, really and slowly for the engine to assess.</p><span class="stage-action">ACTION: ADVERBS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>REPETITION</h4><p>Run the real REPEAT callback. Repetition is evidence for human review, not an automatic instruction to remove every recurrence.</p><span class="stage-action">ACTION: REPEAT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>FLOW</h4><p>Run the real FLOW callback to inspect sentence length and passive phrasing where detected.</p><span class="stage-action">ACTION: FLOW</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>WORD HELP</h4><p>Run the real WORD HELP callback. Stored suggestions remain available; internet suggestions appear only when the service is reachable.</p><span class="stage-action">ACTION: WORD HELP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>LOAD A HUMAN REVISION EXAMPLE</h4><p>Load a prepared human-written revision for comparison. WriterForge did not create this paragraph; it is a second tutorial input.</p><span class="stage-action">ACTION: LOAD HUMAN REVISION</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>REANALYZE THE REVISION</h4><p>Run the same genuine ANALYZE callback on the revised input and judge whether the report changed for the better.</p><span class="stage-action">ACTION: ANALYZE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>CHECK REVISED FLOW</h4><p>Run the genuine FLOW callback again. This demonstrates repeated WriterForge use during human revision.</p><span class="stage-action">ACTION: FLOW</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>COPY A REAL REPORT</h4><p>Run the genuine COPY callback while the visible FLOW report is still present. COPY transfers that report, not the prose input.</p><span class="stage-action">ACTION: COPY REPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">16</span>
+<div><h4>SAVE THE PROSE WITH CLIP</h4><p>Use WriterForge's real CLIP callback. The current revised prose is written to this tutorial's isolated ClipForge subject folder.</p><span class="stage-action">ACTION: CLIP PROSE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">17</span>
+<div><h4>CLEAR THE WORKSPACE</h4><p>Run the real CLEAR callback. This empties the writing box and restores WriterForge's cleared state.</p><span class="stage-action">ACTION: CLEAR</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Repair &amp; Safety" data-search="dot indentification repair &amp; safety visual inspection reveal spaces, tabs and nested block depth with the real dots command, then edit, save and verify clean python. di001 1 of 15 — dot indent workspace dot indentification makes invisible leading whitespace visible inside the editor. this separate tutorial uses one disposable file and never touches your existing projects. show workspace 2 of 15 — load clean nested code the practice function already has valid indentation. at first the leading spaces look like empty margins, even though python uses them to define every function, branch and loop block. load practice code 3 of 15 — confirm the normal view before turning dots on, confirm that the ordinary source parses correctly. dot indentification is a viewing tool; it should not be used as a substitute for a syntax check. check normal syntax 4 of 15 — use the real dots command pressing dots replaces each leading space with a visible middle dot and each leading tab with an arrow. the action below uses the same editor dots command as normal codeforge. turn dots on 5 of 15 — read the symbols one middle dot represents one leading space. four dots represent one normal python indentation level in this file. the symbols appear only at the start of each line, where block structure is defined. show dot legend 6 of 15 — follow nested block depth the function body begins at four spaces. the if and else bodies move farther inward. the for-loop body moves inward again. dot groups make those depth changes easy to compare line by line. map block depth 7 of 15 — reveal a hidden tab a tab can look similar to several spaces in an ordinary editor. dots displays a leading tab as an arrow, allowing mixed indentation to be spotted before it causes confusing structure or syntax behaviour. show tab example 8 of 15 — compare tabs and spaces the demonstration combines a tab-indented line with a four-space line. their ordinary margins can look related, but python may interpret their block depth differently. consistent spaces are the safest default for this workflow. check mixed example 9 of 15 — return to clean code dots is a viewing mode. turn it off before ordinary editing so the source is shown as normal python again. the underlying code should remain readable and syntactically unchanged. turn dots off 10 of 15 — edit the real source make a small content change while dots is off. this changes a string value, not the indentation. keeping content edits separate from whitespace diagnosis makes review much clearer. apply safe edit 11 of 15 — verify the edit with dots turn dots on again after the edit. the changed words should be visible while every leading dot group remains aligned exactly as before. verify with dots 12 of 15 — save clean python turn dots off before saving. codeforge writes the real python source, not a screen full of visual markers. the untouched backup remains beside the practice file for comparison. save clean file 13 of 15 — verify the disk file a disk check confirms that the file exists, still parses, matches the editor buffer and contains no literal dot or arrow markers. this proves the viewing symbols were not saved as python code. check saved file 14 of 15 — know what dots does not do dot indentification reveals whitespace; it does not decide the intended structure, repair broken indentation or prove runtime behaviour. use indent fix separately when a structural repair is required, then inspect and test. review limits 15 of 15 — dot indent complete you have displayed spaces and tabs, followed nested depth, compared mixed whitespace, edited safely, returned to clean python and verified the saved file on disk. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">DI001</span>
+<span class="tutorial-card-copy"><strong>Dot Indentification</strong><small>Reveal spaces, tabs and nested block depth with the real DOTS command, then edit, save and verify clean Python.</small></span>
+<span class="tutorial-card-meta"><em>15 stages</em><b>Visual inspection</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> DI001. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>DOT INDENT WORKSPACE</h4><p>Dot Indentification makes invisible leading whitespace visible inside the Editor. This separate tutorial uses one disposable file and never touches your existing projects.</p><span class="stage-action">ACTION: SHOW WORKSPACE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>LOAD CLEAN NESTED CODE</h4><p>The practice function already has valid indentation. At first the leading spaces look like empty margins, even though Python uses them to define every function, branch and loop block.</p><span class="stage-action">ACTION: LOAD PRACTICE CODE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>CONFIRM THE NORMAL VIEW</h4><p>Before turning DOTS on, confirm that the ordinary source parses correctly. Dot Indentification is a viewing tool; it should not be used as a substitute for a syntax check.</p><span class="stage-action">ACTION: CHECK NORMAL SYNTAX</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>USE THE REAL DOTS COMMAND</h4><p>Pressing DOTS replaces each leading space with a visible middle dot and each leading tab with an arrow. The action below uses the same Editor DOTS command as normal CodeForge.</p><span class="stage-action">ACTION: TURN DOTS ON</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>READ THE SYMBOLS</h4><p>One middle dot represents one leading space. Four dots represent one normal Python indentation level in this file. The symbols appear only at the start of each line, where block structure is defined.</p><span class="stage-action">ACTION: SHOW DOT LEGEND</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>FOLLOW NESTED BLOCK DEPTH</h4><p>The function body begins at four spaces. The if and else bodies move farther inward. The for-loop body moves inward again. Dot groups make those depth changes easy to compare line by line.</p><span class="stage-action">ACTION: MAP BLOCK DEPTH</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>REVEAL A HIDDEN TAB</h4><p>A tab can look similar to several spaces in an ordinary editor. DOTS displays a leading tab as an arrow, allowing mixed indentation to be spotted before it causes confusing structure or syntax behaviour.</p><span class="stage-action">ACTION: SHOW TAB EXAMPLE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>COMPARE TABS AND SPACES</h4><p>The demonstration combines a tab-indented line with a four-space line. Their ordinary margins can look related, but Python may interpret their block depth differently. Consistent spaces are the safest default for this workflow.</p><span class="stage-action">ACTION: CHECK MIXED EXAMPLE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>RETURN TO CLEAN CODE</h4><p>DOTS is a viewing mode. Turn it off before ordinary editing so the source is shown as normal Python again. The underlying code should remain readable and syntactically unchanged.</p><span class="stage-action">ACTION: TURN DOTS OFF</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>EDIT THE REAL SOURCE</h4><p>Make a small content change while DOTS is off. This changes a string value, not the indentation. Keeping content edits separate from whitespace diagnosis makes review much clearer.</p><span class="stage-action">ACTION: APPLY SAFE EDIT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>VERIFY THE EDIT WITH DOTS</h4><p>Turn DOTS on again after the edit. The changed words should be visible while every leading dot group remains aligned exactly as before.</p><span class="stage-action">ACTION: VERIFY WITH DOTS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>SAVE CLEAN PYTHON</h4><p>Turn DOTS off before saving. CodeForge writes the real Python source, not a screen full of visual markers. The untouched backup remains beside the practice file for comparison.</p><span class="stage-action">ACTION: SAVE CLEAN FILE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>VERIFY THE DISK FILE</h4><p>A disk check confirms that the file exists, still parses, matches the Editor buffer and contains no literal dot or arrow markers. This proves the viewing symbols were not saved as Python code.</p><span class="stage-action">ACTION: CHECK SAVED FILE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>KNOW WHAT DOTS DOES NOT DO</h4><p>Dot Indentification reveals whitespace; it does not decide the intended structure, repair broken indentation or prove runtime behaviour. Use Indent Fix separately when a structural repair is required, then inspect and test.</p><span class="stage-action">ACTION: REVIEW LIMITS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>DOT INDENT COMPLETE</h4><p>You have displayed spaces and tabs, followed nested depth, compared mixed whitespace, edited safely, returned to clean Python and verified the saved file on disk.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Repair &amp; Safety" data-search="indent fix repair &amp; safety guided repair load a genuine indentation failure, protect the original, apply the real repair command and verify the saved result. if004 1 of 13 — indent fix workspace indent fix repairs python block structure in the editor. this tutorial uses one disposable practice file, keeps the original as a separate backup, and does not touch any of your existing projects. show workspace 2 of 13 — load a real indentation failure the practice function has valid words and punctuation, but the lines beneath def, if and else are not indented. python cannot decide which statements belong inside each block. load broken code 3 of 13 — protect the original fix changes the editor buffer first. a safe workflow keeps an untouched copy before repair, so the exact starting point can always be recovered and compared with the result. confirm backup 4 of 13 — confirm the failure before repairing, confirm what is actually broken. a syntax check should fail with an indentation-related message. this separates a genuine structure fault from a spelling, import or runtime problem. run syntax check 5 of 13 — inspect the broken structure this tutorial now shows a clearly labelled structure guide before repair. it is a teaching aid, not a codeforge control or generated caseforge result. in the actual pass251 build, structural repair is performed by the editor fix button. show structure guide 6 of 13 — understand the blocks the function body belongs one level inside def. the if and else statements belong inside the function. their return statements belong one further level inside their matching branches. mark block rules 7 of 13 — apply the real fix command codeforge's editor fix command rebuilds the visible block indentation and then runs a syntax check. this is the same fix control used in the normal editor, not a simulated tutorial repair. press fix 8 of 13 — verify the repaired syntax a successful repair must be checked again. syntax ok means python can parse the new structure; it does not automatically prove that every decision or result inside the program is logically correct. verify syntax 9 of 13 — compare before and after the repair should change leading spaces, not the intended words or string content. review the difference before saving, especially when repairing a much larger or more complicated file. show difference 10 of 13 — save deliberately fix repairs the editor buffer. save is the separate decision that writes the repaired buffer to the practice file. keeping those actions separate gives the developer time to inspect the proposed structure first. save repaired file 11 of 13 — verify the saved file a final disk check confirms that the saved file exists, matches the editor buffer and still passes python syntax. the untouched backup remains beside it. check saved file 12 of 13 — know the limits indent fix is designed for structural repair. it cannot decide what your code was supposed to mean, repair every complex continuation, or prove runtime behaviour. always inspect the result, syntax-check it, and test the program. practise recovery 13 of 13 — indent fix complete you have protected an original, confirmed an indentation failure, read the structure guide, used the real fix command, verified the syntax, reviewed the difference and saved the repaired file safely. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">IF004</span>
+<span class="tutorial-card-copy"><strong>Indent Fix</strong><small>Load a genuine indentation failure, protect the original, apply the real repair command and verify the saved result.</small></span>
+<span class="tutorial-card-meta"><em>13 stages</em><b>Guided repair</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> IF004. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>INDENT FIX WORKSPACE</h4><p>Indent Fix repairs Python block structure in the Editor. This tutorial uses one disposable practice file, keeps the original as a separate backup, and does not touch any of your existing projects.</p><span class="stage-action">ACTION: SHOW WORKSPACE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>LOAD A REAL INDENTATION FAILURE</h4><p>The practice function has valid words and punctuation, but the lines beneath def, if and else are not indented. Python cannot decide which statements belong inside each block.</p><span class="stage-action">ACTION: LOAD BROKEN CODE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>PROTECT THE ORIGINAL</h4><p>FIX changes the Editor buffer first. A safe workflow keeps an untouched copy before repair, so the exact starting point can always be recovered and compared with the result.</p><span class="stage-action">ACTION: CONFIRM BACKUP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>CONFIRM THE FAILURE</h4><p>Before repairing, confirm what is actually broken. A syntax check should fail with an indentation-related message. This separates a genuine structure fault from a spelling, import or runtime problem.</p><span class="stage-action">ACTION: RUN SYNTAX CHECK</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>INSPECT THE BROKEN STRUCTURE</h4><p>This tutorial now shows a clearly labelled structure guide before repair. It is a teaching aid, not a CodeForge control or generated CaseForge result. In the actual PASS251 build, structural repair is performed by the Editor FIX button.</p><span class="stage-action">ACTION: SHOW STRUCTURE GUIDE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>UNDERSTAND THE BLOCKS</h4><p>The function body belongs one level inside def. The if and else statements belong inside the function. Their return statements belong one further level inside their matching branches.</p><span class="stage-action">ACTION: MARK BLOCK RULES</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>APPLY THE REAL FIX COMMAND</h4><p>CodeForge's Editor FIX command rebuilds the visible block indentation and then runs a syntax check. This is the same FIX control used in the normal Editor, not a simulated tutorial repair.</p><span class="stage-action">ACTION: PRESS FIX</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>VERIFY THE REPAIRED SYNTAX</h4><p>A successful repair must be checked again. Syntax OK means Python can parse the new structure; it does not automatically prove that every decision or result inside the program is logically correct.</p><span class="stage-action">ACTION: VERIFY SYNTAX</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>COMPARE BEFORE AND AFTER</h4><p>The repair should change leading spaces, not the intended words or string content. Review the difference before saving, especially when repairing a much larger or more complicated file.</p><span class="stage-action">ACTION: SHOW DIFFERENCE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>SAVE DELIBERATELY</h4><p>FIX repairs the Editor buffer. SAVE is the separate decision that writes the repaired buffer to the practice file. Keeping those actions separate gives the developer time to inspect the proposed structure first.</p><span class="stage-action">ACTION: SAVE REPAIRED FILE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>VERIFY THE SAVED FILE</h4><p>A final disk check confirms that the saved file exists, matches the Editor buffer and still passes Python syntax. The untouched backup remains beside it.</p><span class="stage-action">ACTION: CHECK SAVED FILE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>KNOW THE LIMITS</h4><p>Indent Fix is designed for structural repair. It cannot decide what your code was supposed to mean, repair every complex continuation, or prove runtime behaviour. Always inspect the result, syntax-check it, and test the program.</p><span class="stage-action">ACTION: PRACTISE RECOVERY</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>INDENT FIX COMPLETE</h4><p>You have protected an original, confirmed an indentation failure, read the structure guide, used the real FIX command, verified the syntax, reviewed the difference and saved the repaired file safely.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Repair &amp; Safety" data-search="trust virus ai repair &amp; safety safety review learn flag-only scanning, context, confidence, review and quarantine safety with disposable non-executing samples. tv001 1 of 17 — trust ai workspace trust virus ai examines files for malware-like behaviour and reports what it finds. this separate tutorial uses only disposable training files; broad phone and folder scans are locked out. show trust ai 2 of 17 — the safety lock trust virus ai is flag only / report only. a scan does not automatically move, delete, run or quarantine a file. the safe method is: flag → verify → analyze → advise → user decides. show safety rules 3 of 17 — inspect a clean file begin with a normal python file. seeing the source before scanning teaches that a result must be interpreted alongside the actual file and its purpose. show clean source 4 of 17 — run the real file scan the action uses the real scan file path in trust virus ai. the scanner reads the practice file and reports risk, score, confidence, action and any trigger details. scan clean file 5 of 17 — clean is not a guarantee clean means no known malware-like behaviour was found in the inspected sample. it does not prove that every possible threat is absent, so source origin and user judgement still matter. explain clean 6 of 17 — inspect a capability sample legitimate apps may mention camera, microphone or screenshot features. individual capability words can deserve caution without proving malicious intent. show capability source 7 of 17 — scan for low caution this real scan should identify several permission-related words but keep the result in a low-caution range. the file stores labels only and performs no android action. scan capability file 8 of 17 — context prevents panic a warning is evidence to review, not a verdict. ask whether the capability is expected, whether the file can execute it, where the file came from and whether multiple dangerous behaviours appear together. show context guide 9 of 17 — inspect a flagged sample the final training file contains a deliberately strong combination of malware-like phrases. they are inert text, but they allow the real detector to demonstrate a serious flag without creating or running harmful code. show flagged source 10 of 17 — scan the strong combination trust virus ai gives more weight to behaviour combinations than to isolated words. the reverse-shell and socket/subprocess markers should produce a high or critical training result. scan flagged file 11 of 17 — read the result risk summarises the severity band. score records accumulated evidence. confidence reflects how strongly the observed combination supports the report. action states the recommended next safe step. explain report 12 of 17 — review before action review is a read-only evidence screen. it lists the flagged file, advice and trigger details, but it never opens, runs, moves, deletes or quarantines the file. press review 13 of 17 — copy the review copy preserves the visible review text for later investigation, caseforge analysis or a human security check. copying a report does not copy or execute the flagged file. copy review 14 of 17 — q copy safety hold q copy is deliberately separate from scanning and review. in this build it presents a safety hold for high or critical items and performs no automatic bulk copy, move or deletion. test q copy 15 of 17 — check the q room the tutorial opens its own empty quarantine room, not your normal codeforge quarantine. this proves that the training scans and q copy safety hold created no quarantined payloads. open safe q room 16 of 17 — clear and verify clear removes the displayed tutorial report and stored tutorial flags. a final disk check confirms that all three original practice files remain exactly unchanged. clear and verify 17 of 17 — trust ai complete you have scanned clean, low-caution and strongly flagged training files, interpreted context, reviewed evidence, copied a report and confirmed that no file was moved, deleted, run or quarantined. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">TV001</span>
+<span class="tutorial-card-copy"><strong>Trust Virus AI</strong><small>Learn flag-only scanning, context, confidence, review and quarantine safety with disposable non-executing samples.</small></span>
+<span class="tutorial-card-meta"><em>17 stages</em><b>Safety review</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> TV001. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>TRUST AI WORKSPACE</h4><p>Trust Virus AI examines files for malware-like behaviour and reports what it finds. This separate tutorial uses only disposable training files; broad phone and folder scans are locked out.</p><span class="stage-action">ACTION: SHOW TRUST AI</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>THE SAFETY LOCK</h4><p>Trust Virus AI is FLAG ONLY / REPORT ONLY. A scan does not automatically move, delete, run or quarantine a file. The safe method is: Flag → verify → analyze → advise → user decides.</p><span class="stage-action">ACTION: SHOW SAFETY RULES</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>INSPECT A CLEAN FILE</h4><p>Begin with a normal Python file. Seeing the source before scanning teaches that a result must be interpreted alongside the actual file and its purpose.</p><span class="stage-action">ACTION: SHOW CLEAN SOURCE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>RUN THE REAL FILE SCAN</h4><p>The action uses the real SCAN FILE path in Trust Virus AI. The scanner reads the practice file and reports risk, score, confidence, action and any trigger details.</p><span class="stage-action">ACTION: SCAN CLEAN FILE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>CLEAN IS NOT A GUARANTEE</h4><p>CLEAN means no known malware-like behaviour was found in the inspected sample. It does not prove that every possible threat is absent, so source origin and user judgement still matter.</p><span class="stage-action">ACTION: EXPLAIN CLEAN</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>INSPECT A CAPABILITY SAMPLE</h4><p>Legitimate apps may mention camera, microphone or screenshot features. Individual capability words can deserve caution without proving malicious intent.</p><span class="stage-action">ACTION: SHOW CAPABILITY SOURCE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>SCAN FOR LOW CAUTION</h4><p>This real scan should identify several permission-related words but keep the result in a low-caution range. The file stores labels only and performs no Android action.</p><span class="stage-action">ACTION: SCAN CAPABILITY FILE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>CONTEXT PREVENTS PANIC</h4><p>A warning is evidence to review, not a verdict. Ask whether the capability is expected, whether the file can execute it, where the file came from and whether multiple dangerous behaviours appear together.</p><span class="stage-action">ACTION: SHOW CONTEXT GUIDE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>INSPECT A FLAGGED SAMPLE</h4><p>The final training file contains a deliberately strong combination of malware-like phrases. They are inert text, but they allow the real detector to demonstrate a serious flag without creating or running harmful code.</p><span class="stage-action">ACTION: SHOW FLAGGED SOURCE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>SCAN THE STRONG COMBINATION</h4><p>Trust Virus AI gives more weight to behaviour combinations than to isolated words. The reverse-shell and socket/subprocess markers should produce a high or critical training result.</p><span class="stage-action">ACTION: SCAN FLAGGED FILE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>READ THE RESULT</h4><p>RISK summarises the severity band. SCORE records accumulated evidence. CONFIDENCE reflects how strongly the observed combination supports the report. ACTION states the recommended next safe step.</p><span class="stage-action">ACTION: EXPLAIN REPORT</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>REVIEW BEFORE ACTION</h4><p>REVIEW is a read-only evidence screen. It lists the flagged file, advice and trigger details, but it never opens, runs, moves, deletes or quarantines the file.</p><span class="stage-action">ACTION: PRESS REVIEW</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>COPY THE REVIEW</h4><p>COPY preserves the visible review text for later investigation, CaseForge analysis or a human security check. Copying a report does not copy or execute the flagged file.</p><span class="stage-action">ACTION: COPY REVIEW</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">14</span>
+<div><h4>Q COPY SAFETY HOLD</h4><p>Q COPY is deliberately separate from scanning and review. In this build it presents a safety hold for high or critical items and performs no automatic bulk copy, move or deletion.</p><span class="stage-action">ACTION: TEST Q COPY</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">15</span>
+<div><h4>CHECK THE Q ROOM</h4><p>The tutorial opens its own empty quarantine room, not your normal CodeForge quarantine. This proves that the training scans and Q COPY safety hold created no quarantined payloads.</p><span class="stage-action">ACTION: OPEN SAFE Q ROOM</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">16</span>
+<div><h4>CLEAR AND VERIFY</h4><p>CLEAR removes the displayed tutorial report and stored tutorial flags. A final disk check confirms that all three original practice files remain exactly unchanged.</p><span class="stage-action">ACTION: CLEAR AND VERIFY</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">17</span>
+<div><h4>TRUST AI COMPLETE</h4><p>You have scanned clean, low-caution and strongly flagged training files, interpreted context, reviewed evidence, copied a report and confirmed that no file was moved, deleted, run or quarantined.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Audio &amp; Voice" data-search="harmony room audio &amp; voice real audio safety operate calm, focus, deep and sleep through the genuine audio pathways, including stop and runtime safeguards. h002 1 of 13 — real harmony room this is the genuine pass253 harmony panel. its commercial calm, focus, deep, sleep and stop controls remain active. the tutorial guide only sequences and verifies the lesson. show harmony 2 of 13 — calm 174 hz / pulse 3 run the real calm callback. harmony generates or reuses its genuine calm wav, loads it through soundloader, loops it and updates the live field and labels. play calm 3 of 13 — focus 285 hz / pulse 6 run the real focus callback. the previous harmony sound is stopped before the focus sound becomes the single active mode. play focus 4 of 13 — deep 396 hz / pulse 9 run the real deep callback. the visible mode, frequency, pulse, information line and animated field must all agree with the selected commercial preset. play deep 5 of 13 — sleep 432 hz / pulse 3 run the real sleep callback. harmony remains user-controlled: use a comfortable device volume and press stop whenever the sound is no longer wanted. play sleep 6 of 13 — verify the real tone library inspect the four genuine generated harmony wav files. the tutorial verifies their actual headers and does not substitute prepared audio or a prewritten success result. verify wav files 7 of 13 — safe mode switching start calm and then switch to focus through the same real play_mode pathway. the tutorial verifies that the active sound object is replaced rather than layered beside the previous mode. test switch 8 of 13 — manual stop run the genuine stop callback. it must halt the active harmony sound, clear the current sound reference and change the commercial mode label to all stop. stop audio 9 of 13 — restart after stop start deep after the completed stop. this proves the room can begin a fresh real session after silence without retaining the previous sound object. restart deep 10 of 13 — automatic leave safeguard run harmony's genuine on_leave safeguard. it calls the same stop routine used by stop so a harmony tone does not continue after the user leaves the room. test on leave 11 of 13 — project runtime audio lock exercise the genuine pass239 parent-audio lock used while a child project owns runtime. harmony must refuse to start a tone while that lock is active. this is a safety-path test, not a separate commercial button. test audio lock 12 of 13 — final user control test start sleep through the real callback and then stop it again. the tutorial completes this stage only after the actual sound object has been created and the genuine stop pathway returns the room to all stop. play then stop 13 of 13 — harmony complete review the verified harmony operations and finish with every tone stopped. no audio result was prepared or fabricated by the tutorial. complete tutorial" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">H002</span>
+<span class="tutorial-card-copy"><strong>Harmony Room</strong><small>Operate CALM, FOCUS, DEEP and SLEEP through the genuine audio pathways, including stop and Runtime safeguards.</small></span>
+<span class="tutorial-card-meta"><em>13 stages</em><b>Real audio safety</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> H002. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div><div class="tutorial-apk-download"><div><h4>WORKING ANDROID TUTORIAL APK</h4><p>Install the working Harmony Room tutorial APK on a 64-bit Android device.</p><span class="tutorial-apk-detail">ARM64 • 21.1 MB • SHA-256 34f983b80851…</span></div><a aria-label="Download Harmony Room Android tutorial APK" class="tutorial-apk-button" download="Harmony_Room_Tutorial_ARM64.apk" href="downloads/Harmony_Room_Tutorial_ARM64.apk" type="application/vnd.android.package-archive">DOWNLOAD TUTORIAL APK</a></div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>REAL HARMONY ROOM</h4><p>This is the genuine PASS253 Harmony panel. Its commercial CALM, FOCUS, DEEP, SLEEP and STOP controls remain active. The tutorial guide only sequences and verifies the lesson.</p><span class="stage-action">ACTION: SHOW HARMONY</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>CALM 174 HZ / PULSE 3</h4><p>Run the real CALM callback. Harmony generates or reuses its genuine CALM WAV, loads it through SoundLoader, loops it and updates the live field and labels.</p><span class="stage-action">ACTION: PLAY CALM</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>FOCUS 285 HZ / PULSE 6</h4><p>Run the real FOCUS callback. The previous Harmony sound is stopped before the FOCUS sound becomes the single active mode.</p><span class="stage-action">ACTION: PLAY FOCUS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>DEEP 396 HZ / PULSE 9</h4><p>Run the real DEEP callback. The visible mode, frequency, pulse, information line and animated field must all agree with the selected commercial preset.</p><span class="stage-action">ACTION: PLAY DEEP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>SLEEP 432 HZ / PULSE 3</h4><p>Run the real SLEEP callback. Harmony remains user-controlled: use a comfortable device volume and press STOP whenever the sound is no longer wanted.</p><span class="stage-action">ACTION: PLAY SLEEP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>VERIFY THE REAL TONE LIBRARY</h4><p>Inspect the four genuine generated Harmony WAV files. The tutorial verifies their actual headers and does not substitute prepared audio or a prewritten success result.</p><span class="stage-action">ACTION: VERIFY WAV FILES</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>SAFE MODE SWITCHING</h4><p>Start CALM and then switch to FOCUS through the same real play_mode pathway. The tutorial verifies that the active sound object is replaced rather than layered beside the previous mode.</p><span class="stage-action">ACTION: TEST SWITCH</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>MANUAL STOP</h4><p>Run the genuine STOP callback. It must halt the active Harmony sound, clear the current sound reference and change the commercial mode label to ALL STOP.</p><span class="stage-action">ACTION: STOP AUDIO</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>RESTART AFTER STOP</h4><p>Start DEEP after the completed stop. This proves the room can begin a fresh real session after silence without retaining the previous sound object.</p><span class="stage-action">ACTION: RESTART DEEP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>AUTOMATIC LEAVE SAFEGUARD</h4><p>Run Harmony's genuine on_leave safeguard. It calls the same stop routine used by STOP so a Harmony tone does not continue after the user leaves the room.</p><span class="stage-action">ACTION: TEST ON LEAVE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>PROJECT RUNTIME AUDIO LOCK</h4><p>Exercise the genuine PASS239 parent-audio lock used while a child project owns Runtime. Harmony must refuse to start a tone while that lock is active. This is a safety-path test, not a separate commercial button.</p><span class="stage-action">ACTION: TEST AUDIO LOCK</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>FINAL USER CONTROL TEST</h4><p>Start SLEEP through the real callback and then stop it again. The tutorial completes this stage only after the actual sound object has been created and the genuine STOP pathway returns the room to ALL STOP.</p><span class="stage-action">ACTION: PLAY THEN STOP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>HARMONY COMPLETE</h4><p>Review the verified Harmony operations and finish with every tone stopped. No audio result was prepared or fabricated by the tutorial.</p><span class="stage-action">ACTION: COMPLETE TUTORIAL</span></div>
+</li></ol>
+</div>
+</details>
+<details class="tutorial-card" data-category="Audio &amp; Voice" data-search="advanced voice ai audio &amp; voice creator package 1 scan the real voice library, test discovered words, control playback and review the genuine package locks. av001 1 of 13 — real voice ai workspace this is the genuine pass253 harmony voice ai panel. the commercial controls remain visible. the tutorial guide only sequences safe exercises. show workspace 2 of 13 — scan the real voice library run the genuine scan callback. codeforge searches its permitted voice folders and reports the actual number of accepted files and word keys. scan 3 of 13 — review discovered word keys inspect the real word keys discovered by scan. the added key list is tutorial guidance derived from the live voice map, not a separate codeforge control. review keys 4 of 13 — test one real word use the genuine test callback with one word that scan actually discovered. if no voice file exists, the tutorial demonstrates codeforge's honest no-match result. test word 5 of 13 — test a real word sequence use the same genuine test callback with a short sequence assembled only from discovered word keys. exact recordings remain preferred by the engine. test phrase 6 of 13 — stop voice playback run the genuine stop callback. it cancels queued playback and stops the current voice sound. stop 7 of 13 — tone lock off run the real tone lock callback until the status is off. this changes the voice engine setting; it does not rewrite any audio file. tone lock off 8 of 13 — tone lock on run the same real tone lock callback until the status is on, restoring the normal locked-volume and guarded pitch behaviour. tone lock on 9 of 13 — run a local stop command place the word stop in the real command box and run the genuine run command callback. voice ai should route it locally without using the web. run stop command 10 of 13 — ask web local command routing use the genuine ask web callback with open voice. voice ai checks local commands before any internet request, so this exercise requires no live web result. ask: open voice 11 of 13 — microphone controls lock open the genuine microphone lock message. in creator package 1, mic ask and mic mood are visibly locked for creator package 2. show mic lock 12 of 13 — adaptive ai control lock open the genuine adaptive ai lock message. this tutorial does not unlock or imitate the creator package 2 control. show adaptive lock 13 of 13 — final real voice status run one final genuine scan and review the actual file count, key count and tone lock status before completing the tutorial. final status" data-tutorial-card="">
+<summary>
+<span class="tutorial-card-mark">AV001</span>
+<span class="tutorial-card-copy"><strong>Advanced Voice AI</strong><small>Scan the real voice library, test discovered words, control playback and review the genuine package locks.</small></span>
+<span class="tutorial-card-meta"><em>13 stages</em><b>Creator Package 1</b></span>
+</summary>
+<div class="tutorial-card-body">
+<div class="tutorial-source-note"><strong>Interactive lesson source:</strong> AV001. The public guide follows the working tutorial sequence while protected source code and internal architecture remain private.</div>
+<ol class="tutorial-stage-list"><li class="tutorial-stage">
+<span class="stage-index">1</span>
+<div><h4>REAL VOICE AI WORKSPACE</h4><p>This is the genuine PASS253 Harmony Voice AI panel. The commercial controls remain visible. The tutorial guide only sequences safe exercises.</p><span class="stage-action">ACTION: SHOW WORKSPACE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">2</span>
+<div><h4>SCAN THE REAL VOICE LIBRARY</h4><p>Run the genuine SCAN callback. CodeForge searches its permitted voice folders and reports the actual number of accepted files and word keys.</p><span class="stage-action">ACTION: SCAN</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">3</span>
+<div><h4>REVIEW DISCOVERED WORD KEYS</h4><p>Inspect the real word keys discovered by SCAN. The added key list is tutorial guidance derived from the live voice map, not a separate CodeForge control.</p><span class="stage-action">ACTION: REVIEW KEYS</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">4</span>
+<div><h4>TEST ONE REAL WORD</h4><p>Use the genuine TEST callback with one word that SCAN actually discovered. If no voice file exists, the tutorial demonstrates CodeForge's honest no-match result.</p><span class="stage-action">ACTION: TEST WORD</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">5</span>
+<div><h4>TEST A REAL WORD SEQUENCE</h4><p>Use the same genuine TEST callback with a short sequence assembled only from discovered word keys. Exact recordings remain preferred by the engine.</p><span class="stage-action">ACTION: TEST PHRASE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">6</span>
+<div><h4>STOP VOICE PLAYBACK</h4><p>Run the genuine STOP callback. It cancels queued playback and stops the current voice sound.</p><span class="stage-action">ACTION: STOP</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">7</span>
+<div><h4>TONE LOCK OFF</h4><p>Run the real TONE LOCK callback until the status is OFF. This changes the voice engine setting; it does not rewrite any audio file.</p><span class="stage-action">ACTION: TONE LOCK OFF</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">8</span>
+<div><h4>TONE LOCK ON</h4><p>Run the same real TONE LOCK callback until the status is ON, restoring the normal locked-volume and guarded pitch behaviour.</p><span class="stage-action">ACTION: TONE LOCK ON</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">9</span>
+<div><h4>RUN A LOCAL STOP COMMAND</h4><p>Place the word stop in the real command box and run the genuine RUN COMMAND callback. Voice AI should route it locally without using the web.</p><span class="stage-action">ACTION: RUN STOP COMMAND</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">10</span>
+<div><h4>ASK WEB LOCAL COMMAND ROUTING</h4><p>Use the genuine ASK WEB callback with open voice. Voice AI checks local commands before any internet request, so this exercise requires no live web result.</p><span class="stage-action">ACTION: ASK: OPEN VOICE</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">11</span>
+<div><h4>MICROPHONE CONTROLS LOCK</h4><p>Open the genuine microphone lock message. In Creator Package 1, MIC ASK and MIC MOOD are visibly locked for Creator Package 2.</p><span class="stage-action">ACTION: SHOW MIC LOCK</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">12</span>
+<div><h4>ADAPTIVE AI CONTROL LOCK</h4><p>Open the genuine ADAPTIVE AI lock message. This tutorial does not unlock or imitate the Creator Package 2 control.</p><span class="stage-action">ACTION: SHOW ADAPTIVE LOCK</span></div>
+</li><li class="tutorial-stage">
+<span class="stage-index">13</span>
+<div><h4>FINAL REAL VOICE STATUS</h4><p>Run one final genuine SCAN and review the actual file count, key count and Tone Lock status before completing the tutorial.</p><span class="stage-action">ACTION: FINAL STATUS</span></div>
+</li></ol>
+</div>
+</details>
+</div>
+<p class="tutorial-empty" hidden="" id="tutorial-empty">No tutorial stages match that search.</p>
+<div class="tutorial-release-bridge">
+<div><p class="eyebrow">THE COMPLETE HARMONY PATH</p><h3>Create in CodeForge. Release through Harmony Equilibrium.</h3></div>
+<p>Build the project, run the genuine application, prepare its Android identity, create the APK or AAB package, then move into the Harmony listing and direct-release pathway. The public store upload system remains a future publishing service until its secure creator, payment and delivery systems are connected.</p><p>Download verification details: <a href="downloads/APK_DOWNLOAD_MANIFEST.txt">APK download manifest</a></p>
+</div>
+</section>
+<section class="section compact-section" id="release-board">
+<div class="section-heading">
+<p class="eyebrow">CURRENT RELEASE BOARD</p>
+<h2>Honest status. No invented launch claims.</h2>
+<p>The public website is live. Finished Android projects are being prepared as release packages, while unfinished projects remain clearly marked as development work.</p>
+</div>
+<div class="release-board">
+<article class="release-card live"><strong>Harmony Equilibrium</strong><small>Official public website and ecosystem foundation.</small><span class="release-state">Website live</span></article>
+<article class="release-card"><strong>Juice Box Wars</strong><small>Android game moving into release packaging.</small><span class="release-state">Ready to package</span></article>
+<article class="release-card"><strong>Pythagoras Oracle</strong><small>Interactive numerical exploration application.</small><span class="release-state">Ready to package</span></article>
+<article class="release-card"><strong>Ambience of War</strong><small>Original atmospheric mobile audio experience.</small><span class="release-state">Ready to package</span></article>
+<article class="release-card hold"><strong>SNAFU Historical Games</strong><small>Development continues. Release screenshots are intentionally being held back.</small><span class="release-state">In development</span></article>
+</div>
+</section>
+<section class="section forge-section" id="forge-tools">
+<div class="section-heading">
+<p class="eyebrow">HARMONY FORGE TOOLS</p>
+<h2>Creative tools that help create other things.</h2>
+<p>Four focused mobile tools separate specialised creative tasks into clear working environments.</p>
+</div>
+<div class="forge-grid">
+<button class="forge-card" data-product="musicforge" type="button">
+<span>MF</span><strong>MusicForge</strong><small>Music, rhythm and sound creation</small>
+</button>
+<button class="forge-card" data-product="iconforge" type="button">
+<span>IF</span><strong>IconForge</strong><small>Icons and visual identity assets</small>
+</button>
+<button class="forge-card" data-product="introforge" type="button">
+<span>IN</span><strong>IntroForge</strong><small>Application and game introductions</small>
+</button>
+<button class="forge-card" data-product="auto-snap-forge" type="button">
+<span>AS</span><strong>Auto Snap Forge</strong><small>Long-document capture workflows</small>
+</button>
+</div>
+</section>
+<section class="section dark-section" id="ai">
+<div class="section-heading">
+<p class="eyebrow">ARTIFICIAL INTELLIGENCE</p>
+<h2>Human-guided. Private where it needs to be.</h2>
+<p>Harmony Equilibrium develops original artificial-intelligence research while protecting internal architecture, training methods and proprietary development records.</p>
+</div>
+<div class="status-grid">
+<article class="status-card">
+<p>SUPER INTELLIGENCE</p>
+<h3>Private research and development</h3>
+<p>A long-term Harmony Equilibrium programme exploring future human-guided intelligence systems.</p>
+<small>Internal methods, capabilities, tests and milestones are intentionally confidential.</small>
+</article>
+<article class="status-card">
+<p>DANGER CLOSE AI</p>
+<h3>Human responsibility remains central</h3>
+<p>Critical work requires evidence, clear limits, human review and accountable decisions.</p>
+</article>
+</div>
+</section>
+<section class="section" id="research">
+<div class="section-heading">
+<p class="eyebrow">RESEARCH CENTRE</p>
+<h2>Public principles without private development records.</h2>
+</div>
+<div aria-label="Public research standard" class="research-flow">
+<span>Idea</span><b>&gt;</b><span>Prototype</span><b>&gt;</b><span>Practical Test</span><b>&gt;</b><span>Refinement</span><b>&gt;</b><span>Public Release</span>
+</div>
+<div class="principle-grid two">
+<article class="panel">
+<h3>Commercial Tutorial Fidelity</h3>
+<p>A tutorial is trusted only when it performs the same genuine operation as the commercial product.</p>
+<strong class="status positive">Verified on device</strong>
+</article>
+<article class="panel">
+<h3>Creative Research</h3>
+<p>Ideas are documented, prototyped, tested and refined before they are presented as public products.</p>
+<strong class="status">Ongoing</strong>
+</article>
+</div>
+<blockquote>Public claims must match demonstrated capabilities.</blockquote>
+</section>
+<section class="section compact-section" id="audiobooks">
+<div class="section-heading">
+<p class="eyebrow">HARMONY EQUILIBRIUM AUDIOBOOKS</p>
+<h2>Under production. Coming soon.</h2>
+<p>Original audiobooks are being written, recorded and produced. Titles, previews and listening links will be announced when ready.</p>
+</div>
+</section>
+<section class="section services-section" id="services">
+<div class="section-heading">
+<p class="eyebrow">CUSTOM SOFTWARE</p>
+<h2>Bring the idea. Build it together.</h2>
+<p>Original Android apps, games, business tools, educational software and project-improvement work.</p>
+</div>
+<div class="service-list">
+<span>Android Apps</span>
+<span>Artificial Intelligence</span>
+<span>Games</span>
+<span>Business Software</span>
+<span>Educational Software</span>
+<span>Pimp My Project!</span>
+</div>
+<p class="notice">The verified public enquiry channel is being prepared. No inactive form is presented as though it sends a message.</p>
+</section>
+<section class="section about-section" id="about">
+<div class="section-heading">
+<p class="eyebrow">ABOUT HARMONY EQUILIBRIUM</p>
+<h2>Software, AI, research, publishing, music and digital innovation.</h2>
+<p>Harmony Equilibrium is the creative company and ecosystem established by Jamon Allan Hartzer in Western Australia.</p>
+</div>
+<div class="quote-grid">
+<blockquote>“We create things that create things.”</blockquote>
+<blockquote>“Being Australian is not about the place you are from; it’s who you are in that place.”</blockquote>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div>
+<strong>HARMONY EQUILIBRIUM</strong>
+<p>Artificial Intelligence Connected With Human Intelligence.</p><p>Create. Build. Publish. Sell.</p>
+</div>
+<nav aria-label="Legal and information">
+<button class="footer-link" data-open-legal="privacy-dialog" type="button">Privacy Notice</button>
+<button class="footer-link" data-open-legal="terms-dialog" type="button">Website Terms</button>
+<a href="#top">Back to top</a>
+</nav>
+<small>© 2026 Jamon Allan Hartzer · Western Australia</small>
+</footer>
+<dialog class="modal" id="product-dialog">
+<button aria-label="Close" class="modal-close" data-close-dialog="" type="button">×</button>
+<div id="product-dialog-content"></div>
+</dialog>
+<dialog class="modal" id="interest-dialog">
+<button aria-label="Close" class="modal-close" data-close-dialog="" type="button">×</button>
+<div>
+<p class="eyebrow">MY INTEREST LIST</p>
+<h2>Saved on this device.</h2>
+<p>This list does not create an account, order, payment, reservation or subscription.</p>
+<div class="interest-list" id="interest-list"></div>
+<button class="button" data-clear-interest="" type="button">Clear interest list</button>
+</div>
+</dialog>
+<dialog class="modal legal-modal" id="privacy-dialog">
+<button aria-label="Close" class="modal-close" data-close-dialog="" type="button">×</button>
+<div><p class="eyebrow">PUBLIC PREVIEW</p>
 <h1>Privacy Notice</h1>
 <p class="legal-status">Effective for the Harmony Equilibrium public-preview website.</p>
-
 <h2>What this website stores</h2>
 <p>The optional Store interest list is stored only in the visitor’s browser using local storage. It is not sent to Harmony Equilibrium and does not create a hosted account.</p>
-
 <h2>No public account</h2>
 <p>This preview does not provide a cloud profile, public sign-in service or hosted Harmony Equilibrium account.</p>
-
 <h2>No payment processing</h2>
 <p>The website does not take payments, create orders, reserve products or provide commercial digital delivery.</p>
-
 <h2>No hosted enquiry submission</h2>
 <p>No inactive local form is presented as though it sends a message or project request. A verified public contact channel will be added before enquiries open.</p>
-
 <h2>External destinations</h2>
 <p>Future media, social and contact destinations will use verified public links. Visitors will choose whether to follow those links.</p>
-
 <h2>Local data control</h2>
 <p>The local interest list remains in the browser until it is cleared through the website, removed through browser settings or erased when site data is cleared.</p>
-
 <h2>Future hosted services</h2>
 <p>A final hosted privacy policy will be published before accounts, analytics, enquiries, payments or direct digital delivery are activated.</p></div>
-  </dialog>
-
-  <dialog id="terms-dialog" class="modal legal-modal">
-    <button class="modal-close" type="button" data-close-dialog aria-label="Close">×</button>
-    <div><p class="eyebrow">PUBLIC PREVIEW</p>
+</dialog>
+<dialog class="modal legal-modal" id="terms-dialog">
+<button aria-label="Close" class="modal-close" data-close-dialog="" type="button">×</button>
+<div><p class="eyebrow">PUBLIC PREVIEW</p>
 <h1>Website Terms</h1>
 <p class="legal-status">Plain-language conditions for the current public preview.</p>
-
 <h2>Preview information</h2>
 <p>Product descriptions and availability statements explain current public intentions and may be updated as development continues.</p>
-
 <h2>No purchase contract</h2>
 <p>Viewing a product or saving it to the local interest list does not create an order, reservation, subscription or purchase agreement.</p>
-
 <h2>Intellectual property</h2>
 <p>This preview does not transfer ownership of Harmony Equilibrium names, software, source code, designs, media or other creative work.</p>
-
 <h2>Private research</h2>
 <p>Public summaries do not grant access to private research, internal architecture, training methods or proprietary development processes.</p>
-
 <h2>Future services</h2>
 <p>Client accounts, hosted enquiries, payments, downloads and collaboration services will receive their own final conditions before activation.</p>
-
 <h2>Final hosted terms</h2>
 <p>Commercial terms will be reviewed and published before direct transactions or account services open.</p></div>
-  </dialog>
-
-  <script id="product-data" type="application/json">[{&quot;id&quot;: &quot;codeforge&quot;, &quot;name&quot;: &quot;CodeForge Creativity 223&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Release preparation&quot;, &quot;platform&quot;: &quot;Android development platform&quot;, &quot;mark&quot;: &quot;CF&quot;, &quot;description&quot;: &quot;A mobile creative development station for writing, testing, organising and preparing Python and Kivy projects.&quot;, &quot;features&quot;: [&quot;Mobile development workspace&quot;, &quot;Project editing and runtime testing&quot;, &quot;Android project preparation&quot;, &quot;Integrated Forge tools&quot;, &quot;Guided tutorial suite&quot;]}, {&quot;id&quot;: &quot;harmony-stabilizer&quot;, &quot;name&quot;: &quot;Harmony Stabilizer Collection&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;HS&quot;, &quot;description&quot;: &quot;A collection of original Harmony Equilibrium sound and focus experiences with direct user control.&quot;, &quot;features&quot;: [&quot;Calm experience&quot;, &quot;Focus experience&quot;, &quot;Deep experience&quot;, &quot;Sleep experience&quot;]}, {&quot;id&quot;: &quot;musicforge&quot;, &quot;name&quot;: &quot;MusicForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Music and sound creation&quot;, &quot;mark&quot;: &quot;MF&quot;, &quot;description&quot;: &quot;An original mobile creative tool for developing rhythm, music, sound ideas and adaptive audio experiences.&quot;, &quot;features&quot;: [&quot;Mobile music and rhythm creation&quot;, &quot;Adaptive percussion development&quot;, &quot;Original sound experimentation&quot;, &quot;Creative audio workflow&quot;]}, {&quot;id&quot;: &quot;iconforge&quot;, &quot;name&quot;: &quot;IconForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Icon and visual asset creation&quot;, &quot;mark&quot;: &quot;IF&quot;, &quot;description&quot;: &quot;A focused creative utility for preparing application icons and project visual identity assets.&quot;, &quot;features&quot;: [&quot;Application icon preparation&quot;, &quot;Project visual identity workflow&quot;, &quot;Mobile-first creative interface&quot;, &quot;Export-ready asset organisation&quot;]}, {&quot;id&quot;: &quot;introforge&quot;, &quot;name&quot;: &quot;IntroForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Intro and presentation creation&quot;, &quot;mark&quot;: &quot;IN&quot;, &quot;description&quot;: &quot;A dedicated creative tool for preparing, organising and managing application and game introductions separately from the main runtime.&quot;, &quot;features&quot;: [&quot;Application and game intro preparation&quot;, &quot;Separate introduction workflow&quot;, &quot;Project-friendly asset organisation&quot;, &quot;Mobile development focus&quot;]}, {&quot;id&quot;: &quot;auto-snap-forge&quot;, &quot;name&quot;: &quot;Auto Snap Forge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Document and screen-capture utility&quot;, &quot;mark&quot;: &quot;AS&quot;, &quot;description&quot;: &quot;A mobile utility designed to automate long-document scrolling and sequential screen-capture workflows.&quot;, &quot;features&quot;: [&quot;Automated long-document scrolling&quot;, &quot;Sequential screen capture&quot;, &quot;Full-document workflow assistance&quot;, &quot;Mobile-first operation&quot;]}, {&quot;id&quot;: &quot;ambience-of-war&quot;, &quot;name&quot;: &quot;Ambience of War&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;AW&quot;, &quot;description&quot;: &quot;An original atmospheric audio experience created for historical and dramatic listening.&quot;, &quot;features&quot;: [&quot;Original sound design&quot;, &quot;Immersive listening&quot;, &quot;Mobile playback&quot;]}, {&quot;id&quot;: &quot;pythagoras-oracle&quot;, &quot;name&quot;: &quot;Pythagoras Oracle&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;PO&quot;, &quot;description&quot;: &quot;An interactive numerical exploration application developed by Harmony Equilibrium.&quot;, &quot;features&quot;: [&quot;Interactive numerical exploration&quot;, &quot;Mobile interface&quot;, &quot;Research-inspired presentation&quot;]}, {&quot;id&quot;: &quot;juice-box-wars&quot;, &quot;name&quot;: &quot;Juice Box Wars&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android game&quot;, &quot;mark&quot;: &quot;JB&quot;, &quot;description&quot;: &quot;A serious tactical action game built around an absurd juice-carton battlefield.&quot;, &quot;features&quot;: [&quot;Tactical defence gameplay&quot;, &quot;Multiple support weapons&quot;, &quot;Comic battlefield identity&quot;, &quot;Original audio and visual design&quot;]}, {&quot;id&quot;: &quot;snafu&quot;, &quot;name&quot;: &quot;SNAFU Historical Games&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android historical games&quot;, &quot;mark&quot;: &quot;SN&quot;, &quot;description&quot;: &quot;A developing series of historically inspired tactical games focused on battlefield decisions and human stories.&quot;, &quot;features&quot;: [&quot;Historical scenarios&quot;, &quot;Tactical command&quot;, &quot;Original battlefield systems&quot;, &quot;Multiple planned theatres&quot;]}, {&quot;id&quot;: &quot;audiobooks&quot;, &quot;name&quot;: &quot;Harmony Equilibrium Audiobooks&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Under production&quot;, &quot;platform&quot;: &quot;Audiobooks&quot;, &quot;mark&quot;: &quot;AB&quot;, &quot;description&quot;: &quot;Original audiobooks are being written, recorded and produced. Titles and release information will be announced when ready.&quot;, &quot;features&quot;: [&quot;Original stories and publications&quot;, &quot;Produced audio editions&quot;, &quot;Release details coming later&quot;]}, {&quot;id&quot;: &quot;custom-software&quot;, &quot;name&quot;: &quot;Custom Software&quot;, &quot;category&quot;: &quot;Services&quot;, &quot;status&quot;: &quot;Enquiries opening soon&quot;, &quot;platform&quot;: &quot;Custom development&quot;, &quot;mark&quot;: &quot;CS&quot;, &quot;description&quot;: &quot;Original apps, games, business tools, educational projects and project-improvement work.&quot;, &quot;features&quot;: [&quot;Android applications&quot;, &quot;Games and creative tools&quot;, &quot;Business and educational software&quot;, &quot;Project improvement&quot;]}]</script>
-  <script>
+</dialog>
+<script id="product-data" type="application/json">[{&quot;id&quot;: &quot;codeforge&quot;, &quot;name&quot;: &quot;CodeForge Creativity 223&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Release preparation&quot;, &quot;platform&quot;: &quot;Android development platform&quot;, &quot;mark&quot;: &quot;CF&quot;, &quot;description&quot;: &quot;A mobile creative development station for writing, testing, organising and preparing Python and Kivy projects.&quot;, &quot;features&quot;: [&quot;Mobile development workspace&quot;, &quot;Project editing and runtime testing&quot;, &quot;Android project preparation&quot;, &quot;Integrated Forge tools&quot;, &quot;13-tutorial guided learning centre&quot;]}, {&quot;id&quot;: &quot;harmony-stabilizer&quot;, &quot;name&quot;: &quot;Harmony Stabilizer Collection&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Coming soon&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;HS&quot;, &quot;description&quot;: &quot;A collection of original Harmony Equilibrium sound and focus experiences with direct user control.&quot;, &quot;features&quot;: [&quot;Calm experience&quot;, &quot;Focus experience&quot;, &quot;Deep experience&quot;, &quot;Sleep experience&quot;]}, {&quot;id&quot;: &quot;musicforge&quot;, &quot;name&quot;: &quot;MusicForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Music and sound creation&quot;, &quot;mark&quot;: &quot;MF&quot;, &quot;description&quot;: &quot;An original mobile creative tool for developing rhythm, music, sound ideas and adaptive audio experiences.&quot;, &quot;features&quot;: [&quot;Mobile music and rhythm creation&quot;, &quot;Adaptive percussion development&quot;, &quot;Original sound experimentation&quot;, &quot;Creative audio workflow&quot;]}, {&quot;id&quot;: &quot;iconforge&quot;, &quot;name&quot;: &quot;IconForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Icon and visual asset creation&quot;, &quot;mark&quot;: &quot;IF&quot;, &quot;description&quot;: &quot;A focused creative utility for preparing application icons and project visual identity assets.&quot;, &quot;features&quot;: [&quot;Application icon preparation&quot;, &quot;Project visual identity workflow&quot;, &quot;Mobile-first creative interface&quot;, &quot;Export-ready asset organisation&quot;]}, {&quot;id&quot;: &quot;introforge&quot;, &quot;name&quot;: &quot;IntroForge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Intro and presentation creation&quot;, &quot;mark&quot;: &quot;IN&quot;, &quot;description&quot;: &quot;A dedicated creative tool for preparing, organising and managing application and game introductions separately from the main runtime.&quot;, &quot;features&quot;: [&quot;Application and game intro preparation&quot;, &quot;Separate introduction workflow&quot;, &quot;Project-friendly asset organisation&quot;, &quot;Mobile development focus&quot;]}, {&quot;id&quot;: &quot;auto-snap-forge&quot;, &quot;name&quot;: &quot;Auto Snap Forge&quot;, &quot;category&quot;: &quot;Forge Tools&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Document and screen-capture utility&quot;, &quot;mark&quot;: &quot;AS&quot;, &quot;description&quot;: &quot;A mobile utility designed to automate long-document scrolling and sequential screen-capture workflows.&quot;, &quot;features&quot;: [&quot;Automated long-document scrolling&quot;, &quot;Sequential screen capture&quot;, &quot;Full-document workflow assistance&quot;, &quot;Mobile-first operation&quot;]}, {&quot;id&quot;: &quot;ambience-of-war&quot;, &quot;name&quot;: &quot;Ambience of War&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;AW&quot;, &quot;description&quot;: &quot;An original atmospheric audio experience created for historical and dramatic listening.&quot;, &quot;features&quot;: [&quot;Original sound design&quot;, &quot;Immersive listening&quot;, &quot;Mobile playback&quot;]}, {&quot;id&quot;: &quot;pythagoras-oracle&quot;, &quot;name&quot;: &quot;Pythagoras Oracle&quot;, &quot;category&quot;: &quot;Software&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android&quot;, &quot;mark&quot;: &quot;PO&quot;, &quot;description&quot;: &quot;An interactive numerical exploration application developed by Harmony Equilibrium.&quot;, &quot;features&quot;: [&quot;Interactive numerical exploration&quot;, &quot;Mobile interface&quot;, &quot;Research-inspired presentation&quot;]}, {&quot;id&quot;: &quot;juice-box-wars&quot;, &quot;name&quot;: &quot;Juice Box Wars&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;Ready to package&quot;, &quot;platform&quot;: &quot;Android game&quot;, &quot;mark&quot;: &quot;JB&quot;, &quot;description&quot;: &quot;A serious tactical action game built around an absurd juice-carton battlefield.&quot;, &quot;features&quot;: [&quot;Tactical defence gameplay&quot;, &quot;Multiple support weapons&quot;, &quot;Comic battlefield identity&quot;, &quot;Original audio and visual design&quot;]}, {&quot;id&quot;: &quot;snafu&quot;, &quot;name&quot;: &quot;SNAFU Historical Games&quot;, &quot;category&quot;: &quot;Games&quot;, &quot;status&quot;: &quot;In development&quot;, &quot;platform&quot;: &quot;Android historical games&quot;, &quot;mark&quot;: &quot;SN&quot;, &quot;description&quot;: &quot;A developing series of historically inspired tactical games focused on battlefield decisions and human stories.&quot;, &quot;features&quot;: [&quot;Historical scenarios&quot;, &quot;Tactical command&quot;, &quot;Original battlefield systems&quot;, &quot;Multiple planned theatres&quot;]}, {&quot;id&quot;: &quot;audiobooks&quot;, &quot;name&quot;: &quot;Harmony Equilibrium Audiobooks&quot;, &quot;category&quot;: &quot;Audio and Media&quot;, &quot;status&quot;: &quot;Under production&quot;, &quot;platform&quot;: &quot;Audiobooks&quot;, &quot;mark&quot;: &quot;AB&quot;, &quot;description&quot;: &quot;Original audiobooks are being written, recorded and produced. Titles and release information will be announced when ready.&quot;, &quot;features&quot;: [&quot;Original stories and publications&quot;, &quot;Produced audio editions&quot;, &quot;Release details coming later&quot;]}, {&quot;id&quot;: &quot;custom-software&quot;, &quot;name&quot;: &quot;Custom Software&quot;, &quot;category&quot;: &quot;Services&quot;, &quot;status&quot;: &quot;Enquiries opening soon&quot;, &quot;platform&quot;: &quot;Custom development&quot;, &quot;mark&quot;: &quot;CS&quot;, &quot;description&quot;: &quot;Original apps, games, business tools, educational projects and project-improvement work.&quot;, &quot;features&quot;: [&quot;Android applications&quot;, &quot;Games and creative tools&quot;, &quot;Business and educational software&quot;, &quot;Project improvement&quot;]}]</script>
+<script>
 
 (() => {
   "use strict";
@@ -1632,5 +2397,40 @@ blockquote {
 })();
 
   </script>
+<script>
+(() => {
+  const cards = [...document.querySelectorAll('[data-tutorial-card]')];
+  const filters = [...document.querySelectorAll('[data-tutorial-filter]')];
+  const search = document.getElementById('tutorial-search');
+  const empty = document.getElementById('tutorial-empty');
+  let category = 'All';
+  const applyTutorialFilters = () => {
+    const terms = (search?.value || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let visible = 0;
+    cards.forEach((card) => {
+      const categoryMatch = category === 'All' || card.dataset.category === category;
+      const haystack = card.dataset.search || '';
+      const searchMatch = terms.every((term) => haystack.includes(term));
+      const show = categoryMatch && searchMatch;
+      card.hidden = !show;
+      if (show) visible += 1;
+      if (!show) card.open = false;
+    });
+    if (empty) empty.hidden = visible !== 0;
+  };
+  filters.forEach((button) => button.addEventListener('click', () => {
+    category = button.dataset.tutorialFilter;
+    filters.forEach((item) => item.classList.toggle('active', item === button));
+    applyTutorialFilters();
+  }));
+  search?.addEventListener('input', applyTutorialFilters);
+  document.querySelector('[data-tutorial-open-all]')?.addEventListener('click', () => {
+    cards.filter((card) => !card.hidden).forEach((card) => { card.open = true; });
+  });
+  document.querySelector('[data-tutorial-close-all]')?.addEventListener('click', () => {
+    cards.forEach((card) => { card.open = false; });
+  });
+})();
+</script>
 </body>
 </html>
